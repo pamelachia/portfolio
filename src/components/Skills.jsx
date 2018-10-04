@@ -59,7 +59,7 @@ class Skills extends Component {
                     <div className={gridStyle}>
                         <Material>
                             <Skill
-                                imgSrc="/img/gametheory.png"
+                                imgSrc="img/gametheory.png"
                                 title=" Game Theory (economics)"
                             >
                                 <p>
@@ -76,7 +76,7 @@ class Skills extends Component {
                         </Material>
                         <Material>
                             <Skill
-                                imgSrc="/img/python.png"
+                                imgSrc="img/python.png"
                                 title="Python development"
                             >
                                 <p>
@@ -90,7 +90,7 @@ class Skills extends Component {
                         </Material>
                         <Material>
                             <Skill
-                                imgSrc="/img/maths.png"
+                                imgSrc="img/maths.png"
                                 title="Mathematics"
                             >
                                 <p>
@@ -102,7 +102,7 @@ class Skills extends Component {
                         </Material>
                         <Material>
                             <Skill
-                                imgSrc="/img/javascript.png"
+                                imgSrc="img/javascript.png"
                                 title="JavaScript development"
                             >
                                 <p>

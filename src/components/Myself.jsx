@@ -4,54 +4,13 @@ import Title from "./Section/Title";
 import Subtitle from "./Section/Subtitle";
 import { colors, fontFamilies } from "./../constants";
 import Accent from "./Accent";
+import Scroller from "./Scroller";
 
 const AVATAR_SIZE = 300;
 
-// from https://codemyui.com/scroll-icon-animation/, adapted to Emotion
-const IconScroll = () => {
-    const scroll = keyframes`
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-            transform: translateY(46px);
-        }
-    `;
-
-    const style = css`
-        width: 40px;
-        height: 70px;
-        margin: 50px auto 50px;
-        box-shadow: inset 0 0 0 1px ${colors.babyPowder};
-        border-radius: 25px;
-        position: relative;
-    `;
-
-    const dotStyle = css`
-        position: relative;
-        width: 8px;
-        height: 8px;
-        background: ${colors.maastrichtBlue};
-        margin-left: -4px;
-        top: 8px;
-        left: 50%;
-        border-radius: 4px;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        animation-name: ${scroll};
-    `;
-
-    return (
-        <div className={style}>
-            <div className={dotStyle} />
-        </div>
-    );
-};
-
 const Avatar = () => {
     const style = css`
-        background-image: url("/img/PamelaChia.jpg");
+        background-image: url("img/PamelaChia.jpg");
         background-size: contain;
         width: ${AVATAR_SIZE}px;
         height: ${AVATAR_SIZE}px;
@@ -172,7 +131,7 @@ class Myself extends Component {
                 </div>
                 <div className={scrollOpacityStyle}>
                     Scroll to learn more about me.
-                    <IconScroll />
+                    <Scroller />
                 </div>
             </div>
         );

@@ -35,6 +35,7 @@ const dotStyle = css`
     animation-name: ${scroll};
 `;
 
+// from https://codemyui.com/scroll-icon-animation/, adapted to Emotion
 class Scroller extends PureComponent {
     render() {
         return (
