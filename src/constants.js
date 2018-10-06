@@ -17,6 +17,6 @@ export const colors = {
 
 export const fontFamilies = {
     openSans: `"Open Sans", sans-serif`,
-    montserrat: `Montserrat, sans-serif`,
     satisfy: `Satisfy, sans-serif`,
+    quicksand: `Quicksand, sans-serif`,
 };

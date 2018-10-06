@@ -11,7 +11,7 @@ class Subtitle extends Component {
     render() {
         const style = css`
             font-size: 22px;
-            font-family: ${fontFamilies.montserrat};
+            font-family: ${fontFamilies.quicksand};
             font-weight: 400;
             margin-bottom: 11px;
         `;
