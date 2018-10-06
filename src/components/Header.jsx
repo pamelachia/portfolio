@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import { colors } from "../constants";
+import InstagramIcon from "../svg-components/InstagramIcon";
+import TwitterIcon from "../svg-components/TwitterIcon";
 
 const HEADER_HEIGHT = 70;
 
@@ -40,18 +42,21 @@ class Header extends Component {
             cursor: pointer;
         `;
 
-        // const liCenterStyle = css`
-        //     text-align: center;
-        //     width: 100%;
-        //     margin-left: -25px;
-        // `;
-
         const contactStyle = css`
             color: ${colors.maastrichtBlue};
             font-weight: normal;
             text-align: right;
             width: 100%;
         `;
+
+        const iconStyle = css({
+            marginRight: "10px",
+            transition: "color 0.5s ease",
+            color: colors.maastrichtBlue,
+            ":hover": {
+                color: colors.babyPowder
+            }
+        });
 
         const normalFontStyle = css`
             font-weight: 400;
@@ -63,23 +68,27 @@ class Header extends Component {
                     <li className={liStyle}>
                         <span className={normalFontStyle}>Pamela Chia</span>
                     </li>
-                    {/* <li className={liStyle}>
-                        <div className={liCenterStyle}>
-                            Learner {this.renderCircle(colors.roseMadder)}
-                        </div>
-                    </li>
                     <li className={liStyle}>
-                        <div className={liCenterStyle}>
-                            Maker {this.renderCircle(colors.maximumBlueGreen)}
+                        <div className={contactStyle}>
+                            <a
+                                href="https://twitter.com/chibi_pammy"
+                                target="_blank"
+                                className={iconStyle}
+                            >
+                                <TwitterIcon height={15} fill="currentColor" />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/chibipammy/"
+                                target="_blank"
+                                className={iconStyle}
+                            >
+                                <InstagramIcon
+                                    height={15}
+                                    fill="currentColor"
+                                />
+                            </a>
+                            Contact
                         </div>
-                    </li>
-                    <li className={liStyle}>
-                        <div className={liCenterStyle}>
-                            Seeker {this.renderCircle(colors.brightYellow)}
-                        </div>
-                    </li> */}
-                    <li className={liStyle}>
-                        <div className={contactStyle}>Contact</div>
                     </li>
                 </menu>
             </header>
