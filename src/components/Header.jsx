@@ -72,6 +72,7 @@ class Header extends Component {
                         <div className={contactStyle}>
                             <a
                                 href="https://twitter.com/chibi_pammy"
+                                rel="noopener noreferrer"
                                 target="_blank"
                                 className={iconStyle}
                             >
@@ -79,6 +80,7 @@ class Header extends Component {
                             </a>
                             <a
                                 href="https://www.instagram.com/chibipammy/"
+                                rel="noopener noreferrer"
                                 target="_blank"
                                 className={iconStyle}
                             >
