@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { colors } from "../constants";
+import { colors, fontFamilies } from "../constants";
 import InstagramIcon from "../svg-components/InstagramIcon";
 import TwitterIcon from "../svg-components/TwitterIcon";
 
@@ -21,6 +21,8 @@ class Header extends Component {
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: ${fontFamilies.quicksand};
+            font-weight: 500;
         `;
 
         const menuStyle = css`
@@ -58,15 +60,11 @@ class Header extends Component {
             }
         });
 
-        const normalFontStyle = css`
-            font-weight: 400;
-        `;
-
         return (
             <header className={style}>
                 <menu className={menuStyle}>
                     <li className={liStyle}>
-                        <span className={normalFontStyle}>Pamela Chia</span>
+                        Pamela Chia
                     </li>
                     <li className={liStyle}>
                         <div className={contactStyle}>

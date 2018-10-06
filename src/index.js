@@ -10,7 +10,7 @@ WebFont.load({
         families: [
             "Open Sans:300,400,800",
             "Satisfy:400",
-            "Quicksand:400",
+            "Quicksand:400,500",
             "sans-serif"
         ]
     }
