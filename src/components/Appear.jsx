@@ -47,9 +47,9 @@ class Appear extends Component {
         `;
 
         const style = css`
+            opacity: ${this.state.display ? 1 : 0};
             animation-duration: 1.5s;
-            animation-name: ${scroll};
-            display: ${this.state.display ? "block" : "none"};
+            animation-name: ${this.state.display ? scroll : "none"};
         `;
 
         return (
