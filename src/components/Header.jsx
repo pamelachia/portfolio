@@ -4,6 +4,7 @@ import { css, cx } from "emotion";
 import { colors, fontFamilies } from "../constants";
 import InstagramIcon from "../svg-components/InstagramIcon";
 import TwitterIcon from "../svg-components/TwitterIcon";
+import Copier from "./Copier";
 
 const HEADER_HEIGHT = 70;
 
@@ -92,7 +93,11 @@ class Header extends Component {
                                 />
                             </a>
                         </div>
-                        <div className={contactStyle}>Contact</div>
+                        <div className={contactStyle}>
+                            <Copier>
+                                <span>Contact Me</span>
+                            </Copier>
+                        </div>
                     </li>
                 </menu>
             </header>
