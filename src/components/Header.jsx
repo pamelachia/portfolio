@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { colors, fontFamilies } from "../constants";
 import InstagramIcon from "../svg-components/InstagramIcon";
 import TwitterIcon from "../svg-components/TwitterIcon";
@@ -39,20 +39,26 @@ class Header extends Component {
             display: flex;
             flex-grow: 1;
             height: 100%;
-            font-size: 21px;
+            font-size: 23px;
             align-items: center;
             cursor: pointer;
         `;
 
+        const lastLiStyle = css`
+            flex-grow: 0;
+        `;
+
         const contactStyle = css`
             color: ${colors.maastrichtBlue};
-            font-weight: normal;
             text-align: right;
             width: 100%;
+            margin-left: 20px;
         `;
 
         const iconStyle = css({
-            marginRight: "10px",
+            marginRight: "15px",
+            position: "relative",
+            top: "1px",
             transition: "color 0.5s ease",
             color: colors.maastrichtBlue,
             ":hover": {
@@ -63,32 +69,25 @@ class Header extends Component {
         return (
             <header className={style}>
                 <menu className={menuStyle}>
-                    <li className={liStyle}>
-                        Pamela Chia
-                    </li>
-                    <li className={liStyle}>
-                        <div className={contactStyle}>
-                            <a
-                                href="https://twitter.com/chibi_pammy"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className={iconStyle}
-                            >
-                                <TwitterIcon height={15} fill="currentColor" />
-                            </a>
-                            <a
-                                href="https://www.instagram.com/chibipammy/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className={iconStyle}
-                            >
-                                <InstagramIcon
-                                    height={15}
-                                    fill="currentColor"
-                                />
-                            </a>
-                            Contact
-                        </div>
+                    <li className={liStyle}>Pamela Chia</li>
+                    <li className={cx(liStyle, lastLiStyle)}>
+                        <a
+                            href="https://twitter.com/chibi_pammy"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={iconStyle}
+                        >
+                            <TwitterIcon height={16} fill="currentColor" />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/chibipammy/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={iconStyle}
+                        >
+                            <InstagramIcon height={16} fill="currentColor" />
+                        </a>
+                        <span className={contactStyle}>Contact</span>
                     </li>
                 </menu>
             </header>
