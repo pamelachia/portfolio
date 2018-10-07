@@ -33,10 +33,10 @@ const Skill = ({ title, imgSrc, children }) => {
 class Skills extends Component {
     render() {
         const style = css`
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-top: 50px;
             max-width: 1024px;
             margin: 0 auto;
         `;
@@ -52,10 +52,10 @@ class Skills extends Component {
 
         return (
             <div className={style}>
-                <Title>
-                    I have some <Accent>skills</Accent>.
-                </Title>
                 <Appear>
+                    <Title>
+                        I have some <Accent>skills</Accent>.
+                    </Title>
                     <div className={gridStyle}>
                         <Material>
                             <Skill
