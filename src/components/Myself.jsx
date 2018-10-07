@@ -20,8 +20,8 @@ const Avatar = () => {
 
     const wrapperStyle = css`
         border-radius: ${AVATAR_SIZE / 5}px;
-        border: 5px solid ${colors.maastrichtBlue};
-        padding: 5px;
+        border: 3px solid ${colors.maastrichtBlue};
+        padding: 10px;
         margin-bottom: 10px;
         display: inline-block;
         overflow: hidden;
