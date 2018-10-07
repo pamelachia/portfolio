@@ -14,12 +14,12 @@ const Avatar = () => {
         background-size: contain;
         width: ${AVATAR_SIZE}px;
         height: ${AVATAR_SIZE}px;
-        border-radius: ${AVATAR_SIZE / 2}px;
+        border-radius: ${AVATAR_SIZE / 6}px;
         overflow: hidden;
     `;
 
     const wrapperStyle = css`
-        border-radius: ${AVATAR_SIZE}px;
+        border-radius: ${AVATAR_SIZE / 5}px;
         border: 5px solid ${colors.maastrichtBlue};
         padding: 5px;
         margin-bottom: 10px;
