@@ -6,6 +6,9 @@ import { colors, fontFamilies } from "./../constants";
 
 const drop = keyframes`
     from {
+        opacity: 0;
+    }
+    10% {
         opacity: 1;
     }
     60% {
