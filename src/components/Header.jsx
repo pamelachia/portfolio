@@ -22,14 +22,12 @@ class Header extends Component {
             align-items: center;
             justify-content: center;
             font-family: ${fontFamilies.quicksand};
-            font-weight: 500;
         `;
 
         const menuStyle = css`
             margin: 0 auto;
             padding: 0; /* menu is an "ul", must get rid of left margin */
             max-width: 1024px;
-            height: 100%;
             list-style: none;
             display: flex;
             flex-grow: 1;
@@ -37,25 +35,25 @@ class Header extends Component {
 
         const liStyle = css`
             display: flex;
-            flex-grow: 1;
+            flex-direction: row;
             height: 100%;
             font-size: 23px;
             align-items: center;
-            cursor: pointer;
+            flex-grow: 1;
         `;
 
-        const lastLiStyle = css`
-            flex-grow: 0;
+        const edgeLiStyle = css`
+            font-weight: 500;
+            justify-content: flex-end;
         `;
 
         const contactStyle = css`
             color: ${colors.maastrichtBlue};
-            text-align: right;
-            width: 100%;
             margin-left: 20px;
         `;
 
         const iconStyle = css({
+            textAlign: "right",
             marginRight: "15px",
             position: "relative",
             top: "1px",
@@ -70,24 +68,31 @@ class Header extends Component {
             <header className={style}>
                 <menu className={menuStyle}>
                     <li className={liStyle}>Pamela Chia</li>
-                    <li className={cx(liStyle, lastLiStyle)}>
-                        <a
-                            href="https://twitter.com/chibi_pammy"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className={iconStyle}
-                        >
-                            <TwitterIcon height={16} fill="currentColor" />
-                        </a>
-                        <a
-                            href="https://www.instagram.com/chibipammy/"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className={iconStyle}
-                        >
-                            <InstagramIcon height={16} fill="currentColor" />
-                        </a>
-                        <span className={contactStyle}>Contact</span>
+                    <li className={cx(liStyle, edgeLiStyle)}>
+                        <div>
+                            <a
+                                href="https://twitter.com/chibi_pammy"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={iconStyle}
+                            >
+                                <TwitterIcon height={16} fill="currentColor" />
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.instagram.com/chibipammy/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className={iconStyle}
+                            >
+                                <InstagramIcon
+                                    height={16}
+                                    fill="currentColor"
+                                />
+                            </a>
+                        </div>
+                        <div className={contactStyle}>Contact</div>
                     </li>
                 </menu>
             </header>
