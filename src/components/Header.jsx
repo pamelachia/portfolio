@@ -51,6 +51,10 @@ class Header extends Component {
         const contactStyle = css`
             color: ${colors.maastrichtBlue};
             margin-left: 20px;
+            transition: color 0.5s ease;
+            :hover {
+                color: ${colors.babyPowder};
+            }
         `;
 
         const iconStyle = css({
