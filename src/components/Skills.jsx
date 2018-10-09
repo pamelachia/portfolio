@@ -33,7 +33,7 @@ const Skill = ({ title, imgSrc, children }) => {
 class Skills extends Component {
     render() {
         const style = css`
-            padding: 100px 0;
+            padding: 150px 0;
             height: 100%;
             display: flex;
             flex-direction: column;

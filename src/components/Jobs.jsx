@@ -33,7 +33,7 @@ const Job = ({ title, imgSrc, children }) => {
 class Jobs extends Component {
     render() {
         const style = css`
-            padding: 200px 0;
+            padding: 150px 0;
             display: flex;
             flex-direction: column;
             justify-content: center;

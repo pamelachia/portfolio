@@ -37,7 +37,7 @@ const Project = ({ title, imgSrc, children }) => {
 class Projects extends Component {
     render() {
         const style = css`
-            padding: 200px 0;
+            padding: 150px 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
