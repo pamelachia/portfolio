@@ -5,46 +5,50 @@ import Subtitle from "./Section/Subtitle";
 import Material from "./Section/Material";
 import Appear from "./Appear";
 import Accent from "./Accent";
+import { colors } from "./../constants";
 
-const Skill = ({ title, imgSrc, children }) => {
+const Project = ({ title, imgSrc, children }) => {
     const style = css`
-        display: flex;
         width: 100%;
     `;
 
     const imgStyle = css`
         flex-shrink: 0;
-        width: 20%;
-        height: 20%;
+        width: 96%;
+        height: 100%;
+        margin: 10px 0;
         margin-right: 5%;
+        border: 2px solid ${colors.maastrichtBlue};
+        border-radius: 10px;
+        padding: 2%;
     `;
 
     return (
-        <div className={style}>
-            {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
-            <div>
+        <Material>
+            <div className={style}>
+                {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
                 <Subtitle>{title}</Subtitle>
                 {children}
             </div>
-        </div>
+        </Material>
     );
 };
 
-class Skills extends Component {
+class Projects extends Component {
     render() {
         const style = css`
+            padding: 200px 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-top: 50px;
             max-width: 1024px;
             margin: 0 auto;
         `;
 
         const gridStyle = css`
             display: grid;
-            grid-template-columns: 45% 45%;
-            grid-column-gap: 10%;
+            grid-template-columns: 28% 28% 28%;
+            grid-column-gap: 7.99%;
             grid-row-gap: 50px;
             width: 100%;
             margin-top: 50px;
@@ -52,66 +56,49 @@ class Skills extends Component {
 
         return (
             <div className={style}>
-                <Title>
-                    I have some <Accent>skills</Accent>.
-                </Title>
                 <Appear>
+                    <Title>
+                        And I run some <Accent>projects</Accent> of my own.
+                    </Title>
                     <div className={gridStyle}>
-                        <Material>
-                            <Skill
-                                imgSrc="img/gametheory.png"
-                                title=" Game Theory (economics)"
-                            >
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <p>
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat. Duis aute irure.
-                                </p>
-                            </Skill>
-                        </Material>
-                        <Material>
-                            <Skill
-                                imgSrc="img/python.png"
-                                title="Python development"
-                            >
-                                <p>
-                                    Dolor in reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur.
-                                    Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum.
-                                </p>
-                            </Skill>
-                        </Material>
-                        <Material>
-                            <Skill
-                                imgSrc="img/maths.png"
-                                title="Mathematics"
-                            >
-                                <p>
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat. Duis aute irure.
-                                </p>
-                            </Skill>
-                        </Material>
-                        <Material>
-                            <Skill
-                                imgSrc="img/javascript.png"
-                                title="JavaScript development"
-                            >
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </Skill>
-                        </Material>
+                        <Project
+                            title="This portfolio!"
+                            imgSrc="img/project-blog.png"
+                        >
+                            <p>This is my first full-blown personal website!</p>
+                            <p>
+                                It is made using React.js and using the Emotion
+                                CSS-in-JS library, allowing me to quickly create
+                                base components and iterate over many (many,
+                                many) designs.
+                            </p>
+                        </Project>
+                        <Project
+                            title="React-Prevention 🚫"
+                            imgSrc="img/project-prevention.png"
+                        >
+                            <p>
+                                A little library that prevents default and stops
+                                propagation in JavaScript in a nifty way.
+                            </p>
+                            <p>
+                                What better way to understand a concept than by
+                                overengineering a solution for it? And it
+                                actually works great. I swear.
+                            </p>
+                        </Project>
+                        <Project
+                            title="Sudoku in React.js"
+                            imgSrc="img/project-sudoku.png"
+                        >
+                            <p>My first React.js application!</p>
+                            <p>
+                                I love playing sudoku and kakuro, so I decided
+                                it would be a good starting point to try
+                                developing solvers for each along with a
+                                graphical interface.
+                            </p>
+                        </Project>
                     </div>
                 </Appear>
             </div>
@@ -119,4 +106,4 @@ class Skills extends Component {
     }
 }
 
-export default Skills;
+export default Projects;

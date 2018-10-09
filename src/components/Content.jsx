@@ -3,6 +3,7 @@ import Section from "./Section";
 import Myself from "./Myself";
 import Skills from "./Skills";
 import Jobs from "./Jobs";
+import Projects from "./Projects";
 import { colors } from "./../constants";
 
 class Content extends Component {
@@ -21,6 +22,9 @@ class Content extends Component {
                 </Section>
                 <Section key="jobs" backgroundColor={colors.deepDark}>
                     <Jobs />
+                </Section>
+                <Section key="projects" backgroundColor={colors.deepDark}>
+                    <Projects />
                 </Section>
             </div>
         );
