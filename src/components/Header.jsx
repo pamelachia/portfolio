@@ -32,26 +32,38 @@ class Header extends Component {
             list-style: none;
             display: flex;
             flex-grow: 1;
+            align-items: center;
+            height: 60%;
         `;
 
         const liStyle = css`
             display: flex;
             flex-direction: row;
             height: 100%;
-            font-size: 23px;
             align-items: center;
-            flex-grow: 1;
+            margin-right: 25px;
+            font-size: 18px;
+        `;
+
+        const titleStyle = css`
+            font-size: 23px;
+            border-right: 1px solid ${colors.maastrichtBlue};
+            flex-grow: 0;
+            padding-right: 25px;
         `;
 
         const edgeLiStyle = css`
-            font-weight: 500;
             justify-content: flex-end;
+            flex-grow: 1;
+            margin-right: 0;
         `;
 
         const contactStyle = css`
             color: ${colors.maastrichtBlue};
-            margin-left: 20px;
+            margin-left: 10px;
             transition: color 0.5s ease;
+            font-weight: 500;
+            font-size: 23px;
             :hover {
                 color: ${colors.babyPowder};
             }
@@ -72,7 +84,10 @@ class Header extends Component {
         return (
             <header className={style}>
                 <menu className={menuStyle}>
-                    <li className={liStyle}>Pamela Chia</li>
+                    <li className={cx(liStyle, titleStyle)}>Pamela Chia</li>
+                    <li className={liStyle}>About</li>
+                    <li className={liStyle}>Projects</li>
+                    <li className={liStyle}>Contacts</li>
                     <li className={cx(liStyle, edgeLiStyle)}>
                         <div>
                             <a
@@ -108,9 +123,5 @@ class Header extends Component {
         );
     }
 }
-
-Header.propTypes = {
-    activeKey: PropTypes.string
-};
 
 export default Header;
