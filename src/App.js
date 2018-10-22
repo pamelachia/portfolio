@@ -6,6 +6,14 @@ import { colors, fontFamilies } from "./constants";
 import Content from "./components/Content";
 
 class App extends Component {
+    state = {
+        scrolledTo: ""
+    };
+
+    handleScrollTo = key => {
+        this.setState({ scrolledTo: key });
+    };
+
     render() {
         const containerStyle = css`
             background-color: ${colors.deepDark};
@@ -18,8 +26,8 @@ class App extends Component {
 
         return (
             <div className={containerStyle}>
-                <Header />
-                <Content />
+                <Header onScollTo={this.handleScrollTo} />
+                <Content scrolledTo={this.state.scrolledTo} />
             </div>
         );
     }

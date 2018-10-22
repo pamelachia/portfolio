@@ -5,10 +5,19 @@ import { css } from "emotion";
 class Section extends Component {
     static propTypes = {
         children: PropTypes.node.isRequired,
-        outer: PropTypes.node,
+        name: PropTypes.string,
         backgroundColor: PropTypes.string.isRequired,
-        fillWindowHeight: PropTypes.bool
+        fillWindowHeight: PropTypes.bool,
+        scrolledTo: PropTypes.string
     };
+
+    componentDidUpdate() {
+        if (this.props.name === this.props.scrolledTo) {
+            this.el.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    }
 
     render() {
         const style = css`
@@ -16,7 +25,11 @@ class Section extends Component {
             height: ${this.props.fillWindowHeight ? "100vh" : "auto"};
         `;
 
-        return <section className={style}>{this.props.children}</section>;
+        return (
+            <section ref={el => (this.el = el)} className={style}>
+                {this.props.children}
+            </section>
+        );
     }
 }
 
