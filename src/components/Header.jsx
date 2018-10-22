@@ -36,11 +36,17 @@ const menuStyle = css`
 
 const liStyle = css`
     display: flex;
+    item-align: center;
     flex-direction: row;
     height: 100%;
     align-items: center;
     margin-right: 25px;
     font-size: 18px;
+    transition: color 0.5s ease;
+    cursor: pointer;
+    :hover {
+        color: ${colors.maastrichtBlue};
+    }
 `;
 
 const titleStyle = css`
@@ -57,6 +63,7 @@ const edgeLiStyle = css`
 `;
 
 const contactStyle = css`
+    height: 100%;
     color: ${colors.maastrichtBlue};
     margin-left: 10px;
     transition: color 0.5s ease;
@@ -67,17 +74,25 @@ const contactStyle = css`
     }
 `;
 
-const iconStyle = css({
-    textAlign: "right",
-    marginRight: "15px",
-    position: "relative",
-    top: "1px",
-    transition: "color 0.5s ease",
-    color: colors.maastrichtBlue,
-    ":hover": {
-        color: colors.babyPowder
+const contactClickAreaStyle = css`
+    display: flex;
+    height: 100%;
+    align-items: center;
+`;
+
+const iconStyle = css`
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-right: 15px;
+    position: relative;
+    top: 1px;
+    transition: color 0.5s ease;
+    color: ${colors.maastrichtBlue};
+    :hover {
+        color: ${colors.babyPowder};
     }
-});
+`;
 
 class Header extends Component {
     static propTypes = {
@@ -90,7 +105,12 @@ class Header extends Component {
         return (
             <header className={style}>
                 <menu className={menuStyle}>
-                    <li className={cx(liStyle, titleStyle)}>Pamela Chia</li>
+                    <li
+                        onClick={this.handleOnScrollTo("about")}
+                        className={cx(liStyle, titleStyle)}
+                    >
+                        Pamela Chia
+                    </li>
                     <li
                         onClick={this.handleOnScrollTo("about")}
                         className={liStyle}
@@ -110,32 +130,25 @@ class Header extends Component {
                         Contacts
                     </li>
                     <li className={cx(liStyle, edgeLiStyle)}>
-                        <div>
-                            <a
-                                href="https://twitter.com/chibi_pammy"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className={iconStyle}
-                            >
-                                <TwitterIcon height={16} fill="currentColor" />
-                            </a>
-                        </div>
-                        <div>
-                            <a
-                                href="https://www.instagram.com/chibipammy/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className={iconStyle}
-                            >
-                                <InstagramIcon
-                                    height={16}
-                                    fill="currentColor"
-                                />
-                            </a>
-                        </div>
+                        <a
+                            href="https://twitter.com/chibi_pammy"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={iconStyle}
+                        >
+                            <TwitterIcon height={16} fill="currentColor" />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/chibipammy/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={iconStyle}
+                        >
+                            <InstagramIcon height={16} fill="currentColor" />
+                        </a>
                         <div className={contactStyle}>
                             <Copier>
-                                <span>Contact Me</span>
+                                <div className={contactClickAreaStyle}>Contact Me</div>
                             </Copier>
                         </div>
                     </li>
