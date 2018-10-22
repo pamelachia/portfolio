@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { css } from "emotion";
 import Title from "./Section/Title";
 import Subtitle from "./Section/Subtitle";
-import Material from "./Section/Material";
+import Card from "./Section/Card";
 import Appear from "./Appear";
 import Accent from "./Accent";
 
@@ -57,7 +57,7 @@ class Jobs extends Component {
                         I <Accent>work</Accent> with amazing companies.
                     </Title>
                     <div className={gridStyle}>
-                        <Material>
+                        <Card>
                             <Job
                                 imgSrc="img/vase.png"
                                 title="Vase.ai (Data Analyst & Fullstack Developer)"
@@ -80,8 +80,8 @@ class Jobs extends Component {
                                     mollit anim id est laborum.
                                 </p>
                             </Job>
-                        </Material>
-                        <Material>
+                        </Card>
+                        <Card>
                             <Job
                                 imgSrc="img/ace.png"
                                 title="Acter Carton Enterprise (Family-ran Business)"
@@ -104,7 +104,7 @@ class Jobs extends Component {
                                     ex ea commodo consequat. Duis aute irure.
                                 </p>
                             </Job>
-                        </Material>
+                        </Card>
                     </div>
                 </Appear>
             </div>

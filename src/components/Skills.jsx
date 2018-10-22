@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { css } from "emotion";
 import Title from "./Section/Title";
 import Subtitle from "./Section/Subtitle";
-import Material from "./Section/Material";
+import Card from "./Section/Card";
 import Appear from "./Appear";
 import Accent from "./Accent";
 
@@ -58,7 +58,7 @@ class Skills extends Component {
                         I have some <Accent>skills</Accent>.
                     </Title>
                     <div className={gridStyle}>
-                        <Material>
+                        <Card>
                             <Skill
                                 imgSrc="img/gametheory.png"
                                 title=" Game Theory (economics)"
@@ -74,8 +74,8 @@ class Skills extends Component {
                                     ex ea commodo consequat. Duis aute irure.
                                 </p>
                             </Skill>
-                        </Material>
-                        <Material>
+                        </Card>
+                        <Card>
                             <Skill
                                 imgSrc="img/python.png"
                                 title="Python development"
@@ -88,8 +88,8 @@ class Skills extends Component {
                                     mollit anim id est laborum.
                                 </p>
                             </Skill>
-                        </Material>
-                        <Material>
+                        </Card>
+                        <Card>
                             <Skill
                                 imgSrc="img/maths.png"
                                 title="Mathematics"
@@ -100,8 +100,8 @@ class Skills extends Component {
                                     ex ea commodo consequat. Duis aute irure.
                                 </p>
                             </Skill>
-                        </Material>
-                        <Material>
+                        </Card>
+                        <Card>
                             <Skill
                                 imgSrc="img/javascript.png"
                                 title="JavaScript development"
@@ -112,7 +112,7 @@ class Skills extends Component {
                                     incididunt ut labore et dolore magna aliqua.
                                 </p>
                             </Skill>
-                        </Material>
+                        </Card>
                     </div>
                 </Appear>
             </div>

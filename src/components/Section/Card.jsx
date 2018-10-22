@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css } from "emotion";
 import { fontFamilies } from "../../styles";
 
-class Material extends Component {
+class Card extends Component {
     static propTypes = {
         children: PropTypes.node.isRequired
     };
@@ -18,4 +18,4 @@ class Material extends Component {
     }
 }
 
-export default Material;
+export default Card;

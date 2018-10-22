@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { css } from "emotion";
 import Title from "./Section/Title";
 import Subtitle from "./Section/Subtitle";
-import Material from "./Section/Material";
+import Card from "./Section/Card";
 import Appear from "./Appear";
 import Accent from "./Accent";
 import { colors } from "../styles";
@@ -24,13 +24,13 @@ const Project = ({ title, imgSrc, children }) => {
     `;
 
     return (
-        <Material>
+        <Card>
             <div className={style}>
                 {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
                 <Subtitle>{title}</Subtitle>
                 {children}
             </div>
-        </Material>
+        </Card>
     );
 };
 
