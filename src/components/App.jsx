@@ -2,7 +2,7 @@ import "../App.css";
 import React, { Component } from "react";
 import { css } from "emotion";
 import Header from "./Header";
-import { colors, fontFamilies } from "../constants";
+import { colors, fontFamilies } from "../styles";
 import Section from "./Section";
 import Myself from "./Myself";
 import Skills from "./Skills";

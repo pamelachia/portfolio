@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { css, keyframes } from "emotion";
 import Title from "./Section/Title";
 import Subtitle from "./Section/Subtitle";
-import { colors, fontFamilies } from "./../constants";
+import { colors, fontFamilies } from "../styles";
 import Accent from "./Accent";
 import Scroller from "./Scroller";
 

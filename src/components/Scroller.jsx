@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { css, keyframes } from "emotion";
-import { colors } from "./../constants";
+import { colors } from "../styles";
 
 const scroll = keyframes`
     from {

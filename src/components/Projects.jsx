@@ -5,7 +5,7 @@ import Subtitle from "./Section/Subtitle";
 import Material from "./Section/Material";
 import Appear from "./Appear";
 import Accent from "./Accent";
-import { colors } from "./../constants";
+import { colors } from "../styles";
 
 const Project = ({ title, imgSrc, children }) => {
     const style = css`

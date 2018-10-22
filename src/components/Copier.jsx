@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, keyframes } from "emotion";
 import CopyToClipboard from "react-copy-to-clipboard";
-import { colors, fontFamilies } from "./../constants";
+import { colors, fontFamilies } from "../styles";
 
 const drop = keyframes`
     from {
