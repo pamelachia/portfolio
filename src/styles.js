@@ -1,3 +1,5 @@
+import { css } from "emotion";
+
 export const colors = {
     black: "#000000",
     deepDark: "#131313",
@@ -18,5 +20,23 @@ export const colors = {
 export const fontFamilies = {
     openSans: `"Open Sans", sans-serif`,
     satisfy: `Satisfy, sans-serif`,
-    quicksand: `Quicksand, sans-serif`,
+    quicksand: `Quicksand, sans-serif`
 };
+
+const breakpoints = {
+    small: 480,
+    //medium: 768,
+    large: 960
+};
+
+export const mq = Object.keys(breakpoints).reduce((accumulator, label) => {
+    let prefix = typeof breakpoints[label] === "string" ? "" : "max-width:";
+    let suffix = typeof breakpoints[label] === "string" ? "" : "px";
+    accumulator[label] = cls =>
+        css`
+            @media (${prefix + breakpoints[label] + suffix}) {
+                ${cls};
+            }
+        `;
+    return accumulator;
+}, {});

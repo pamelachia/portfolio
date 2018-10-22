@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import { colors, fontFamilies } from "../styles";
+import { colors, fontFamilies, mq } from "../styles";
 import InstagramIcon from "../svg-components/InstagramIcon";
 import TwitterIcon from "../svg-components/TwitterIcon";
 import Copier from "./Copier";
@@ -24,7 +24,7 @@ const style = css`
 `;
 
 const menuStyle = css`
-    margin: 0 auto;
+    margin: 0 20px;
     padding: 0; /* menu is an "ul", must get rid of left margin */
     max-width: 1024px;
     list-style: none;
@@ -47,6 +47,10 @@ const liStyle = css`
     :hover {
         color: ${colors.maastrichtBlue};
     }
+
+    ${mq.small(css`
+        display: none;
+    `)};
 `;
 
 const titleStyle = css`
@@ -54,12 +58,20 @@ const titleStyle = css`
     border-right: 1px solid ${colors.maastrichtBlue};
     flex-grow: 0;
     padding-right: 25px;
+
+    ${mq.small(css`
+        display: flex;
+    `)};
 `;
 
 const edgeLiStyle = css`
     justify-content: flex-end;
     flex-grow: 1;
     margin-right: 0;
+
+    ${mq.small(css`
+        display: flex;
+    `)};
 `;
 
 const contactStyle = css`
@@ -148,7 +160,9 @@ class Header extends Component {
                         </a>
                         <div className={contactStyle}>
                             <Copier>
-                                <div className={contactClickAreaStyle}>Contact Me</div>
+                                <div className={contactClickAreaStyle}>
+                                    Contact Me
+                                </div>
                             </Copier>
                         </div>
                     </li>
