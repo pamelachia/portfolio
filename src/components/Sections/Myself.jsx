@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { css, keyframes } from "emotion";
-import Title from "./Section/Title";
-import Subtitle from "./Section/Subtitle";
-import { colors, fontFamilies } from "../styles";
-import Accent from "./Accent";
-import Scroller from "./Scroller";
+import Title from "../Section/Title";
+import Subtitle from "../Section/Subtitle";
+import { colors, fontFamilies } from "../../styles";
+import Accent from "../Cards/Accent";
+import Scroller from "../Scroller";
 
 const AVATAR_SIZE = 300;
 

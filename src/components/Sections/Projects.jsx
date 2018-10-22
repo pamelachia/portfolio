@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { css } from "emotion";
-import Title from "./Section/Title";
-import Subtitle from "./Section/Subtitle";
-import Card from "./Section/Card";
-import Appear from "./Appear";
-import Accent from "./Accent";
-import { colors } from "../styles";
+import Title from "../Section/Title";
+import Subtitle from "../Section/Subtitle";
+import Card from "../Section/Card";
+import Appear from "../Appear";
+import Accent from "../Cards/Accent";
+import { colors } from "../../styles";
 
 const Project = ({ title, imgSrc, children }) => {
     const style = css`

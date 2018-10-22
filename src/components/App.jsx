@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import { css } from "emotion";
 import Header from "./Header";
 import { colors, fontFamilies } from "../styles";
-import Section from "./Section";
-import Myself from "./Myself";
-import Skills from "./Skills";
-import Jobs from "./Jobs";
-import Projects from "./Projects";
+import Section from "./Section/Section";
+import Myself from "./Sections/Myself";
+import Skills from "./Sections/Skills";
+import Jobs from "./Sections/Jobs";
+import Projects from "./Sections/Projects";
 
 class App extends Component {
     state = {

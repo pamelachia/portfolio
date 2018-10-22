@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { css } from "emotion";
-import Title from "./Section/Title";
-import Subtitle from "./Section/Subtitle";
-import Card from "./Section/Card";
-import Appear from "./Appear";
-import Accent from "./Accent";
+import Title from "../Section/Title";
+import Subtitle from "../Section/Subtitle";
+import Card from "../Section/Card";
+import Appear from "../Appear";
+import Accent from "../Cards/Accent";
 
 const Job = ({ title, imgSrc, children }) => {
     const style = css`
