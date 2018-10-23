@@ -118,10 +118,6 @@ class Myself extends Component {
             padding-left: 2px;
         `;
 
-        const scrollOpacityStyle = css`
-            opacity: ${this.state.iconScrollOpacity};
-        `;
-
         return (
             <div className={wrapperStyle}>
                 <div className={style}>
@@ -150,7 +146,7 @@ class Myself extends Component {
                     </div>
                     <Avatar />
                 </div>
-                <div className={scrollOpacityStyle}>
+                <div style={{opacity: this.state.iconScrollOpacity}}>
                     Scroll to learn more about me.
                     <Scroller />
                 </div>
