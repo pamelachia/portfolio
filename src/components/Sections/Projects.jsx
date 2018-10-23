@@ -15,7 +15,7 @@ const Project = ({ title, imgSrc, children }) => {
 
     const imgStyle = css`
         flex-shrink: 0;
-        width: 96%;
+        width: 95%; /* 1% less to accomodate border */
         height: 100%;
         margin: 10px 0;
         margin-right: 5%;
