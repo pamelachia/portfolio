@@ -146,7 +146,7 @@ class Myself extends Component {
                     </div>
                     <Avatar />
                 </div>
-                <div style={{opacity: this.state.iconScrollOpacity}}>
+                <div style={{ opacity: this.state.iconScrollOpacity }}>
                     Scroll to learn more about me.
                     <Scroller />
                 </div>
