@@ -7,6 +7,7 @@ import Accent from "../Cards/Accent";
 import Scroller from "../Scroller";
 
 const AVATAR_SIZE = 300;
+const MOBILE_AVATAR_SIZE = 200;
 
 const Avatar = () => {
     const style = css`
@@ -16,6 +17,12 @@ const Avatar = () => {
         height: ${AVATAR_SIZE}px;
         border-radius: ${AVATAR_SIZE / 6}px;
         overflow: hidden;
+
+        ${mq.small(css`
+            width: ${MOBILE_AVATAR_SIZE}px;
+            height: ${MOBILE_AVATAR_SIZE}px;
+            border-radius: ${MOBILE_AVATAR_SIZE / 6}px;
+        `)};
     `;
 
     const wrapperStyle = css`
@@ -26,6 +33,11 @@ const Avatar = () => {
         display: inline-block;
         overflow: hidden;
         flex-shrink: 0;
+
+        ${mq.small(css`
+            padding: 5px;
+            border-radius: ${MOBILE_AVATAR_SIZE / 5}px;
+        `)};
     `;
 
     return (
@@ -74,6 +86,11 @@ class Myself extends Component {
             justify-content: center;
             max-width: 1024px;
             margin: 0 auto;
+
+            ${mq.small(css`
+                height: auto;
+                margin: 0 20px;
+            `)};
         `;
 
         const style = css`
@@ -82,6 +99,7 @@ class Myself extends Component {
             align-items: center;
             justify-content: center;
             padding-top: 50px;
+            width: 100%;
 
             ${mq.small(css`
                 flex-direction: column;
@@ -89,14 +107,14 @@ class Myself extends Component {
         `;
 
         const textStyle = css`
-            margin-right: 150px;
+            flex-grow: 1;
             animation-duration: 1.5s;
             animation-name: ${scroll};
         `;
 
         const satisfyTextStyle = css`
             font-family: ${fontFamilies.satisfy};
-            font-size: 30px;
+            font-size: 1.4em;
             line-height: 22px;
             padding-left: 2px;
         `;
