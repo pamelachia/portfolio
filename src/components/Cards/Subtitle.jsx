@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { fontFamilies } from "../../styles";
+import { fontFamilies, mq } from "../../styles";
 
 class Subtitle extends Component {
     static propTypes = {
@@ -14,6 +14,10 @@ class Subtitle extends Component {
             font-family: ${fontFamilies.quicksand};
             font-weight: 400;
             margin-bottom: 11px;
+
+            ${mq.small(css`
+                font-size: 18px;
+            `)};
         `;
 
         return <div className={style}>{this.props.children}</div>;

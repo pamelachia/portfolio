@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { css, keyframes } from "emotion";
-import Title from "../Section/Title";
-import Subtitle from "../Section/Subtitle";
-import { colors, fontFamilies } from "../../styles";
+import Title from "../Cards/Title";
+import Subtitle from "../Cards/Subtitle";
+import { colors, fontFamilies, mq } from "../../styles";
 import Accent from "../Cards/Accent";
 import Scroller from "../Scroller";
 
@@ -82,6 +82,10 @@ class Myself extends Component {
             align-items: center;
             justify-content: center;
             padding-top: 50px;
+
+            ${mq.small(css`
+                flex-direction: column;
+            `)};
         `;
 
         const textStyle = css`

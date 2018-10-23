@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { css } from "emotion";
 import Header from "./Header";
 import { colors, fontFamilies } from "../styles";
-import Section from "./Section/Section";
+import Section from "./Section";
 import Myself from "./Sections/Myself";
 import Skills from "./Sections/Skills";
 import Jobs from "./Sections/Jobs";

@@ -7,6 +7,7 @@ import TwitterIcon from "../svg-components/TwitterIcon";
 import Copier from "./Copier";
 
 const HEADER_HEIGHT = 70;
+const MOBILE_HEADER_HEIGHT = 40;
 
 const style = css`
     position: fixed;
@@ -21,6 +22,10 @@ const style = css`
     align-items: center;
     justify-content: center;
     font-family: ${fontFamilies.quicksand};
+
+    ${mq.small(css`
+        height: ${MOBILE_HEADER_HEIGHT}px;
+    `)};
 `;
 
 const menuStyle = css`
@@ -50,6 +55,7 @@ const liStyle = css`
 
     ${mq.small(css`
         display: none;
+        font-size: 16px;
     `)};
 `;
 
@@ -84,6 +90,10 @@ const contactStyle = css`
     :hover {
         color: ${colors.babyPowder};
     }
+
+    ${mq.small(css`
+        font-size: 16px;
+    `)};
 `;
 
 const contactClickAreaStyle = css`
