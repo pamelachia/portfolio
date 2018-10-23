@@ -23,6 +23,7 @@ class Section extends Component {
         const style = css`
             background-color: ${this.props.backgroundColor};
             height: ${this.props.fillWindowHeight ? "100vh" : "auto"};
+            margin: 0 20px;
         `;
 
         return (

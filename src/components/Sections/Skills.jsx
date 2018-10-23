@@ -5,6 +5,7 @@ import Subtitle from "../Cards/Subtitle";
 import Card from "../Cards/Card";
 import Appear from "../Appear";
 import Accent from "../Cards/Accent";
+import { mq } from "../../styles";
 
 const Skill = ({ title, imgSrc, children }) => {
     const style = css`
@@ -49,6 +50,10 @@ class Skills extends Component {
             grid-row-gap: 50px;
             width: 100%;
             margin-top: 50px;
+
+            ${mq.small(css`
+                grid-template-columns: 100%;
+            `)};
         `;
 
         return (
@@ -90,10 +95,7 @@ class Skills extends Component {
                             </Skill>
                         </Card>
                         <Card>
-                            <Skill
-                                imgSrc="img/maths.png"
-                                title="Mathematics"
-                            >
+                            <Skill imgSrc="img/maths.png" title="Mathematics">
                                 <p>
                                     Ut enim ad minim veniam, quis nostrud
                                     exercitation ullamco laboris nisi ut aliquip

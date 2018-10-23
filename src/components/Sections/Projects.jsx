@@ -6,6 +6,7 @@ import Card from "../Cards/Card";
 import Appear from "../Appear";
 import Accent from "../Cards/Accent";
 import { colors } from "../../styles";
+import { mq } from "../../styles";
 
 const Project = ({ title, imgSrc, children }) => {
     const style = css`
@@ -52,6 +53,10 @@ class Projects extends Component {
             grid-row-gap: 50px;
             width: 100%;
             margin-top: 50px;
+
+            ${mq.small(css`
+                grid-template-columns: 100%;
+            `)};
         `;
 
         return (

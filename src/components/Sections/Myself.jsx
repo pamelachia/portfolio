@@ -89,7 +89,6 @@ class Myself extends Component {
 
             ${mq.small(css`
                 height: auto;
-                margin: 0 20px;
             `)};
         `;
 
