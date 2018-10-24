@@ -6,8 +6,9 @@ import Card from "../Cards/Card";
 import Appear from "../Appear";
 import Accent from "../Cards/Accent";
 import { mq } from "../../styles";
+import Copier from "../Copier";
 
-const Skill = ({ title, imgSrc, children }) => {
+const Contact = ({ title, imgSrc, children }) => {
     const style = css`
         display: flex;
         width: 100%;
@@ -22,16 +23,18 @@ const Skill = ({ title, imgSrc, children }) => {
 
     return (
         <div className={style}>
-            {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
-            <div>
-                <Subtitle>{title}</Subtitle>
-                {children}
-            </div>
+            <Card>
+                {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
+                <div>
+                    <Subtitle>{title}</Subtitle>
+                    {children}
+                </div>
+            </Card>
         </div>
     );
 };
 
-class Skills extends Component {
+class Contacts extends Component {
     render() {
         const style = css`
             padding: 150px 0;
@@ -60,61 +63,34 @@ class Skills extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        I have some <Accent>skills</Accent>.
+                        Do you want to <Accent>contact</Accent> me?
                     </Title>
+                    <Subtitle>
+                        Perhaps... you want to challenge me? Then, it can not be
+                        helped!
+                    </Subtitle>
                     <div className={gridStyle}>
-                        <Card>
-                            <Skill
-                                imgSrc="img/gametheory.png"
-                                title=" Game Theory (economics)"
-                            >
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <p>
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat. Duis aute irure.
-                                </p>
-                            </Skill>
-                        </Card>
-                        <Card>
-                            <Skill
-                                imgSrc="img/python.png"
-                                title="Python development"
-                            >
-                                <p>
-                                    Dolor in reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur.
-                                    Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum.
-                                </p>
-                            </Skill>
-                        </Card>
-                        <Card>
-                            <Skill imgSrc="img/maths.png" title="Mathematics">
-                                <p>
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat. Duis aute irure.
-                                </p>
-                            </Skill>
-                        </Card>
-                        <Card>
-                            <Skill
-                                imgSrc="img/javascript.png"
-                                title="JavaScript development"
-                            >
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </Skill>
-                        </Card>
+                        <Contact title="By Email">
+                            You can copy my email address by clicking{" "}
+                            <Copier>
+                                <span>
+                                    <Accent>this. ✨</Accent>
+                                </span>
+                            </Copier>
+                            <p>
+                                You can paste it into your favorite email
+                                client.
+                            </p>
+                        </Contact>
+                        <Contact title="By Phone">
+                            <p>
+                                UK number: +{69 - 25} ({5 - 5}){3189 + 4293}{" "}
+                                {1283 - 405} {2349 - 1930}
+                            </p>
+                            <p>
+                                This number will lead you to my personal mobile.
+                            </p>
+                        </Contact>
                     </div>
                 </Appear>
             </div>
@@ -122,4 +98,4 @@ class Skills extends Component {
     }
 }
 
-export default Skills;
+export default Contacts;

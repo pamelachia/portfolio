@@ -8,6 +8,7 @@ import Myself from "./Sections/Myself";
 import Skills from "./Sections/Skills";
 import Jobs from "./Sections/Jobs";
 import Projects from "./Sections/Projects";
+import Contacts from "./Sections/Contacts";
 
 class App extends Component {
     state = {
@@ -60,6 +61,13 @@ class App extends Component {
                         backgroundColor={colors.deepDark}
                     >
                         <Projects />
+                    </Section>
+                    <Section
+                        name="contacts"
+                        scrolledTo={this.state.scrolledTo}
+                        backgroundColor={colors.deepDark}
+                    >
+                        <Contacts />
                     </Section>
                 </div>
             </div>
