@@ -74,7 +74,12 @@ class Contacts extends Component {
                             You can copy my email address by clicking{" "}
                             <Copier>
                                 <span>
-                                    <Accent>this. ✨</Accent>
+                                    <Accent>
+                                        this.{" "}
+                                        <span role="img" aria-label="Stars">
+                                            ✨
+                                        </span>
+                                    </Accent>
                                 </span>
                             </Copier>
                             <p>

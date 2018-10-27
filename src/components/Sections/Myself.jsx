@@ -136,7 +136,11 @@ class Myself extends Component {
                                     pretty words
                                 </span>{" "}
                                 <br />
-                                and mathematical magic ✨.
+                                and mathematical magic{" "}
+                                <span role="img" aria-label="Stars">
+                                    ✨
+                                </span>
+                                .
                             </p>
                             <p>
                                 I currently work as at{" "}
