@@ -4,7 +4,7 @@ import Title from "../Cards/Title";
 import Subtitle from "../Cards/Subtitle";
 import { colors, fontFamilies, mq } from "../../styles";
 import Accent from "../Cards/Accent";
-import Scroller from "../Scroller";
+import ScrollerAnimated from "../ScrollerAnimated";
 
 const AVATAR_SIZE = 300;
 const MOBILE_AVATAR_SIZE = 200;
@@ -48,25 +48,6 @@ const Avatar = () => {
 };
 
 class Myself extends Component {
-    state = {
-        iconScrollOpacity: 1
-    };
-
-    componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
-    }
-
-    handleScroll = () => {
-        // opacity 100% minus the % of one fourth of the height of the page
-        this.setState({
-            iconScrollOpacity: 1 - (window.scrollY / window.innerHeight) * 4
-        });
-    };
-
     render() {
         const scroll = keyframes`
             from {
@@ -150,10 +131,7 @@ class Myself extends Component {
                     </div>
                     <Avatar />
                 </div>
-                <div style={{ opacity: this.state.iconScrollOpacity }}>
-                    Scroll to learn more about me.
-                    <Scroller />
-                </div>
+                <ScrollerAnimated />
             </div>
         );
     }
