@@ -60,7 +60,7 @@ class Jobs extends Component {
                         <Card>
                             <Job
                                 imgSrc="img/vase.png"
-                                title="Vase.ai (Data Analyst & Fullstack Developer)"
+                                title="Vase.ai"
                             >
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur
@@ -84,7 +84,7 @@ class Jobs extends Component {
                         <Card>
                             <Job
                                 imgSrc="img/ace.png"
-                                title="Acter Carton Enterprise (Family-ran Business)"
+                                title="Acter Carton Enterprise (Family-run Business)"
                             >
                                 <p>
                                     Dolor in reprehenderit in voluptate velit

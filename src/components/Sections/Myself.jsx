@@ -108,24 +108,24 @@ class Myself extends Component {
                         </Title>
                         <Subtitle>
                             <p>
-                                I love taking on good challenges <br />
+                                I love taking on real challenges <br />
                                 and solving crazy-hard problems.
                             </p>
                             <p>
-                                I get way too excited over{" "}
+                                I tend to get way too excited over{" "}
                                 <span className={satisfyTextStyle}>
-                                    pretty words
+                                    beautiful writing
                                 </span>{" "}
                                 <br />
-                                and mathematical magic{" "}
+                                and mathematical elegance{" "}
                                 <span role="img" aria-label="Stars">
                                     ✨
                                 </span>
                                 .
                             </p>
                             <p>
-                                I currently work as at{" "}
-                                <Accent>Data Analyst</Accent> at Vase.ai.
+                                I currently work with all things <Accent>data</Accent> {" "}
+                                at Vase.ai.
                             </p>
                         </Subtitle>
                     </div>

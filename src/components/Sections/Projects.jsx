@@ -63,18 +63,18 @@ class Projects extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        And I run some <Accent>projects</Accent> of my own.
+                        I enjoy working on cool <Accent>projects</Accent>.
                     </Title>
                     <div className={gridStyle}>
                         <Project
-                            title="This portfolio!"
+                            title="This portfolio"
                             imgSrc="img/project-blog.png"
                         >
-                            <p>This is my first full-blown personal website!</p>
+                            <p>This is my first-ever personal website!</p>
                             <p>
-                                It is made using React.js and using the Emotion
-                                CSS-in-JS library, allowing me to quickly create
-                                base components and iterate over many (many,
+                                It is made using ReactJS and I use the Emotion
+                                CSS-in-JS library. I can quickly create base
+                                components and iterate over many (many,
                                 many) designs.
                             </p>
                         </Project>
@@ -93,14 +93,14 @@ class Projects extends Component {
                             </p>
                         </Project>
                         <Project
-                            title="Sudoku in React.js"
+                            title="Sudoku in ReactJS"
                             imgSrc="img/project-sudoku.png"
                         >
-                            <p>My first React.js application!</p>
+                            <p>My first ReactJS application!</p>
                             <p>
-                                I love playing sudoku and kakuro, so I decided
-                                it would be a good starting point to try
-                                developing solvers for each along with a
+                                I love playing sudoku and kakuro during my free time, so I decided
+                                it would be a good starting point to develop
+                                solvers for each along with a
                                 graphical interface.
                             </p>
                         </Project>

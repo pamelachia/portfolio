@@ -63,37 +63,39 @@ class Contacts extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        Do you want to <Accent>contact</Accent> me?
+                        Say <Accent>Hi</Accent> 
                     </Title>
                     <Subtitle>
-                        Perhaps... you want to challenge me? Then, it can not be
-                        helped!
+                        If you believe that we will both benefit from a chat, let's <Accent>talk</Accent>. I love making new friends!
                     </Subtitle>
                     <div className={gridStyle}>
                         <Contact title="By Email">
-                            You can copy my email address by clicking{" "}
+                            Click{" "}
                             <Copier>
                                 <span>
                                     <Accent>
-                                        this.{" "}
+                                        this{" "}
                                         <span role="img" aria-label="Stars">
                                             ✨
                                         </span>
                                     </Accent>
                                 </span>
                             </Copier>
+                            {" "}to copy my email address.
                             <p>
-                                You can paste it into your favorite email
-                                client.
+                                This is the best way to contact me. I reply within a day. 
+                            </p>
+                            <p>
+                                Also email me if you want me to send over my CV/resume.
                             </p>
                         </Contact>
                         <Contact title="By Phone">
                             <p>
-                                UK number: +{69 - 25} ({5 - 5}){3189 + 4293}{" "}
+                                UK number: +{69 - 25} ({5 - 5}) {3189 + 4293}{" "}
                                 {1283 - 405} {2349 - 1930}
                             </p>
                             <p>
-                                This number will lead you to my personal mobile.
+                                If you really must hear my voice, this number will lead you to my personal mobile.
                             </p>
                         </Contact>
                     </div>

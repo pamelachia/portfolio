@@ -4,6 +4,7 @@ import { css, cx } from "emotion";
 import { colors, fontFamilies, mq } from "../styles";
 import InstagramIcon from "../svg-components/InstagramIcon";
 import TwitterIcon from "../svg-components/TwitterIcon";
+import GoodreadsIcon from "../svg-components/GoodreadsIcon";
 import Copier from "./Copier";
 
 const HEADER_HEIGHT = 70;
@@ -149,9 +150,17 @@ class Header extends Component {
                         onClick={this.handleOnScrollTo("contacts")}
                         className={liStyle}
                     >
-                        Contacts
+                        Contact
                     </li>
                     <li className={cx(liStyle, edgeLiStyle)}>
+                        <a
+                            href="https://goodreads.com/pamelachia"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={iconStyle}
+                        >
+                            <GoodreadsIcon height={16} fill="currentColor"/>
+                        </a>
                         <a
                             href="https://twitter.com/chibi_pammy"
                             rel="noopener noreferrer"
