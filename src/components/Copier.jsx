@@ -66,7 +66,7 @@ class Copier extends Component {
                     position: relative;
                     cursor: pointer;
                     height: 100%;
-                    display: inline-block
+                    display: inline-block;
                 `}
             >
                 <CopyToClipboard
