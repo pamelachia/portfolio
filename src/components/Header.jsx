@@ -179,7 +179,7 @@ class Header extends Component {
                             <InstagramIcon height={16} fill="currentColor" />
                         </a>
                         <div className={contactStyle}>
-                            <Copier>
+                            <Copier side="right">
                                 <div className={contactClickAreaStyle}>
                                     Contact Me
                                 </div>

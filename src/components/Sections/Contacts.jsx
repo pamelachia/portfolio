@@ -76,7 +76,7 @@ class Contacts extends Component {
                     <div className={gridStyle}>
                         <Contact title="By Email">
                             Click{" "}
-                            <Copier>
+                            <Copier side="left">
                                 <span>
                                     <Accent>
                                         this{" "}

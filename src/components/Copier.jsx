@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, keyframes } from "emotion";
 import CopyToClipboard from "react-copy-to-clipboard";
-import { colors, fontFamilies } from "../styles";
+import { colors, fontFamilies, mq } from "../styles";
 
 const drop = keyframes`
     from {
@@ -22,7 +22,8 @@ const drop = keyframes`
 
 class Copier extends Component {
     static propTypes = {
-        children: PropTypes.node.isRequired
+        children: PropTypes.node.isRequired,
+        side: PropTypes.string.isRequired
     };
 
     state = {
@@ -42,7 +43,7 @@ class Copier extends Component {
         const popoverStyle = css`
             position: absolute;
             top: 200%;
-            right: 0;
+            ${this.props.side}: 0;
             width: 320px;
             height: 50px;
             font-size: 14px;
@@ -58,6 +59,14 @@ class Copier extends Component {
             border-radius: 10px;
             color: ${colors.babyPowder};
             font-family: ${fontFamilies.openSans};
+
+            ${mq.small(css`
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                left: 20px;
+                width: auto;
+            `)};
         `;
 
         return (
