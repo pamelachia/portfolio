@@ -35,7 +35,8 @@ const menuStyle = css`
     max-width: 1024px;
     list-style: none;
     display: flex;
-    flex-grow: 1;
+    /* flex-grow: 1; On IE11 this will make it look offset so we use width: 100% */
+    width: 100%;
     align-items: center;
     height: 60%;
 `;

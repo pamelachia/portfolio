@@ -12,6 +12,11 @@ const Contact = ({ title, imgSrc, children }) => {
     const style = css`
         display: flex;
         width: 100%;
+        margin-bottom: 50px;
+        /* IE11 hack, remove the margin if we can use grid gutter */
+        @supports (display: grid) {
+            margin-bottom: 0;
+        }
     `;
 
     const imgStyle = css`
@@ -63,7 +68,7 @@ class Contacts extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        Say <Accent>Hi</Accent> 
+                        Say <Accent>Hi</Accent>
                     </Title>
                     <Subtitle>
                         If you believe that we will both benefit from a chat, let's <Accent>talk</Accent>. I love making new friends!
@@ -83,7 +88,7 @@ class Contacts extends Component {
                             </Copier>
                             {" "}to copy my email address.
                             <p>
-                                This is the best way to contact me. I reply within a day. 
+                                This is the best way to contact me. I reply within a day.
                             </p>
                             <p>
                                 Also email me if you want me to send over my CV/resume.

@@ -34,9 +34,6 @@ class Jobs extends Component {
     render() {
         const style = css`
             padding: 150px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             max-width: 1024px;
             margin: 0 auto;
         `;

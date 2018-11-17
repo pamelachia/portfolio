@@ -11,6 +11,11 @@ const Skill = ({ title, imgSrc, children }) => {
     const style = css`
         display: flex;
         width: 100%;
+        margin-bottom: 50px;
+        /* IE11 hack, remove the margin if we can use grid gutter */
+        @supports (display: grid) {
+            margin-bottom: 0;
+        }
     `;
 
     const imgStyle = css`
@@ -35,10 +40,6 @@ class Skills extends Component {
     render() {
         const style = css`
             padding: 150px 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             max-width: 1024px;
             margin: 0 auto;
         `;

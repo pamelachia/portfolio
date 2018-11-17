@@ -11,11 +11,17 @@ import { mq } from "../../styles";
 const Project = ({ title, imgSrc, children }) => {
     const style = css`
         width: 100%;
+        margin-bottom: 80px;
+        /* IE11 hack, remove the margin if we can use grid gutter */
+        @supports (display: grid) {
+            margin-bottom: 0;
+        }
     `;
 
     const imgStyle = css`
         flex-shrink: 0;
         width: 95%; /* 1% less to accomodate border */
+        max-width: 400px; /* IE11 limit width so it doesn't get too big out of a grid */
         height: 100%;
         margin: 10px 0;
         margin-right: 5%;
@@ -39,9 +45,6 @@ class Projects extends Component {
     render() {
         const style = css`
             padding: 150px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             max-width: 1024px;
             margin: 0 auto;
         `;
