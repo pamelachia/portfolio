@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { css, keyframes } from "emotion";
 import Title from "../Cards/Title";
 import Subtitle from "../Cards/Subtitle";
-import { colors, fontFamilies, mq } from "../../styles";
+import { colors, mq } from "../../styles";
 import Accent from "../Cards/Accent";
 import ScrollerAnimated from "../ScrollerAnimated";
 
@@ -92,13 +92,6 @@ class Myself extends Component {
             animation-name: ${scroll};
         `;
 
-        const satisfyTextStyle = css`
-            font-family: ${fontFamilies.satisfy};
-            font-size: 1.4em;
-            line-height: 22px;
-            padding-left: 2px;
-        `;
-
         return (
             <div className={wrapperStyle}>
                 <div className={style}>
@@ -111,24 +104,13 @@ class Myself extends Component {
                                 I love taking on real challenges <br />
                                 and solving crazy-hard problems.
                             </p>
-                            {/* <p>
-                                I tend to get way too excited over{" "}
-                                <span className={satisfyTextStyle}>
-                                    beautiful writing
-                                </span>{" "}
-                                <br />
-                                and mathematical elegance{" "}
-                                <span role="img" aria-label="Stars">
-                                    ✨
-                                </span>
-                                .
-                            </p> */}
                             <p>
-                                Currently, I am working with all things <Accent>data</Accent> {" "}
-                                at Vase.ai.
+                                Currently, I am working with all things{" "}
+                                <Accent>data</Accent> at Vase.ai.
                             </p>
                             <p>
-                                <Accent>Let me know</Accent> if you want me to send over my CV/resume.
+                                <Accent>Let me know</Accent> if you want me to
+                                send over my CV/resume.
                             </p>
                         </Subtitle>
                     </div>

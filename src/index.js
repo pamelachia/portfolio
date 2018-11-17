@@ -11,12 +11,7 @@ smoothscroll.polyfill();
 
 WebFont.load({
     google: {
-        families: [
-            "Open Sans:300,400,800",
-            "Satisfy:400",
-            "Quicksand:400,500",
-            "sans-serif"
-        ]
+        families: ["Open Sans:300,400,800", "Quicksand:400,500", "sans-serif"]
     }
 });
 
