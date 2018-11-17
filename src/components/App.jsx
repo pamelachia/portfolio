@@ -6,7 +6,6 @@ import { colors, fontFamilies } from "../styles";
 import Section from "./Section";
 import Myself from "./Sections/Myself";
 import Skills from "./Sections/Skills";
-import Jobs from "./Sections/Jobs";
 import Projects from "./Sections/Projects";
 import Contacts from "./Sections/Contacts";
 
@@ -47,13 +46,6 @@ class App extends Component {
                         backgroundColor={colors.deepDark}
                     >
                         <Skills />
-                    </Section>
-                    <Section
-                        name="jobs"
-                        scrolledTo={this.state.scrolledTo}
-                        backgroundColor={colors.deepDark}
-                    >
-                        <Jobs />
                     </Section>
                     <Section
                         name="projects"
