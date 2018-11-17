@@ -61,7 +61,7 @@ class Skills extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        I have some <Accent>skills</Accent>.
+                        My <Accent>skills</Accent>.
                     </Title>
                     <div className={gridStyle}>
                         <Card>
@@ -70,14 +70,10 @@ class Skills extends Component {
                                 title=" Game Theory (economics)"
                             >
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
+                                    Experienced in applying a broad range of game theoretic models to business problems and real-world situations.
                                 </p>
                                 <p>
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat. Duis aute irure.
+                                    I read game theory publications and books as a hobby, and took many game theory modules in university. All this allows me to bring new perspectives to the table.
                                 </p>
                             </Skill>
                         </Card>
@@ -87,20 +83,23 @@ class Skills extends Component {
                                 title="Python development"
                             >
                                 <p>
-                                    Dolor in reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur.
-                                    Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum.
+                                    Good working knowledge of Python. Have written Python scripts (VS Code) for data cleaning, data transforming, and data-related algorithms for SQL and MongoDB databases.
+                                </p>
+                                <p>
+                                    Use Jupyter Notebook for exploratory analysis and testing a range of data visualisations I want to use for projects.
                                 </p>
                             </Skill>
                         </Card>
                         <Card>
-                            <Skill imgSrc="img/maths.png" title="Mathematics">
+                            <Skill imgSrc="img/maths.png" title="Mathematics and Statistics">
                                 <p>
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat. Duis aute irure.
+                                    Comfortable with formal mathematics and statistics concepts.
+                                </p>
+                                <p>
+                                    I developed proofs for problems, created mathematically complete algorithms for certain projects, and consistently test statistical assumptions when using models based on <Accent>economometrics</Accent> and <Accent>machine learning</Accent>.
+                                </p>
+                                <p>
+                                    My interest developed initially from the elegance in theory, then further strengthened when I though about the impact it would have in practice if properly utilised. I read papers, practice, and always do my best to understand and learn new and foreign concepts fast.
                                 </p>
                             </Skill>
                         </Card>
@@ -110,9 +109,13 @@ class Skills extends Component {
                                 title="JavaScript development"
                             >
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
+                                    I do full stack Javascript. <Accent>Mongo, Express, React, and Node</Accent>.
+                                </p>
+                                <p>
+                                    I started exploring Javascript after some Python due to my wanting to implement and deploy my ideas fast.
+                                </p>
+                                <p>
+                                    Experienced with Git and standard development and engineering practices for collaborating on large products.
                                 </p>
                             </Skill>
                         </Card>
