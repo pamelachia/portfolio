@@ -111,7 +111,7 @@ class Myself extends Component {
                                 I love taking on real challenges <br />
                                 and solving crazy-hard problems.
                             </p>
-                            <p>
+                            {/* <p>
                                 I tend to get way too excited over{" "}
                                 <span className={satisfyTextStyle}>
                                     beautiful writing
@@ -122,10 +122,13 @@ class Myself extends Component {
                                     ✨
                                 </span>
                                 .
+                            </p> */}
+                            <p>
+                                Currently, I am working with all things <Accent>data</Accent> {" "}
+                                at Vase.ai.
                             </p>
                             <p>
-                                I currently work with all things <Accent>data</Accent> {" "}
-                                at Vase.ai.
+                                <Accent>Let me know</Accent> if you want me to send over my CV/resume.
                             </p>
                         </Subtitle>
                     </div>

@@ -90,9 +90,6 @@ class Contacts extends Component {
                             <p>
                                 This is the best way to contact me. I reply within a day.
                             </p>
-                            <p>
-                                Also email me if you want me to send over my CV/resume.
-                            </p>
                         </Contact>
                         <Contact title="By Phone">
                             <p>

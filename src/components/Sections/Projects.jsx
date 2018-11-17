@@ -66,7 +66,7 @@ class Projects extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        I enjoy working on cool <Accent>projects</Accent>.
+                        Cool <Accent>projects</Accent> I work on.
                     </Title>
                     <div className={gridStyle}>
                         <Project
