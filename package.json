@@ -25,6 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .jsx,.js src",
+    "fix": "npm run lint -- --fix",
     "icons": "svgr --icon -d src/svg-components src/svg"
   },
   "husky": {
