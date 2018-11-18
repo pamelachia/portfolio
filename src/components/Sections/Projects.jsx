@@ -8,6 +8,9 @@ import Accent from "../Cards/Accent";
 import Link from "../Cards/Link";
 import { colors } from "../../styles";
 import { mq } from "../../styles";
+import BlogImg from "../../img/project-blog.png";
+import PreventionImg from "../../img/project-prevention.png";
+import SudokuImg from "../../img/project-sudoku.png";
 
 const Project = ({ title, imgSrc, children }) => {
     const style = css`
@@ -116,10 +119,7 @@ class Projects extends Component {
                     </div>
                     <Subtitle>Development</Subtitle>
                     <div className={gridStyle}>
-                        <Project
-                            title="This portfolio"
-                            imgSrc="img/project-blog.png"
-                        >
+                        <Project title="This portfolio" imgSrc={BlogImg}>
                             <p>This is my first-ever personal website!</p>
                             <p>
                                 It is made using ReactJS and I use the Emotion
@@ -130,7 +130,7 @@ class Projects extends Component {
                         </Project>
                         <Project
                             title="React-Prevention 🚫"
-                            imgSrc="img/project-prevention.png"
+                            imgSrc={PreventionImg}
                         >
                             <p>
                                 A little library that prevents default and stops
@@ -142,10 +142,7 @@ class Projects extends Component {
                                 actually works great. I swear.
                             </p>
                         </Project>
-                        <Project
-                            title="Sudoku in ReactJS"
-                            imgSrc="img/project-sudoku.png"
-                        >
+                        <Project title="Sudoku in ReactJS" imgSrc={SudokuImg}>
                             <p>My first ReactJS application!</p>
                             <p>
                                 I love playing sudoku and kakuro during my free

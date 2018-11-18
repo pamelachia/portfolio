@@ -7,13 +7,14 @@ import { colors, fontFamilies, mq } from "../../styles";
 import Accent from "../Cards/Accent";
 import Link from "../Cards/Link";
 import ScrollerAnimated from "../ScrollerAnimated";
+import AvatarImg from "../../img/PamelaChia.jpg";
 
 const AVATAR_SIZE = 300;
 const MOBILE_AVATAR_SIZE = 200;
 
 const Avatar = () => {
     const style = css`
-        background-image: url("img/PamelaChia.jpg");
+        background-image: url("${AvatarImg}");
         background-size: contain;
         width: ${AVATAR_SIZE}px;
         height: ${AVATAR_SIZE}px;
