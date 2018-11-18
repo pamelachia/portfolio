@@ -92,16 +92,16 @@ class Skills extends Component {
                                 title="Python development"
                             >
                                 <p>
-                                    Good working knowledge of Python. Have
-                                    written Python scripts (VS Code) for data
-                                    cleaning, data transforming, and
-                                    data-related algorithms for SQL and MongoDB
-                                    databases.
+                                    My go-to for data management, cleaning and
+                                    transformation. I'm most commonly seen
+                                    writing Python data-related algorithms
+                                    backed by SQL and MongoDB.
                                 </p>
                                 <p>
-                                    Use Jupyter Notebook for exploratory
+                                    I use Jupyter Notebook for exploratory
                                     analysis and testing a range of data
-                                    visualisations I want to use for projects.
+                                    visualisations I'd like to include in my
+                                    projects.
                                 </p>
                             </Skill>
                         </Card>
@@ -139,7 +139,9 @@ class Skills extends Component {
                                 title="JavaScript development"
                             >
                                 <p>
-                                    I do full stack Javascript.{" "}
+                                    My language of choice for when I develop a
+                                    project end-to-end. The stack I'm most
+                                    experienced with is MERN:{" "}
                                     <Accent>
                                         Mongo, Express, React, and Node
                                     </Accent>
@@ -151,9 +153,12 @@ class Skills extends Component {
                                     deploy my ideas fast.
                                 </p>
                                 <p>
-                                    Experienced with Git and standard
-                                    development and engineering practices for
-                                    collaborating on large products.
+                                    For these projects I follow standard
+                                    engineering practices for collaborating on
+                                    large projects, including writing unit tests
+                                    with Jest, end-to-end tests with Cypress,
+                                    and running them on continuous integration
+                                    against each Git commit.
                                 </p>
                             </Skill>
                         </Card>
