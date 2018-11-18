@@ -32,6 +32,7 @@ class Link extends PureComponent {
                     className={accentTextStyle}
                     href={this.props.href}
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     {this.props.children}
                 </a>
