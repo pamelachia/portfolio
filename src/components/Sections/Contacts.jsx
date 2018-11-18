@@ -70,7 +70,8 @@ class Contacts extends Component {
                         Say <Accent>Hi</Accent>
                     </Title>
                     <Subtitle>
-                        If you believe that we will both benefit from a chat, let's <Accent>talk</Accent>. I love making new friends!
+                        If you believe that we will both benefit from a chat,
+                        let's <Accent>talk</Accent>. I love making new friends!
                     </Subtitle>
                     <div className={gridStyle}>
                         <Contact title="By Email">
@@ -84,10 +85,11 @@ class Contacts extends Component {
                                         </span>
                                     </Accent>
                                 </span>
-                            </Copier>
-                            {" "}to copy my email address.
+                            </Copier>{" "}
+                            to copy my email address.
                             <p>
-                                This is the best way to contact me. I reply within a day.
+                                This is the best way to contact me. I reply
+                                within a day.
                             </p>
                         </Contact>
                         <Contact title="By Phone">
@@ -96,7 +98,8 @@ class Contacts extends Component {
                                 {1283 - 405} {2349 - 1930}
                             </p>
                             <p>
-                                If you really must hear my voice, this number will lead you to my personal mobile.
+                                If you really must hear my voice, this number
+                                will lead you to my personal mobile.
                             </p>
                         </Contact>
                     </div>

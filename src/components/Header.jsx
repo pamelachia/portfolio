@@ -160,7 +160,7 @@ class Header extends Component {
                             target="_blank"
                             className={iconStyle}
                         >
-                            <GoodreadsIcon height={16} fill="currentColor"/>
+                            <GoodreadsIcon height={16} fill="currentColor" />
                         </a>
                         <a
                             href="https://twitter.com/chibi_pammy"
