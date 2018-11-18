@@ -23,9 +23,7 @@ export const fontFamilies = {
 };
 
 const breakpoints = {
-    small: 480,
-    //medium: 768,
-    large: 960
+    small: 728,
 };
 
 export const mq = Object.keys(breakpoints).reduce((accumulator, label) => {

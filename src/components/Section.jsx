@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
+import { mq } from "../styles";
 
 class Section extends Component {
     static propTypes = {
@@ -24,6 +25,10 @@ class Section extends Component {
             background-color: ${this.props.backgroundColor};
             height: ${this.props.fillWindowHeight ? "100vh" : "auto"};
             margin: 0 20px;
+
+            ${mq.small(css`
+                height: auto;
+            `)};
         `;
 
         return (
