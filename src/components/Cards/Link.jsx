@@ -7,9 +7,10 @@ const accentTextStyle = css`
     color: ${colors.maastrichtBlue};
     display: inline-block;
     padding-bottom: 1px;
+    position: relative;
+    top: -1px;
     border-bottom: 1px solid ${colors.maastrichtBlue};
     transition: color 0.5s ease;
-
 
     :hover {
         color: ${colors.babyPowder};
@@ -20,10 +21,23 @@ const accentTextStyle = css`
 class Link extends PureComponent {
     static propTypes = {
         children: PropTypes.node.isRequired,
-        onClick: PropTypes.func.isRequired
+        onClick: PropTypes.func,
+        href: PropTypes.string
     };
 
     render() {
+        if (this.props.href) {
+            return (
+                <a
+                    className={accentTextStyle}
+                    href={this.props.href}
+                    target="_blank"
+                >
+                    {this.props.children}
+                </a>
+            );
+        }
+
         return (
             <span className={accentTextStyle} onClick={this.props.onClick}>
                 {this.props.children}

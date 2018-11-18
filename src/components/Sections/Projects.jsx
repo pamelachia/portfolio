@@ -5,6 +5,7 @@ import Subtitle from "../Cards/Subtitle";
 import Card from "../Cards/Card";
 import Appear from "../Appear";
 import Accent from "../Cards/Accent";
+import Link from "../Cards/Link";
 import { colors } from "../../styles";
 import { mq } from "../../styles";
 
@@ -41,6 +42,35 @@ const Project = ({ title, imgSrc, children }) => {
     );
 };
 
+const Post = ({ type, href, children }) => {
+    const style = css`
+        background: ${colors.lightDark};
+        display: flex;
+        border-bottom: 1px solid ${colors.deepDark};
+    `;
+
+    const typeStyle = css`
+        width: 200px;
+        padding: 10px;
+        border-right: 1px solid ${colors.deepDark};
+    `;
+
+    const titleStyle = css`
+        padding: 10px 20px;
+    `;
+
+    return (
+        <Card>
+            <div className={style}>
+                <div className={typeStyle}>{type}</div>
+                <div className={titleStyle}>
+                    <Link href={href}>{children}</Link>
+                </div>
+            </div>
+        </Card>
+    );
+};
+
 class Projects extends Component {
     render() {
         const style = css`
@@ -49,13 +79,16 @@ class Projects extends Component {
             margin: 0 auto;
         `;
 
+        const postsStyle = css`
+            margin-bottom: 50px;
+        `;
+
         const gridStyle = css`
             display: grid;
             grid-template-columns: 28% 28% 28%;
             grid-column-gap: 7.99%;
             grid-row-gap: 50px;
             width: 100%;
-            margin-top: 50px;
 
             ${mq.small(css`
                 grid-template-columns: 100%;
@@ -68,6 +101,20 @@ class Projects extends Component {
                     <Title>
                         Cool <Accent>projects</Accent> I work on.
                     </Title>
+                    <div className={postsStyle}>
+                        <Subtitle>Blogposts and Essays</Subtitle>
+                        <Post type="React">
+                            10 reasons why writing a blogpost is cool.
+                        </Post>
+                        <Post type="Hobbies">My hobbies are amazing.</Post>
+                        <Post type="Python">
+                            About the time when I defeated a python.
+                        </Post>
+                        <Post type="Dissertation">
+                            The dissertation from my degree.
+                        </Post>
+                    </div>
+                    <Subtitle>Development</Subtitle>
                     <div className={gridStyle}>
                         <Project
                             title="This portfolio"
@@ -77,8 +124,8 @@ class Projects extends Component {
                             <p>
                                 It is made using ReactJS and I use the Emotion
                                 CSS-in-JS library. I can quickly create base
-                                components and iterate over many (many,
-                                many) designs.
+                                components and iterate over many (many, many)
+                                designs.
                             </p>
                         </Project>
                         <Project
@@ -101,9 +148,9 @@ class Projects extends Component {
                         >
                             <p>My first ReactJS application!</p>
                             <p>
-                                I love playing sudoku and kakuro during my free time, so I decided
-                                it would be a good starting point to develop
-                                solvers for each along with a
+                                I love playing sudoku and kakuro during my free
+                                time, so I decided it would be a good starting
+                                point to develop solvers for each along with a
                                 graphical interface.
                             </p>
                         </Project>
