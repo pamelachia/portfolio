@@ -15,6 +15,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "husky": "^1.1.4",
     "react-scripts": "2.0.3"
   },
   "scripts": {
@@ -22,6 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "pre-commit": "npm run lint",
     "icons": "svgr --icon -d src/svg-components src/svg"
   },
   "homepage": "./",
