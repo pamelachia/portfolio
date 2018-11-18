@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { css, keyframes } from "emotion";
 import Title from "../Cards/Title";
 import Subtitle from "../Cards/Subtitle";
-import { colors, mq } from "../../styles";
+import { colors, fontFamilies, mq } from "../../styles";
 import Accent from "../Cards/Accent";
+import Link from "../Cards/Link";
 import ScrollerAnimated from "../ScrollerAnimated";
 
 const AVATAR_SIZE = 300;
@@ -48,6 +50,10 @@ const Avatar = () => {
 };
 
 class Myself extends Component {
+    static propTypes = {
+        onScollTo: PropTypes.func.isRequired
+    };
+
     render() {
         const scroll = keyframes`
             from {
@@ -92,6 +98,11 @@ class Myself extends Component {
             animation-name: ${scroll};
         `;
 
+        const cvStyle = css`
+            margin-top: 55px;
+            font-family: ${fontFamilies.quicksand};
+        `;
+
         return (
             <div className={wrapperStyle}>
                 <div className={style}>
@@ -108,14 +119,21 @@ class Myself extends Component {
                                 Currently, I am working with all things{" "}
                                 <Accent>data</Accent> at Vase.ai.
                             </p>
-                            <p>
-                                <Accent>Let me know</Accent> if you want me to
-                                send over my CV/resume.
-                            </p>
                         </Subtitle>
+                        <div className={cvStyle}>
+                            <Link
+                                onClick={() => {
+                                    this.props.onScollTo("contacts");
+                                }}
+                            >
+                                Let me know
+                            </Link>{" "}
+                            if you want me to send over my CV/resume.
+                        </div>
                     </div>
                     <Avatar />
                 </div>
+
                 <ScrollerAnimated />
             </div>
         );

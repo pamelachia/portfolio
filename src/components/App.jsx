@@ -38,7 +38,7 @@ class App extends Component {
                         backgroundColor={colors.deepDark}
                         fillWindowHeight={true}
                     >
-                        <Myself />
+                        <Myself onScollTo={this.handleScrollTo} />
                     </Section>
                     <Section
                         name="skills"
