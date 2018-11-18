@@ -15,7 +15,8 @@ class Section extends Component {
     componentDidUpdate() {
         if (this.props.name === this.props.scrolledTo) {
             this.el.scrollIntoView({
-                behavior: "smooth"
+                behavior: "smooth",
+                block: "start"
             });
         }
     }
