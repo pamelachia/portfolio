@@ -58,6 +58,7 @@ class App extends Component {
                         name="contacts"
                         scrolledTo={this.state.scrolledTo}
                         backgroundColor={colors.deepDark}
+                        fillWindowHeight={true}
                     >
                         <Contacts />
                     </Section>

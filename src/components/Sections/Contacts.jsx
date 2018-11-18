@@ -42,7 +42,6 @@ const Contact = ({ title, imgSrc, children }) => {
 class Contacts extends Component {
     render() {
         const style = css`
-            padding: 150px 0;
             height: 100%;
             display: flex;
             flex-direction: column;
