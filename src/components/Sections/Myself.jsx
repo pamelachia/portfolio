@@ -113,12 +113,26 @@ class Myself extends Component {
                         </Title>
                         <Subtitle>
                             <p>
-                                I love taking on real challenges <br />
-                                and solving crazy-hard problems.
-                            </p>
-                            <p>
                                 Currently, I am working with all things{" "}
                                 <Accent>data</Accent> at Vase.ai.
+                            </p>
+                            <p>
+                                I am passionate about solving difficult problems
+                                that make the world a better place and allow
+                                everyone to truly live to their fullest
+                                potential.
+                            </p>
+                            <p>
+                                My way of approaching this is by cultivating a
+                                strong interdisciplinary approach. I’m
+                                interested in the intersection of information,
+                                mathematics, psychology, economics, and
+                                businesses that transform lives.
+                            </p>
+                            <p>
+                                I am currently building my interdisciplinary
+                                knowledge and experience across data science,
+                                software engineering, and growth hacking.
                             </p>
                         </Subtitle>
                         <div className={cvStyle}>
