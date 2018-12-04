@@ -95,7 +95,7 @@ class Skills extends Component {
                                     My go-to for data management, cleaning and
                                     transformation. I'm most commonly seen
                                     writing Python data-related algorithms
-                                    backed by SQL and MongoDB.
+                                    backed by MongoDB and SQL.
                                 </p>
                                 <p>
                                     I use Jupyter Notebook for exploratory
@@ -150,7 +150,8 @@ class Skills extends Component {
                                 <p>
                                     I started exploring Javascript after some
                                     Python due to my wanting to implement and
-                                    deploy my ideas fast.
+                                    deploy my ideas in a more collaborative
+                                    environment.
                                 </p>
                                 <p>
                                     For these projects I follow standard
