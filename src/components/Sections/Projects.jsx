@@ -45,7 +45,7 @@ const Project = ({ title, imgSrc, children }) => {
     );
 };
 
-const Post = ({ type, href, children }) => {
+/*const Post = ({ type, href, children }) => {
     const style = css`
         background: ${colors.lightDark};
         display: flex;
@@ -72,7 +72,7 @@ const Post = ({ type, href, children }) => {
             </div>
         </Card>
     );
-};
+};*/
 
 class Projects extends Component {
     render() {
@@ -104,7 +104,7 @@ class Projects extends Component {
                     <Title>
                         Cool <Accent>projects</Accent> I work on.
                     </Title>
-                    <div className={postsStyle}>
+                    {/*<div className={postsStyle}>
                         <Subtitle>Blogposts and Essays</Subtitle>
                         <Post type="React">
                             10 reasons why writing a blogpost is cool.
@@ -116,7 +116,7 @@ class Projects extends Component {
                         <Post type="Dissertation">
                             The dissertation from my degree.
                         </Post>
-                    </div>
+                    </div>*/}
                     <Subtitle>Development</Subtitle>
                     <div className={gridStyle}>
                         <Project title="This portfolio" imgSrc={BlogImg}>
