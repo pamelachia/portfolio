@@ -8,6 +8,7 @@ import Myself from "./Sections/Myself";
 import Skills from "./Sections/Skills";
 import Projects from "./Sections/Projects";
 import Contacts from "./Sections/Contacts";
+import Mission from "./Sections/Mission";
 
 class App extends Component {
     state = {
@@ -39,6 +40,13 @@ class App extends Component {
                         fillWindowHeight={true}
                     >
                         <Myself onScollTo={this.handleScrollTo} />
+                    </Section>
+                    <Section
+                        name="mission"
+                        scrolledTo={this.state.scrolledTo}
+                        backgroundColor={colors.deepDark}
+                    >
+                        <Mission />
                     </Section>
                     <Section
                         name="skills"

@@ -120,32 +120,6 @@ class Myself extends Component {
                                 I love solving crazy-hard problems that will
                                 change the world.
                             </p>
-                            {/* here seperate page */}
-                            <p>
-                                I am <Accent>REALLY</Accent> passionate about
-                                solving difficult problems. I get excited
-                                knowing that it isn't something straightforward
-                                and that it requires a team of dedicated,
-                                creative, and capable people to tackle together.
-                            </p>
-                            <p>
-                                I especially enjoy products and solutions that
-                                will enable people to live to their fullest. I
-                                want to do my part to make the world a better
-                                place.
-                            </p>
-                            <p>
-                                My way of approaching this is by cultivating a
-                                strong and unique interdisciplinary approach.
-                                I’m interested in the intersection of
-                                information, mathematics, psychology, economics,
-                                and businesses that transform lives.
-                            </p>
-                            <p>
-                                I am currently building my knowledge and
-                                experience across data science, software
-                                engineering, and growth hacking.
-                            </p>
                         </Subtitle>
                         <div className={cvStyle}>
                             <Link
