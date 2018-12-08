@@ -9,8 +9,8 @@ import Link from "../Cards/Link";
 import ScrollerAnimated from "../ScrollerAnimated";
 import AvatarImg from "../../img/PamelaChia.jpg";
 
-const AVATAR_SIZE = 300;
-const MOBILE_AVATAR_SIZE = 200;
+const AVATAR_SIZE = 230;
+const MOBILE_AVATAR_SIZE = 150;
 
 const Avatar = () => {
     const style = css`
@@ -18,7 +18,7 @@ const Avatar = () => {
         background-size: contain;
         width: ${AVATAR_SIZE}px;
         height: ${AVATAR_SIZE}px;
-        border-radius: ${AVATAR_SIZE / 6}px;
+        border-radius: ${AVATAR_SIZE / 9}px;
         overflow: hidden;
 
         ${mq.small(css`
@@ -29,10 +29,9 @@ const Avatar = () => {
     `;
 
     const wrapperStyle = css`
-        border-radius: ${AVATAR_SIZE / 5}px;
-        border: 3px solid ${colors.maastrichtBlue};
+        border-radius: ${AVATAR_SIZE / 6}px;
+        border: 2px solid ${colors.maastrichtBlue};
         padding: 10px;
-        margin-bottom: 10px;
         display: inline-block;
         overflow: hidden;
         flex-shrink: 0;
@@ -40,6 +39,7 @@ const Avatar = () => {
         ${mq.small(css`
             padding: 5px;
             border-radius: ${MOBILE_AVATAR_SIZE / 5}px;
+            margin-bottom: 10px;
         `)};
     `;
 
