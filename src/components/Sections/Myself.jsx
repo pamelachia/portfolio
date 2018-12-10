@@ -12,7 +12,7 @@ import AvatarImg from "../../img/PamelaChia.jpg";
 const AVATAR_SIZE = 230;
 const MOBILE_AVATAR_SIZE = 150;
 
-const Avatar = () => {
+const Avatar = ({ isMobile }) => {
     const style = css`
         background-image: url("${AvatarImg}");
         background-size: contain;
@@ -32,14 +32,15 @@ const Avatar = () => {
         border-radius: ${AVATAR_SIZE / 6}px;
         border: 2px solid ${colors.maastrichtBlue};
         padding: 10px;
-        display: inline-block;
         overflow: hidden;
         flex-shrink: 0;
+        display: ${!isMobile ? "inline-block" : "none"};
 
         ${mq.small(css`
+            display: ${isMobile ? "inline-block" : "none"};
             padding: 5px;
             border-radius: ${MOBILE_AVATAR_SIZE / 5}px;
-            margin-bottom: 10px;
+            margin: 0 auto 15px;
         `)};
     `;
 
@@ -97,6 +98,14 @@ class Myself extends Component {
             flex-grow: 1;
             animation-duration: 1.5s;
             animation-name: ${scroll};
+
+            ${mq.small(css`
+                margin-top: 30px;
+            `)};
+        `;
+
+        const mobileAvatarStyles = css`
+            text-align: center;
         `;
 
         const cvStyle = css`
@@ -111,6 +120,9 @@ class Myself extends Component {
                         <Title>
                             I am <Accent>Pamela</Accent>.
                         </Title>
+                        <div className={mobileAvatarStyles}>
+                            <Avatar isMobile={true} />
+                        </div>
                         <Subtitle>
                             <p>
                                 Currently, I am working with all things{" "}
@@ -132,9 +144,8 @@ class Myself extends Component {
                             if you want me to send over my CV/resume.
                         </div>
                     </div>
-                    <Avatar />
+                    <Avatar isMobile={false} />
                 </div>
-
                 <ScrollerAnimated />
             </div>
         );
