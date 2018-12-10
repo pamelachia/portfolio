@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { fontFamilies } from "../../styles";
+import { mq, fontFamilies } from "../../styles";
 
 class Title extends Component {
     static propTypes = {
@@ -13,6 +13,11 @@ class Title extends Component {
             font-size: 42px;
             font-family: ${fontFamilies.quicksand};
             margin-bottom: 30px;
+
+            ${mq.small(css`
+                font-size: 35px;
+                text-align: center;
+            `)};
         `;
 
         return <div className={style}>{this.props.children}</div>;
