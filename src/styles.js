@@ -23,6 +23,7 @@ export const fontFamilies = {
 };
 
 const breakpoints = {
+    xsmall: 350,
     small: 728
 };
 
