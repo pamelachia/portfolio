@@ -48,6 +48,10 @@ class Contacts extends Component {
             justify-content: center;
             max-width: 1024px;
             margin: 0 auto;
+
+            ${mq.small(css`
+                padding-bottom: 100px;
+            `)};
         `;
 
         const gridStyle = css`
