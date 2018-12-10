@@ -1,5 +1,7 @@
 import React, { PureComponent } from "react";
 import Scroller from "./Scroller";
+import { mq } from "../styles";
+import { css } from "emotion";
 
 class ScrollerAnimated extends PureComponent {
     componentDidMount() {
@@ -20,6 +22,12 @@ class ScrollerAnimated extends PureComponent {
     };
 
     render() {
+        const textStyle = css`
+            ${mq.small(css`
+                display: none;
+            `)};
+        `;
+
         return (
             <div
                 ref={el => {
@@ -27,7 +35,7 @@ class ScrollerAnimated extends PureComponent {
                 }}
                 style={{ opacity: 1 }}
             >
-                Scroll to learn more about me.
+                <div className={textStyle}>Scroll to learn more about me.</div>
                 <Scroller />
             </div>
         );
