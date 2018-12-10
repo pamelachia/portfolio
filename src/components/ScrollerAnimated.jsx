@@ -13,7 +13,9 @@ class ScrollerAnimated extends PureComponent {
     }
 
     handleScroll = () => {
-        const opacity = 1 - (window.pageYOffset / window.innerHeight) * 4;
+        let opacity = 1 - ((window.pageYOffset - 50) / window.innerHeight) * 4;
+
+        opacity = Math.max(0, opacity);
 
         window.requestAnimationFrame(() => {
             // opacity 100% minus the % of one fourth of the height of the page
