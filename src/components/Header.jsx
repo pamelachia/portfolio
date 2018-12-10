@@ -66,6 +66,7 @@ const titleStyle = css`
     border-right: 1px solid ${colors.maastrichtBlue};
     flex-grow: 0;
     padding-right: 25px;
+    white-space: nowrap;
 
     ${mq.small(css`
         display: flex;
@@ -89,9 +90,14 @@ const contactStyle = css`
     transition: color 0.5s ease;
     font-weight: 500;
     font-size: 23px;
+    white-space: nowrap;
     :hover {
         color: ${colors.babyPowder};
     }
+
+    ${mq.xsmall(css`
+        display: none;
+    `)};
 
     ${mq.small(css`
         font-size: 16px;
