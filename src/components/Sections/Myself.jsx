@@ -35,6 +35,7 @@ const Avatar = ({ isMobile }) => {
         overflow: hidden;
         flex-shrink: 0;
         display: ${!isMobile ? "inline-block" : "none"};
+        margin: 0 0 0 20px;
 
         ${mq.small(css`
             display: ${isMobile ? "inline-block" : "none"};
