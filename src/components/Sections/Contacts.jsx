@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { css } from "emotion";
 import Title from "../Cards/Title";
 import Subtitle from "../Cards/Subtitle";
-import Card from "../Cards/Card";
 import Appear from "../Appear";
 import Accent from "../Cards/Accent";
 import { mq } from "../../styles";
@@ -28,13 +27,11 @@ const Contact = ({ title, imgSrc, children }) => {
 
     return (
         <div className={style}>
-            <Card>
-                {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
-                <div>
-                    <Subtitle>{title}</Subtitle>
-                    {children}
-                </div>
-            </Card>
+            {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
+            <div>
+                <Subtitle>{title}</Subtitle>
+                {children}
+            </div>
         </div>
     );
 };
