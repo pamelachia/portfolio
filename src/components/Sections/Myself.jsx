@@ -10,7 +10,7 @@ import ScrollerAnimated from "../ScrollerAnimated";
 import AvatarImg from "../../img/PamelaChia.jpg";
 
 const AVATAR_SIZE = 190;
-const MOBILE_AVATAR_SIZE = 150;
+const MOBILE_AVATAR_SIZE = 130;
 
 const Avatar = ({ isMobile }) => {
     const style = css`
