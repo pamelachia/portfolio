@@ -74,7 +74,6 @@ class Copier extends Component {
                 className={css`
                     position: relative;
                     cursor: pointer;
-                    height: 100%;
                     display: inline-block;
                 `}
             >

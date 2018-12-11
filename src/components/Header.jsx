@@ -84,7 +84,6 @@ const edgeLiStyle = css`
 `;
 
 const contactStyle = css`
-    height: 100%;
     color: ${colors.maastrichtBlue};
     margin-left: 10px;
     transition: color 0.5s ease;
