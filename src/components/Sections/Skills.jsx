@@ -10,7 +10,7 @@ import GameTheoryImg from "../../img/gametheory.png";
 import PythonImg from "../../img/python.png";
 import JavaScriptImg from "../../img/javascript.png";
 
-const Skill = ({ title, imgSrc, children }) => {
+const Skill = ({ title, imgSrc, mobileOrder, children }) => {
     const style = css`
         display: flex;
         width: 100%;
@@ -19,6 +19,10 @@ const Skill = ({ title, imgSrc, children }) => {
         @supports (display: grid) {
             margin-bottom: 0;
         }
+
+        ${mq.small(css`
+            order: ${mobileOrder};
+        `)};
     `;
 
     const imgStyle = css`
