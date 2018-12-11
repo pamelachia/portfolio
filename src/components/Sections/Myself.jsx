@@ -9,7 +9,7 @@ import Link from "../Cards/Link";
 import ScrollerAnimated from "../ScrollerAnimated";
 import AvatarImg from "../../img/PamelaChia.jpg";
 
-const AVATAR_SIZE = 230;
+const AVATAR_SIZE = 190;
 const MOBILE_AVATAR_SIZE = 150;
 
 const Avatar = ({ isMobile }) => {
