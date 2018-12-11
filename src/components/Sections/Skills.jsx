@@ -54,7 +54,7 @@ class Skills extends Component {
             display: grid;
             grid-template-columns: 45% 45%;
             grid-column-gap: 10%;
-            grid-row-gap: 50px;
+            grid-row-gap: 30px;
             width: 100%;
             margin-top: 50px;
 

@@ -25,7 +25,7 @@ class App extends Component {
             color: ${colors.babyPowder};
             font-family: ${fontFamilies.openSans};
             font-weight: 300;
-            font-size: 18px;
+            font-size: 17px;
             line-height: 1.5;
         `;
 

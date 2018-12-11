@@ -76,18 +76,20 @@ class Contacts extends Component {
                     </Subtitle>
                     <div className={gridStyle}>
                         <Contact title="By Email">
-                            Click{" "}
-                            <Copier side="left">
-                                <span>
-                                    <Accent>
-                                        this{" "}
-                                        <span role="img" aria-label="Stars">
-                                            ✨
-                                        </span>
-                                    </Accent>
-                                </span>
-                            </Copier>{" "}
-                            to copy my email address.
+                            <p>
+                                Click{" "}
+                                <Copier side="left">
+                                    <span>
+                                        <Accent>
+                                            this{" "}
+                                            <span role="img" aria-label="Stars">
+                                                ✨
+                                            </span>
+                                        </Accent>
+                                    </span>
+                                </Copier>{" "}
+                                to copy my email address.
+                            </p>
                             <p>
                                 This is the best way to contact me. I reply
                                 within a day.

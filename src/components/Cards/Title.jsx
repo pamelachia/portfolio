@@ -12,7 +12,7 @@ class Title extends Component {
         const style = css`
             font-size: 42px;
             font-family: ${fontFamilies.quicksand};
-            margin-bottom: 30px;
+            margin-bottom: 38px;
 
             ${mq.small(css`
                 font-size: 35px;
