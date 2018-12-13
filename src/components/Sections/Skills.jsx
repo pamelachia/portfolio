@@ -85,10 +85,12 @@ class Skills extends Component {
                                 real-world situations.
                             </p>
                             <p>
-                                I read game theory publications and books as a
-                                hobby, and took many game theory modules in
-                                university. All this allows me to bring new
-                                perspectives to the table.
+                                Applied game theory to mathematically model real
+                                world situations in two of my dissertations in
+                                university. I read game theory publications and
+                                books as a hobby, and took many game theory
+                                modules in university. All this allows me to
+                                bring new perspectives to the table.
                             </p>
                         </Skill>
                         <Skill
