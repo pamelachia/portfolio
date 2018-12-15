@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export class Button extends Component {
     static propTypes = {
-        onClick: PropTypes.func.isRequired,
+        onClick: PropTypes.func,
         className: PropTypes.object,
         children: PropTypes.node.isRequired
     };
