@@ -12,7 +12,6 @@ import JavaScriptImg from "../../img/javascript.png";
 
 const Skill = ({ title, imgSrc, mobileOrder, children }) => {
     const style = css`
-        display: flex;
         width: 100%;
         margin-bottom: 50px;
         /* IE11 hack, remove the margin if we can use grid gutter */
@@ -25,23 +24,34 @@ const Skill = ({ title, imgSrc, mobileOrder, children }) => {
         `)};
     `;
 
+    const topStyle = css`
+        display: flex;
+    `;
+
+    const subtitleStyle = css`
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    `;
+
     const imgStyle = css`
         flex-shrink: 0;
-        max-width: 7vh;
-        max-height: 7vh;
+        max-width: 6vh;
+        max-height: 6vh;
         width: auto;
         height: auto;
-        margin-right: 5%;
         display: block;
     `;
 
     return (
         <div className={style}>
-            {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
-            <div>
-                <Subtitle>{title}</Subtitle>
-                {children}
+            <div className={topStyle}>
+                <div className={subtitleStyle}>
+                    <Subtitle disableMargin={true}>{title}</Subtitle>
+                </div>
+                {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
             </div>
+            {children}
         </div>
     );
 };
@@ -52,6 +62,10 @@ class Skills extends Component {
             padding: 150px 0;
             max-width: 1024px;
             margin: 0 auto;
+
+            ul {
+                list-style-type: circle;
+            }
         `;
 
         const gridStyle = css`
