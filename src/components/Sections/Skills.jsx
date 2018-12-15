@@ -26,18 +26,19 @@ const Skill = ({ title, imgSrc, mobileOrder, children }) => {
 
     const topStyle = css`
         display: flex;
+        margin-bottom: 25px;
     `;
 
     const subtitleStyle = css`
-        flex-grow: 1;
+        margin-left: 30px;
         display: flex;
         align-items: center;
     `;
 
     const imgStyle = css`
         flex-shrink: 0;
-        max-width: 6vh;
-        max-height: 6vh;
+        max-width: 60px;
+        max-height: 60px;
         width: auto;
         height: auto;
         display: block;
@@ -46,10 +47,10 @@ const Skill = ({ title, imgSrc, mobileOrder, children }) => {
     return (
         <div className={style}>
             <div className={topStyle}>
+                {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
                 <div className={subtitleStyle}>
                     <Subtitle disableMargin={true}>{title}</Subtitle>
                 </div>
-                {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
             </div>
             {children}
         </div>
