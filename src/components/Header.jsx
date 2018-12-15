@@ -181,8 +181,13 @@ class Header extends Component {
                         </Button>
                     </li>
                     <li className={liStyle}>
-                        <Button onClick={this.handleOnScrollTo("about")}>
-                            About
+                        <Button onClick={this.handleOnScrollTo("mission")}>
+                            Mission
+                        </Button>
+                    </li>
+                    <li className={liStyle}>
+                        <Button onClick={this.handleOnScrollTo("skills")}>
+                            Skills
                         </Button>
                     </li>
                     <li className={liStyle}>

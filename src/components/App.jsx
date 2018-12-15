@@ -45,6 +45,7 @@ class App extends Component {
                         name="mission"
                         scrolledTo={this.state.scrolledTo}
                         backgroundColor={colors.deepDark}
+                        fillWindowHeight={true}
                     >
                         <Mission />
                     </Section>

@@ -14,7 +14,7 @@ class Mission extends Component {
             justify-content: center;
             max-width: 1024px;
             margin: 0 auto;
-            padding: 150px 0;
+            min-height: 100vh;
 
             ${mq.small(css`
                 flex-direction: column;
