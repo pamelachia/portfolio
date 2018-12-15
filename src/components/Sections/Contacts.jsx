@@ -6,6 +6,7 @@ import Appear from "../Appear";
 import Accent from "../Cards/Accent";
 import { mq } from "../../styles";
 import Copier from "../Copier";
+import Link from "../Cards/Link";
 
 const Contact = ({ title, imgSrc, children }) => {
     const style = css`
@@ -79,15 +80,11 @@ class Contacts extends Component {
                             <p>
                                 Click{" "}
                                 <Copier side="left">
-                                    <span>
-                                        <Accent>
-                                            this{" "}
-                                            <span role="img" aria-label="Stars">
-                                                ✨
-                                            </span>
-                                        </Accent>
-                                    </span>
+                                    <Link>this </Link>
                                 </Copier>{" "}
+                                <span role="img" aria-label="Stars">
+                                    ✨
+                                </span>
                                 to copy my email address.
                             </p>
                             <p>
