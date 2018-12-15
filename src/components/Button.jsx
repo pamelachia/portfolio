@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export class Button extends Component {
@@ -21,11 +21,11 @@ export class Button extends Component {
     };
 
     handleOnMouseHoverEnter = () => {
-        this.setState({hovered: true});
+        this.setState({ hovered: true });
     };
 
     handleOnMouseHoverLeave = () => {
-        this.setState({hovered: false});
+        this.setState({ hovered: false });
     };
 
     render() {

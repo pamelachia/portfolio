@@ -6,6 +6,7 @@ import InstagramIcon from "../svg-components/InstagramIcon";
 import TwitterIcon from "../svg-components/TwitterIcon";
 import GoodreadsIcon from "../svg-components/GoodreadsIcon";
 import Copier from "./Copier";
+import { Button } from "./Button";
 
 const HEADER_HEIGHT = 70;
 const MOBILE_HEADER_HEIGHT = 40;
@@ -49,10 +50,32 @@ const liStyle = css`
     align-items: center;
     margin-right: 25px;
     font-size: 18px;
-    transition: color 0.5s ease;
-    cursor: pointer;
-    :hover {
+    :hover,
+    :focus {
         color: ${colors.maastrichtBlue};
+    }
+
+    & > button {
+        transition: color 0.5s ease;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        font-size: inherit;
+        cursor: pointer;
+        font-weight: normal;
+        font-family: ${fontFamilies.quicksand};
+        height: 100%;
+
+        color: ${colors.babyPowder};
+        :hover,
+        :focus {
+            color: ${colors.maastrichtBlue};
+        }
+
+        :hover {
+            outline: none;
+        }
     }
 
     ${mq.small(css`
@@ -84,29 +107,47 @@ const edgeLiStyle = css`
 `;
 
 const contactStyle = css`
-    color: ${colors.maastrichtBlue};
     margin-left: 10px;
-    transition: color 0.5s ease;
-    font-weight: 500;
-    font-size: 23px;
-    white-space: nowrap;
-    :hover {
-        color: ${colors.babyPowder};
+    height: 100%;
+    display: flex;
+
+    button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        font-family: ${fontFamilies.quicksand};
+        transition: color 0.5s ease;
+        font-weight: 500;
+        color: ${colors.maastrichtBlue};
+        white-space: nowrap;
+        font-size: 23px;
+        cursor: pointer;
+
+        :hover,
+        :focus {
+            color: ${colors.babyPowder};
+        }
+
+        :hover {
+            outline: none;
+        }
+
+        ${mq.xsmall(css`
+            display: none;
+        `)};
+
+        ${mq.small(css`
+            font-size: 16px;
+        `)};
     }
-
-    ${mq.xsmall(css`
-        display: none;
-    `)};
-
-    ${mq.small(css`
-        font-size: 16px;
-    `)};
 `;
 
 const contactClickAreaStyle = css`
     display: flex;
     height: 100%;
     align-items: center;
+    color: ${colors.maastrichtBlue};
 `;
 
 const iconStyle = css`
@@ -134,29 +175,25 @@ class Header extends Component {
         return (
             <header className={style}>
                 <menu className={menuStyle}>
-                    <li
-                        onClick={this.handleOnScrollTo("about")}
-                        className={cx(liStyle, titleStyle)}
-                    >
-                        Pamela Chia
+                    <li className={cx(liStyle, titleStyle)}>
+                        <Button onClick={this.handleOnScrollTo("about")}>
+                            Pamela Chia
+                        </Button>
                     </li>
-                    <li
-                        onClick={this.handleOnScrollTo("about")}
-                        className={liStyle}
-                    >
-                        About
+                    <li className={liStyle}>
+                        <Button onClick={this.handleOnScrollTo("about")}>
+                            About
+                        </Button>
                     </li>
-                    <li
-                        onClick={this.handleOnScrollTo("projects")}
-                        className={liStyle}
-                    >
-                        Projects
+                    <li className={liStyle}>
+                        <Button onClick={this.handleOnScrollTo("projects")}>
+                            Projects
+                        </Button>
                     </li>
-                    <li
-                        onClick={this.handleOnScrollTo("contacts")}
-                        className={liStyle}
-                    >
-                        Contact
+                    <li className={liStyle}>
+                        <Button onClick={this.handleOnScrollTo("contacts")}>
+                            Contact
+                        </Button>
                     </li>
                     <li className={cx(liStyle, edgeLiStyle)}>
                         <a
@@ -185,9 +222,9 @@ class Header extends Component {
                         </a>
                         <div className={contactStyle}>
                             <Copier side="right">
-                                <div className={contactClickAreaStyle}>
+                                <Button className={contactClickAreaStyle}>
                                     Contact Me
-                                </div>
+                                </Button>
                             </Copier>
                         </div>
                     </li>
