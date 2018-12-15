@@ -6,7 +6,7 @@ import InstagramIcon from "../svg-components/InstagramIcon";
 import TwitterIcon from "../svg-components/TwitterIcon";
 import GoodreadsIcon from "../svg-components/GoodreadsIcon";
 import Copier from "./Copier";
-import { Button } from "./Button";
+import Button from "./Button";
 
 const HEADER_HEIGHT = 70;
 const MOBILE_HEADER_HEIGHT = 40;
