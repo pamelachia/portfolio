@@ -159,7 +159,8 @@ const iconStyle = css`
     top: 1px;
     transition: color 0.5s ease;
     color: ${colors.maastrichtBlue};
-    :hover {
+    :hover,
+    :focus {
         color: ${colors.babyPowder};
     }
 `;
