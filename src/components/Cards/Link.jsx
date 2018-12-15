@@ -23,6 +23,7 @@ const accentTextStyle = css`
     :hover {
         color: ${colors.babyPowder};
         cursor: pointer;
+        outline: none;
     }
 `;
 
