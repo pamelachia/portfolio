@@ -144,9 +144,8 @@ class Skills extends Component {
                                 </li>
                                 <li>
                                     Consistently test statistical assumptions
-                                    when using models based on{" "}
-                                    <Accent>economometrics</Accent> and{" "}
-                                    <Accent>machine learning</Accent>.
+                                    when using models based on economometrics
+                                    and machine learning.
                                 </li>
                             </ul>
                         </Skill>
