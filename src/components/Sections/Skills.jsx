@@ -93,9 +93,11 @@ class Skills extends Component {
                         My <Accent>skills</Accent>.
                     </Title>
                     <Subtitle>
-                        I adopt modern Software Engineering processes and use
-                        Mathematical proofs to fluently comunicate and
-                        collaborate with my peers.
+                        I focus on effective and clear communication when
+                        collaborating with my peers, utilising my best knowledge
+                        of numbers, data, and people. I also adopt modern
+                        Software Engineering processes while working on products
+                        and personal projects.
                     </Subtitle>
                     <div className={gridStyle}>
                         <Skill
