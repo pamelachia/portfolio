@@ -67,6 +67,10 @@ class Skills extends Component {
             ul {
                 list-style-type: circle;
             }
+
+            li {
+                margin-top: 7px;
+            }
         `;
 
         const gridStyle = css`
@@ -88,36 +92,33 @@ class Skills extends Component {
                     <Title>
                         My <Accent>skills</Accent>.
                     </Title>
+                    <Subtitle>
+                        I adopt modern Software Engineering processes and use
+                        Mathematical proofs to fluently comunicate and
+                        collaborate with my peers.
+                    </Subtitle>
                     <div className={gridStyle}>
                         <Skill
                             imgSrc={PythonImg}
                             title="Python development"
                             mobileOrder={1}
                         >
-                            <p>[Python 3.7]</p>
-                            <p>
-                                Commonly Used Libraries: Numpy, Statistics,
-                                Pandas, Matplotlib, Seaborn
-                            </p>
-                            <p>
-                                Tools: Anaconda, Jupyter Notebook, Google
-                                Colaboratory, VS Code
-                            </p>
                             <ul>
                                 <li>
-                                    Writing scripts for data management,
-                                    cleaning, and transformation.
+                                    Delivering solutions making data stored in
+                                    SQL and NoSQL databases accessible, allowing
+                                    for re-design of data structures, production
+                                    of migration scripts and data cleansing.
                                 </li>
                                 <li>
-                                    Exploratory analysis (pandas dataframes) on
-                                    Jupyter Notebook and Google Colaboratory.
+                                    Exploratory analysis with Pandas Dataframes
+                                    on Jupyter Notebook and Google Colaboratory.
                                 </li>
                                 <li>
-                                    Build data visualisations (seaborn and
-                                    matplotlib) for actionable insights.
-                                    Allowing smoother decision making at work
-                                    and better explanations to audiences for
-                                    personal projects.
+                                    Building data visualisations with Seaborn
+                                    and Matplotlib, for actionable insights,
+                                    allowing smoother decision making and better
+                                    explanations to audiences.
                                 </li>
                             </ul>
                         </Skill>
@@ -127,10 +128,6 @@ class Skills extends Component {
                             mobileOrder={3}
                         >
                             <ul>
-                                <li>
-                                    Comfortable with formal mathematics and
-                                    statistics concepts.
-                                </li>
                                 <li>
                                     Quickly develop rigorous proofs for simpler
                                     solutions. This is so that simpler solutions
@@ -154,26 +151,22 @@ class Skills extends Component {
                             title="JavaScript development"
                             mobileOrder={2}
                         >
-                            <p>[Mongo, Express, React, Node]</p>
                             <ul>
                                 <li>
-                                    Mainly for deploying projects and products
-                                    in a collaborative environment.
+                                    Developing complex algorithms in NodeJS,
+                                    optimised for performance and high
+                                    availability, delivered as a microservice.
                                 </li>
                                 <li>
-                                    Follow standard software engineering
-                                    practices for collaborating on large
-                                    projects. (Git, ...?)
+                                    Composing full fledged websites with
+                                    ReactJS, including providing feedback in
+                                    design stages and copy.
                                 </li>
                                 <li>
-                                    Write unit tests (Jest) and end-to-end tests
-                                    (Cypress).
-                                </li>
-                                <li>
-                                    Using Drone.io, CircleCI, and Docker for
-                                    CI/CD. Host products as Docker containers
-                                    running on VMs hosted in Azure running
-                                    traefik.
+                                    Delivering unit tested code with Jest and
+                                    end-to-end tests with Cypress, running on
+                                    Continuous Integration based on Docker
+                                    containers.
                                 </li>
                             </ul>
                         </Skill>
