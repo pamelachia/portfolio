@@ -27,15 +27,17 @@ class Mission extends Component {
                     <Subtitle>
                         <p>
                             I am <Accent>REALLY</Accent> passionate about
-                            solving difficult problems. I get excited knowing
-                            that it isn't something straightforward and that it
-                            requires a team of dedicated, creative, and capable
-                            people to tackle together.
+                            problem-solving. I am comfortable with ambiguity and
+                            problems of varying complexity. The notion of
+                            generating best possible solutions by working
+                            together with a team of dedicated, creative and
+                            capable individuals excites me.
                         </p>
                         <p>
                             I especially enjoy products and solutions that will
-                            enable people to live to their fullest. I want to do
-                            my part to make the world a better place.
+                            generate value and enable people to live to their
+                            fullest. I want to do my part to make the world a
+                            better place.
                         </p>
                         <p>
                             My way of approaching this is by cultivating a
