@@ -7,10 +7,11 @@ deploy:
   environment:
     name: production
   script:
+    - echo $DEPLOY_DIR
     - cd $DEPLOY_DIR
     - git pull
     - docker-compose build frontend
-    - systemctl restart docker.service
+    - systemctl restart $SERVICE_NAME
 
 cache:
   paths:
