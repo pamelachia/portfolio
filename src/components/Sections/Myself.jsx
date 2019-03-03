@@ -18,7 +18,7 @@ const Avatar = ({ isMobile }) => {
         background-size: contain;
         width: ${AVATAR_SIZE}px;
         height: ${AVATAR_SIZE}px;
-        border-radius: ${AVATAR_SIZE / 9}px;
+        border-radius: 3px;
         overflow: hidden;
 
         ${mq.small(css`
@@ -29,9 +29,8 @@ const Avatar = ({ isMobile }) => {
     `;
 
     const wrapperStyle = css`
-        border-radius: ${AVATAR_SIZE / 6}px;
-        border: 2px solid ${colors.maastrichtBlue};
-        padding: 10px;
+        border-left: 1px solid ${colors.maastrichtBlue};
+        padding: 60px 0 60px 100px;
         overflow: hidden;
         flex-shrink: 0;
         display: ${!isMobile ? "inline-block" : "none"};
@@ -39,6 +38,7 @@ const Avatar = ({ isMobile }) => {
 
         ${mq.small(css`
             display: ${isMobile ? "inline-block" : "none"};
+            border: 2px solid ${colors.maastrichtBlue};
             padding: 5px;
             border-radius: ${MOBILE_AVATAR_SIZE / 5}px;
             margin: 0 auto 30px;
