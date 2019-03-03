@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default class Button extends Component {
     static propTypes = {
         onClick: PropTypes.func,
-        className: PropTypes.object,
+        className: PropTypes.oneOf([PropTypes.object, PropTypes.string]),
         children: PropTypes.node.isRequired
     };
 
