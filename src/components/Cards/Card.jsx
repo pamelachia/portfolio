@@ -10,7 +10,6 @@ class Card extends Component {
 
     render() {
         const style = css`
-            font-size: 16px;
             font-family: ${fontFamilies.openSans};
         `;
 
