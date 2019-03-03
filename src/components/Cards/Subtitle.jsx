@@ -14,6 +14,7 @@ class Subtitle extends Component {
             font-size: 22px;
             font-family: ${fontFamilies.quicksand};
             font-weight: 400;
+            line-height: 1.8em;
             margin-bottom: ${this.props.disableMargin ? 0 : 11}px;
 
             ${mq.small(css`
