@@ -41,7 +41,7 @@ const Avatar = ({ isMobile }) => {
             display: ${isMobile ? "inline-block" : "none"};
             padding: 5px;
             border-radius: ${MOBILE_AVATAR_SIZE / 5}px;
-            margin: 0 auto 15px;
+            margin: 0 auto 30px;
         `)};
     `;
 
@@ -125,14 +125,11 @@ class Myself extends Component {
                             <Avatar isMobile={true} />
                         </div>
                         <Subtitle>
-                            <p>
-                                Currently, I am working with all things{" "}
-                                <Accent>data</Accent> at Vase.ai.
-                            </p>
-                            <p>
-                                I love solving crazy-hard problems that will
-                                change the world.
-                            </p>
+                            I love solving crazy-hard problems that will change
+                            the world.
+                            <br />
+                            Currently, I am working with all things{" "}
+                            <Accent>data</Accent> at Vase.ai.
                         </Subtitle>
                         <div className={cvStyle}>
                             <Link
