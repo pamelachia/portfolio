@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import { css } from "emotion";
+import { css, keyframes } from "emotion";
 import Title from "../Cards/Title";
 import Subtitle from "../Cards/Subtitle";
 import Appear from "../Appear";
 import Accent from "../Cards/Accent";
-import { mq } from "../../styles";
+import Link from "../Cards/Link";
+import { colors, mq } from "../../styles";
 import MathsImg from "../../img/maths.png";
 import GameTheoryImg from "../../img/gametheory.png";
 import PythonImg from "../../img/python.png";
 import JavaScriptImg from "../../img/javascript.png";
 
-const Skill = ({ title, imgSrc, mobileOrder, children }) => {
+const Skill = ({ title, imgSrc, mobileOrder, displayDetail, children }) => {
     const style = css`
         width: 100%;
         margin-bottom: 50px;
@@ -18,6 +19,8 @@ const Skill = ({ title, imgSrc, mobileOrder, children }) => {
         @supports (display: grid) {
             margin-bottom: 0;
         }
+
+        border-bottom: 1px solid ${colors.maastrichtBlue};
 
         ${mq.small(css`
             order: ${mobileOrder};
@@ -27,12 +30,19 @@ const Skill = ({ title, imgSrc, mobileOrder, children }) => {
     const topStyle = css`
         display: flex;
         margin-bottom: 25px;
+
+        ${mobileOrder < 3 ? "flex-direction: row-reverse" : ""};
+        ${mq.small(css`
+            flex-direction: row;
+        `)};
     `;
 
     const subtitleStyle = css`
-        margin-left: 30px;
         display: flex;
         align-items: center;
+        flex-grow: 1;
+        text-align: center;
+        justify-content: center;
     `;
 
     const imgStyle = css`
@@ -42,6 +52,16 @@ const Skill = ({ title, imgSrc, mobileOrder, children }) => {
         width: auto;
         height: auto;
         display: block;
+        margin: 0 10px;
+    `;
+
+    const childrenStyle = css`
+        font-size: 0.8em;
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height 0.8s ease-in-out;
+
+        ${displayDetail ? "max-height: 1000px; padding-bottom: 10px;" : ""};
     `;
 
     return (
@@ -52,12 +72,33 @@ const Skill = ({ title, imgSrc, mobileOrder, children }) => {
                     <Subtitle disableMargin={true}>{title}</Subtitle>
                 </div>
             </div>
-            {children}
+            <div className={childrenStyle}>{children}</div>
         </div>
     );
 };
 
+const disappear = keyframes`
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none
+    }
+`;
+
 class Skills extends Component {
+    state = {
+        learnMore: false
+    };
+
+    handleLearnMoreClick = () => {
+        this.setState({ learnMore: true });
+    };
+
     render() {
         const style = css`
             padding: 150px 0;
@@ -77,13 +118,23 @@ class Skills extends Component {
             display: grid;
             grid-template-columns: 45% 45%;
             grid-column-gap: 10%;
-            grid-row-gap: 30px;
+            grid-row-gap: 50px;
             width: 100%;
-            margin-top: 50px;
+            margin-top: 80px;
 
             ${mq.small(css`
                 grid-template-columns: 100%;
             `)};
+        `;
+
+        const learnMoreStyle = css`
+            margin: 100px auto 0;
+            text-align: center;
+            opacity: 1;
+
+            animation-fill-mode: forwards;
+            animation-duration: 0.8s;
+            ${this.state.learnMore ? `animation-name: ${disappear}` : ""};
         `;
 
         return (
@@ -104,6 +155,7 @@ class Skills extends Component {
                             imgSrc={PythonImg}
                             title="Python development"
                             mobileOrder={1}
+                            displayDetail={this.state.learnMore}
                         >
                             <ul>
                                 <li>
@@ -128,6 +180,7 @@ class Skills extends Component {
                             imgSrc={MathsImg}
                             title="Mathematics and Statistics"
                             mobileOrder={3}
+                            displayDetail={this.state.learnMore}
                         >
                             <ul>
                                 <li>
@@ -152,6 +205,7 @@ class Skills extends Component {
                             imgSrc={JavaScriptImg}
                             title="JavaScript development"
                             mobileOrder={2}
+                            displayDetail={this.state.learnMore}
                         >
                             <ul>
                                 <li>
@@ -176,6 +230,7 @@ class Skills extends Component {
                             imgSrc={GameTheoryImg}
                             title=" Game Theory (economics)"
                             mobileOrder={4}
+                            displayDetail={this.state.learnMore}
                         >
                             <ul>
                                 <li>
@@ -197,6 +252,11 @@ class Skills extends Component {
                                 </li>
                             </ul>
                         </Skill>
+                    </div>
+                    <div className={learnMoreStyle}>
+                        <Link onClick={this.handleLearnMoreClick}>
+                            Learn more
+                        </Link>
                     </div>
                 </Appear>
             </div>
