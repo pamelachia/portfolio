@@ -69,7 +69,7 @@ class Contacts extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        Say <Accent>Hi</Accent>
+                        Say <Accent>Hi</Accent>.
                     </Title>
                     <Subtitle>
                         If you believe that we will both benefit from a chat,
