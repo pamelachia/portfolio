@@ -80,11 +80,8 @@ class Contacts extends Component {
                             <p>
                                 Click{" "}
                                 <Copier side="left">
-                                    <Link>this </Link>
+                                    <Link>here</Link>
                                 </Copier>{" "}
-                                <span role="img" aria-label="Stars">
-                                    ✨
-                                </span>
                                 to copy my email address.
                             </p>
                             <p>
