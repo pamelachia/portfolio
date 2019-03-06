@@ -143,7 +143,7 @@ class Projects extends Component {
                             </p>
                         </Project>
                         <Project
-                            title="React-Prevention 🚫"
+                            title="React-Prevention"
                             imgSrc={PreventionImg}
                         >
                             <p>
