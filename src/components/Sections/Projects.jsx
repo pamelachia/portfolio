@@ -10,8 +10,12 @@ import BlogImg from "../../img/project-blog.png";
 import PreventionImg from "../../img/project-prevention.png";
 import SudokuImg from "../../img/project-sudoku.png";
 import BookImg from "../../img/project-book.png";
+import DataCouncilImg from "../../img/project-datacouncil.png";
+import JuniorDevImg from "../../img/project-juniordev.png";
+import RailgunImg from "../../img/project-railgun.gif";
+import SixtyNineImg from "../../img/project-69.png";
 
-const Project = ({ title, imgSrc, children }) => {
+const Project = ({ title, association, imgSrc, children }) => {
     const style = css`
         display: flex;
         width: 100%;
@@ -24,11 +28,12 @@ const Project = ({ title, imgSrc, children }) => {
     const imgStyle = css`
         flex-shrink: 0;
         max-width: 400px; /* IE11 limit width so it doesn't get too big out of a grid */
-        height: 15vh;
-        margin: 10px 0;
-        margin-right: 5%;
-        border: 2px solid ${colors.maastrichtBlue};
-        padding: 8px;
+        width: 25%;
+        height: 100%;
+        margin: 10px 20px 0 0;
+        border-right: 1px solid ${colors.maastrichtBlue};
+        padding: 0 20px 0 0;
+        border-radius: 3px;
     `;
 
     const textStyle = css`
@@ -42,7 +47,8 @@ const Project = ({ title, imgSrc, children }) => {
             <div className={style}>
                 {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
                 <div className={textStyle}>
-                    <Subtitle>{title}</Subtitle>
+                    <Subtitle disableMargin={!!association}>{title}</Subtitle>
+                    {association && <Accent>with {association}</Accent>}
                     {children}
                 </div>
             </div>
@@ -74,9 +80,39 @@ class Projects extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        Cool <Accent>projects</Accent> I work on.
+                        My <Accent>projects</Accent> and public{" "}
+                        <Accent>talks</Accent>.
                     </Title>
                     <div className={gridStyle}>
+                        <Project
+                            title="Talk at DataCouncil.ai"
+                            imgSrc={DataCouncilImg}
+                        >
+                            <p>
+                                I will be giving a talk at Data Council about
+                                Data Engineering.
+                            </p>
+                        </Project>
+                        <Project
+                            title="Alogrithm SixtyNine"
+                            imgSrc={SixtyNineImg}
+                            association="Vase.ai"
+                        >
+                            <p>
+                                I will be giving a talk at Data Council about
+                                Data Engineering.
+                            </p>
+                        </Project>
+                        <Project
+                            title="Project Railgun"
+                            imgSrc={RailgunImg}
+                            association="Vase.ai"
+                        >
+                            <p>
+                                Real-time event dispatcher for pipelines and
+                                processing units.
+                            </p>
+                        </Project>
                         <Project title="A Book with Pam" imgSrc={BookImg}>
                             <p>
                                 After reading over 500 books in the last five
@@ -95,6 +131,15 @@ class Projects extends Component {
                                 CSS-in-JS library. I can quickly create base
                                 components and iterate over many (many, many)
                                 designs.
+                            </p>
+                        </Project>
+                        <Project
+                            title="Talk at JuniorDev.io"
+                            imgSrc={JuniorDevImg}
+                        >
+                            <p>
+                                I will be giving a talk at Junior Dev about how
+                                I started working as a Data Engineer.
                             </p>
                         </Project>
                         <Project
