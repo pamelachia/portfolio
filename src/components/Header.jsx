@@ -5,6 +5,7 @@ import { colors, fontFamilies, mq } from "../styles";
 import InstagramIcon from "../svg-components/InstagramIcon";
 import TwitterIcon from "../svg-components/TwitterIcon";
 import GoodreadsIcon from "../svg-components/GoodreadsIcon";
+import LinkedinIcon from "../svg-components/LinkedinIcon";
 import Copier from "./Copier";
 import Button from "./Button";
 
@@ -93,6 +94,8 @@ const titleStyle = css`
 
     ${mq.small(css`
         display: flex;
+        border-right: none;
+        padding-right: 0;
     `)};
 `;
 
@@ -225,6 +228,14 @@ class Header extends Component {
                             className={iconStyle}
                         >
                             <InstagramIcon height={16} fill="currentColor" />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/pamela-chia/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className={iconStyle}
+                        >
+                            <LinkedinIcon height={16} fill="currentColor" />
                         </a>
                         <div className={contactStyle}>
                             <Copier side="right">
