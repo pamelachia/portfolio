@@ -109,10 +109,7 @@ class Projects extends Component {
                             imgSrc={SixtyNineImg}
                             association="Vase.ai"
                         >
-                            <p>
-                                I will be giving a talk at Data Council about
-                                Data Engineering.
-                            </p>
+                            <p>Algorithm for balanced population sampling.</p>
                         </Project>
                         <Project
                             title="Project Railgun"
