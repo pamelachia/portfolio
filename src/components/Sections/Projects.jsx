@@ -25,7 +25,7 @@ const Project = ({ title, association, imgSrc, children }) => {
         }
     `;
 
-    const imgStyle = css`
+    const imgWrapperStyle = css`
         flex-shrink: 0;
         max-width: 400px; /* IE11 limit width so it doesn't get too big out of a grid */
         width: 25%;
@@ -33,6 +33,13 @@ const Project = ({ title, association, imgSrc, children }) => {
         margin: 10px 20px 0 0;
         border-right: 1px solid ${colors.maastrichtBlue};
         padding: 0 20px 0 0;
+    `;
+
+    const imgStyle = css`
+        display: block;
+        max-width: 400px; /* IE11 limit width so it doesn't get too big out of a grid */
+        width: 100%;
+        height: 100%;
         border-radius: 3px;
     `;
 
@@ -45,7 +52,11 @@ const Project = ({ title, association, imgSrc, children }) => {
     return (
         <Card>
             <div className={style}>
-                {imgSrc && <img src={imgSrc} alt="logo" className={imgStyle} />}
+                <div className={imgWrapperStyle}>
+                    {imgSrc && (
+                        <img src={imgSrc} alt="logo" className={imgStyle} />
+                    )}
+                </div>
                 <div className={textStyle}>
                     <Subtitle disableMargin={!!association}>{title}</Subtitle>
                     {association && <Accent>with {association}</Accent>}
