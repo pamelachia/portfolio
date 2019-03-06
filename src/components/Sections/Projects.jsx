@@ -115,22 +115,18 @@ class Projects extends Component {
                         </Project>
                         <Project title="A Book with Pam" imgSrc={BookImg}>
                             <p>
-                                After reading over 500 books in the last five
-                                years, I wanted to build <em>something</em> with
-                                the Goodreads API.
+                                Every page contains the best of 500 books I read
+                                in the last five years.
                             </p>
                             <p>
-                                A tech demo built using React with 3D transforms
-                                and Python on Docker.
+                                Tech demo built using 3D CSS, ReactJS and
+                                Python.
                             </p>
                         </Project>
                         <Project title="this.portfolio()" imgSrc={BlogImg}>
-                            <p>This very website!</p>
                             <p>
-                                It is made using ReactJS and I use the Emotion
-                                CSS-in-JS library. I can quickly create base
-                                components and iterate over many (many, many)
-                                designs.
+                                Made using ReactJS, CSS-in-JS, CSS Keyframe
+                                Animation, Grid and Flexbox.
                             </p>
                         </Project>
                         <Project
@@ -150,19 +146,12 @@ class Projects extends Component {
                                 A little library that prevents default and stops
                                 propagation in JavaScript in a nifty way.
                             </p>
-                            <p>
-                                What better way to understand a concept than by
-                                overengineering a solution for it? And it
-                                actually works great. I swear.
-                            </p>
                         </Project>
                         <Project title="Sudoku in ReactJS" imgSrc={SudokuImg}>
                             <p>My first ReactJS application!</p>
                             <p>
-                                I love playing sudoku and kakuro during my free
-                                time, so I decided it would be a good starting
-                                point to develop solvers for each along with a
-                                graphical interface.
+                                Implements my own algorithm to automate the
+                                solution of medium difficulty Sudoku games.
                             </p>
                         </Project>
                     </div>
