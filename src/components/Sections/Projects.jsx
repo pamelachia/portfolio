@@ -11,7 +11,7 @@ import PreventionImg from "../../img/project-prevention.png";
 import SudokuImg from "../../img/project-sudoku.png";
 import BookImg from "../../img/project-book.png";
 import DataCouncilImg from "../../img/project-datacouncil.png";
-// import JuniorDevImg from "../../img/project-juniordev.png";
+import JuniorDevImg from "../../img/project-juniordev.png";
 import RailgunImg from "../../img/project-railgun.gif";
 import SixtyNineImg from "../../img/project-69.png";
 
@@ -105,6 +105,13 @@ class Projects extends Component {
                                 the world of tech.
                             </p>
                         </Project>
+                        <Project title="Teaching Code" imgSrc={JuniorDevImg}>
+                            <p>
+                                I teach my friends how to code so they can
+                                improve their productivity in and out of work.
+                                Mainly Python, Javascript, and VBA.
+                            </p>
+                        </Project>
                         <Project
                             title="Sampling Alogrithm"
                             imgSrc={SixtyNineImg}
@@ -142,15 +149,6 @@ class Projects extends Component {
                                 Animation, Grid and Flexbox.
                             </p>
                         </Project>
-                        {/* <Project
-                            title="Talk at JuniorDev.io"
-                            imgSrc={JuniorDevImg}
-                        >
-                            <p>
-                                I will be giving a talk at Junior Dev about how
-                                I started working as a Data Engineer.
-                            </p>
-                        </Project> */}
                         <Project
                             title="React-Prevention"
                             imgSrc={PreventionImg}
