@@ -11,7 +11,7 @@ import PreventionImg from "../../img/project-prevention.png";
 import SudokuImg from "../../img/project-sudoku.png";
 import BookImg from "../../img/project-book.png";
 import DataCouncilImg from "../../img/project-datacouncil.png";
-import JuniorDevImg from "../../img/project-juniordev.png";
+// import JuniorDevImg from "../../img/project-juniordev.png";
 import RailgunImg from "../../img/project-railgun.gif";
 import SixtyNineImg from "../../img/project-69.png";
 
@@ -96,20 +96,25 @@ class Projects extends Component {
                     </Title>
                     <div className={gridStyle}>
                         <Project
-                            title="Talk at DataCouncil.ai"
+                            title="Meetups and Events"
                             imgSrc={DataCouncilImg}
                         >
                             <p>
-                                I will be giving a talk at Data Council about
-                                Data Engineering.
+                                I enjoy sharing in meetups and events about all
+                                things data and how I started my journey into
+                                the world of tech.
                             </p>
                         </Project>
                         <Project
-                            title="Alogrithm SixtyNine"
+                            title="Sampling Alogrithm"
                             imgSrc={SixtyNineImg}
                             association="Vase.ai"
                         >
-                            <p>Algorithm for balanced population sampling.</p>
+                            <p>
+                                Implemented an algorithm for balanced population
+                                sampling in the company that significantly
+                                improved sampling data.
+                            </p>
                         </Project>
                         <Project
                             title="Project Railgun"
@@ -137,7 +142,7 @@ class Projects extends Component {
                                 Animation, Grid and Flexbox.
                             </p>
                         </Project>
-                        <Project
+                        {/* <Project
                             title="Talk at JuniorDev.io"
                             imgSrc={JuniorDevImg}
                         >
@@ -145,7 +150,7 @@ class Projects extends Component {
                                 I will be giving a talk at Junior Dev about how
                                 I started working as a Data Engineer.
                             </p>
-                        </Project>
+                        </Project> */}
                         <Project
                             title="React-Prevention"
                             imgSrc={PreventionImg}
