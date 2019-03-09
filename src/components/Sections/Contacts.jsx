@@ -50,6 +50,14 @@ class Contacts extends Component {
             ${mq.small(css`
                 padding-bottom: 100px;
             `)};
+
+            ul {
+                list-style-type: circle;
+            }
+
+            li {
+                margin-top: 7px;
+            }
         `;
 
         const gridStyle = css`
@@ -90,10 +98,16 @@ class Contacts extends Component {
                             </p>
                         </Contact>
                         <Contact title="By Phone">
-                            <p>
-                                UK number: +{69 - 25} ({5 - 5}) {3189 + 4293}{" "}
-                                {1283 - 405} {2349 - 1930}
-                            </p>
+                            <ul>
+                                <li>
+                                    UK number: +{69 - 25} ({5 - 5}){" "}
+                                    {3189 + 4293} {1283 - 405} {2349 - 1930}
+                                </li>
+                                <li>
+                                    Malaysian number: +{102 - 42} ({8 - 8}){" "}
+                                    {49 - 33} {403 - 201} {2837 - 1311}
+                                </li>
+                            </ul>
                             <p>
                                 If you really must hear my voice, this number
                                 will lead you to my mobile.
