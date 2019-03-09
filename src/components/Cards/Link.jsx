@@ -8,7 +8,7 @@ const accentTextStyle = css`
     color: ${colors.maastrichtBlue};
     display: inline-block;
     position: relative;
-    top: -1px;
+    top: -0px;
     transition: color 0.5s ease;
 
     /* for button */
@@ -19,6 +19,7 @@ const accentTextStyle = css`
 
     border-bottom: 1px solid ${colors.maastrichtBlue};
     padding-bottom: 1px;
+    text-decoration: none;
 
     :hover {
         color: ${colors.babyPowder};
