@@ -182,8 +182,7 @@ class Projects extends Component {
                         >
                             <p>
                                 A Slack command that uses the HERE GeoAPI to
-                                find the restaurants around you area and returns
-                                a random one to try out.
+                                find the restaurants around your area.
                             </p>
                         </Project>
                         <Project
