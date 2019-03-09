@@ -8,7 +8,6 @@ import Accent from "../Cards/Accent";
 import { mq, colors } from "../../styles";
 import BlogImg from "../../img/project-blog.png";
 import PreventionImg from "../../img/project-prevention.png";
-import SudokuImg from "../../img/project-sudoku.png";
 import BookImg from "../../img/project-book.png";
 import DataCouncilImg from "../../img/project-datacouncil.png";
 import JuniorDevImg from "../../img/project-juniordev.png";
@@ -156,13 +155,6 @@ class Projects extends Component {
                             <p>
                                 A little library that prevents default and stops
                                 propagation in JavaScript in a nifty way.
-                            </p>
-                        </Project>
-                        <Project title="Sudoku in ReactJS" imgSrc={SudokuImg}>
-                            <p>My first ReactJS application!</p>
-                            <p>
-                                Implements my own algorithm to automate the
-                                solution of medium difficulty Sudoku games.
                             </p>
                         </Project>
                     </div>
