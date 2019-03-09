@@ -113,7 +113,7 @@ class Projects extends Component {
                             </p>
                         </Project>
                         <Project
-                            title="Sampling Alogrithm"
+                            title="Sampling Algorithm"
                             imgSrc={SixtyNineImg}
                             association="Vase.ai"
                         >
