@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { css } from "emotion";
 import Title from "../Cards/Title";
+import Link from "../Cards/Link";
 import Subtitle from "../Cards/Subtitle";
 import Card from "../Cards/Card";
 import Appear from "../Appear";
@@ -13,8 +14,47 @@ import DataCouncilImg from "../../img/project-datacouncil.png";
 import JuniorDevImg from "../../img/project-juniordev.png";
 import RailgunImg from "../../img/project-railgun.gif";
 import SixtyNineImg from "../../img/project-69.png";
+import GitlabIcon from "../../svg-components/GitlabIcon";
+import GithubIcon from "../../svg-components/GithubIcon";
 
-const Project = ({ title, association, imgSrc, children }) => {
+const ProjectSubtitle = ({ type, typePayload }) => {
+    switch (type) {
+        case "company":
+            return <Accent>with {typePayload}</Accent>;
+        case "github":
+            return (
+                <Accent>
+                    on{" "}
+                    <Link href={typePayload}>
+                        Github{" "}
+                        <GithubIcon
+                            width="11px"
+                            height="11px"
+                            fill="currentColor"
+                        />
+                    </Link>
+                </Accent>
+            );
+        case "gitlab":
+            return (
+                <Accent>
+                    on{" "}
+                    <Link href={typePayload}>
+                        Gitlab{" "}
+                        <GitlabIcon
+                            width="11px"
+                            height="11px"
+                            fill="currentColor"
+                        />
+                    </Link>
+                </Accent>
+            );
+        default:
+            return null;
+    }
+};
+
+const Project = ({ title, type, typePayload, imgSrc, children }) => {
     const style = css`
         display: flex;
         width: 100%;
@@ -57,8 +97,8 @@ const Project = ({ title, association, imgSrc, children }) => {
                     )}
                 </div>
                 <div className={textStyle}>
-                    <Subtitle disableMargin={!!association}>{title}</Subtitle>
-                    {association && <Accent>with {association}</Accent>}
+                    <Subtitle disableMargin={!!typePayload}>{title}</Subtitle>
+                    <ProjectSubtitle type={type} typePayload={typePayload} />
                     {children}
                 </div>
             </div>
@@ -114,7 +154,8 @@ class Projects extends Component {
                         <Project
                             title="Sampling Algorithm"
                             imgSrc={SixtyNineImg}
-                            association="Vase.ai"
+                            type="company"
+                            typePayload="Vase.ai"
                         >
                             <p>
                                 Implemented an algorithm for balanced population
@@ -125,14 +166,32 @@ class Projects extends Component {
                         <Project
                             title="Project Railgun"
                             imgSrc={RailgunImg}
-                            association="Vase.ai"
+                            type="company"
+                            typePayload="Vase.ai"
                         >
                             <p>
                                 Real-time event dispatcher for pipelines and
                                 processing units.
                             </p>
                         </Project>
-                        <Project title="A Book with Pam" imgSrc={BookImg}>
+                        <Project
+                            title="Slack /restaurant"
+                            imgSrc={BookImg}
+                            type="gitlab"
+                            typePayload="https://gitlab.com/pamelachia/slack-restaurants"
+                        >
+                            <p>
+                                A Slack command that uses the HERE GeoAPI to
+                                find the restaurants around you area and returns
+                                a random one to try out.
+                            </p>
+                        </Project>
+                        <Project
+                            title="A Book with Pam"
+                            imgSrc={BookImg}
+                            type="gitlab"
+                            typePayload="https://gitlab.com/pamelachia/book"
+                        >
                             <p>
                                 Every page contains the best of 500 books I read
                                 in the last five years.
@@ -142,7 +201,12 @@ class Projects extends Component {
                                 Python.
                             </p>
                         </Project>
-                        <Project title="this.portfolio()" imgSrc={BlogImg}>
+                        <Project
+                            title="this.portfolio()"
+                            imgSrc={BlogImg}
+                            type="gitlab"
+                            typePayload="https://gitlab.com/pamelachia/portfolio"
+                        >
                             <p>
                                 Made using ReactJS, CSS-in-JS, CSS Keyframe
                                 Animation, Grid and Flexbox.
@@ -151,6 +215,8 @@ class Projects extends Component {
                         <Project
                             title="React-Prevention"
                             imgSrc={PreventionImg}
+                            type="github"
+                            typePayload="https://github.com/pamelachia/react-prevention"
                         >
                             <p>
                                 A little library that prevents default and stops
