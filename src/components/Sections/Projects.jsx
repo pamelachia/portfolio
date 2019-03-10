@@ -29,7 +29,7 @@ const ProjectSubtitle = ({ type, typePayload }) => {
                 <Accent>
                     on{" "}
                     <Link href={typePayload}>
-                        Github{" "}
+                        GitHub{" "}
                         <GithubIcon
                             width="11px"
                             height="11px"
@@ -43,7 +43,7 @@ const ProjectSubtitle = ({ type, typePayload }) => {
                 <Accent>
                     on{" "}
                     <Link href={typePayload}>
-                        Gitlab{" "}
+                        GitLab{" "}
                         <GitlabIcon
                             width="11px"
                             height="11px"
