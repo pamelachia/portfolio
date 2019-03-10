@@ -11,9 +11,10 @@ import BlogImg from "../../img/project-blog.png";
 import PreventionImg from "../../img/project-prevention.png";
 import BookImg from "../../img/project-book.png";
 import DataCouncilImg from "../../img/project-datacouncil.png";
-import JuniorDevImg from "../../img/project-juniordev.png";
+import TeachingImg from "../../img/project-teaching.png";
 import RailgunImg from "../../img/project-railgun.gif";
-import SixtyNineImg from "../../img/project-69.png";
+import SamplingImg from "../../img/project-sampling.png";
+import RestaurantsImg from "../../img/project-restaurants.png";
 import GitlabIcon from "../../svg-components/GitlabIcon";
 import GithubIcon from "../../svg-components/GithubIcon";
 
@@ -21,6 +22,8 @@ const ProjectSubtitle = ({ type, typePayload }) => {
     switch (type) {
         case "company":
             return <Accent>with {typePayload}</Accent>;
+        case "where":
+            return <Accent>in {typePayload}</Accent>;
         case "github":
             return (
                 <Accent>
@@ -120,6 +123,7 @@ class Projects extends Component {
             grid-column-gap: 6%;
             grid-row-gap: 60px;
             width: 100%;
+            margin-top: 60px;
 
             ${mq.small(css`
                 grid-template-columns: 100%;
@@ -137,6 +141,8 @@ class Projects extends Component {
                         <Project
                             title="Meetups and Events"
                             imgSrc={DataCouncilImg}
+                            type="company"
+                            typePayload="DataCouncil.ai, JuniorDev.io and more"
                         >
                             <p>
                                 I enjoy sharing in meetups and events about all
@@ -144,7 +150,12 @@ class Projects extends Component {
                                 the world of tech.
                             </p>
                         </Project>
-                        <Project title="Teaching Code" imgSrc={JuniorDevImg}>
+                        <Project
+                            title="Teaching how to code"
+                            imgSrc={TeachingImg}
+                            type="where"
+                            typePayload="hipster cafes :)"
+                        >
                             <p>
                                 I teach my friends how to code so they can
                                 improve their productivity in and out of work.
@@ -153,7 +164,7 @@ class Projects extends Component {
                         </Project>
                         <Project
                             title="Sampling Algorithm"
-                            imgSrc={SixtyNineImg}
+                            imgSrc={SamplingImg}
                             type="company"
                             typePayload="Vase.ai"
                         >
@@ -176,7 +187,7 @@ class Projects extends Component {
                         </Project>
                         <Project
                             title="Slack /restaurant"
-                            imgSrc={BookImg}
+                            imgSrc={RestaurantsImg}
                             type="gitlab"
                             typePayload="https://gitlab.com/pamelachia/slack-restaurants"
                         >
