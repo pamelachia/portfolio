@@ -221,8 +221,12 @@ class Skills extends Component {
                                 <li>
                                     Delivering unit tested code with Jest and
                                     end-to-end tests with Cypress, running on
-                                    Continuous Integration based on Docker
-                                    containers.
+                                    Continuous Integration.
+                                </li>
+                                <li>
+                                    Developing Serverless applications and
+                                    running services on AWS and Google Cloud
+                                    Platform (GCP).
                                 </li>
                             </ul>
                         </Skill>
