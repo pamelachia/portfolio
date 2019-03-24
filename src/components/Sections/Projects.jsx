@@ -151,7 +151,7 @@ class Projects extends Component {
                             </p>
                         </Project>
                         <Project
-                            title="Teaching how to code"
+                            title="Teaching how to Code"
                             imgSrc={TeachingImg}
                             type="where"
                             typePayload="hipster cafes :)"

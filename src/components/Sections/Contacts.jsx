@@ -109,7 +109,7 @@ class Contacts extends Component {
                                 </li>
                             </ul>
                             <p>
-                                If you really must hear my voice, this number
+                                If you really must hear my voice, these numbers
                                 will lead you to my mobile.
                             </p>
                         </Contact>
