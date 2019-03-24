@@ -228,7 +228,7 @@ class Skills extends Component {
                         </Skill>
                         <Skill
                             imgSrc={GameTheoryImg}
-                            title=" Game Theory (economics)"
+                            title="Game Theory (economics)"
                             mobileOrder={4}
                             displayDetail={this.state.learnMore}
                         >
