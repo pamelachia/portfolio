@@ -214,7 +214,7 @@ class Header extends Component {
                             <GoodreadsIcon height={16} fill="currentColor" />
                         </a>
                         <a
-                            href="https://twitter.com/chibi_pammy"
+                            href="https://twitter.com/pamelachia_"
                             rel="noopener noreferrer"
                             target="_blank"
                             className={iconStyle}
@@ -222,7 +222,7 @@ class Header extends Component {
                             <TwitterIcon height={16} fill="currentColor" />
                         </a>
                         <a
-                            href="https://www.instagram.com/chibipammy/"
+                            href="https://www.instagram.com/pamelachia_"
                             rel="noopener noreferrer"
                             target="_blank"
                             className={iconStyle}
