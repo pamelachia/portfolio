@@ -142,12 +142,11 @@ class Projects extends Component {
                             title="Meetups and Events"
                             imgSrc={DataCouncilImg}
                             type="company"
-                            typePayload="DataCouncil.ai, JuniorDev.io and more"
+                            typePayload="Women Who Code, DataCouncil.ai, JuniorDev.io and more"
                         >
                             <p>
                                 I enjoy sharing in meetups and events about all
-                                things data and how I started my journey into
-                                the world of tech.
+                                things data.
                             </p>
                         </Project>
                         <Project
@@ -159,7 +158,8 @@ class Projects extends Component {
                             <p>
                                 I teach my friends how to code so they can
                                 improve their productivity in and out of work.
-                                Mainly Python, Javascript, and VBA.
+                                Mainly Python, Javascript, Google Apps Script,
+                                and VBA.
                             </p>
                         </Project>
                         <Project

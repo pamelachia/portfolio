@@ -144,11 +144,26 @@ class Skills extends Component {
                         My <Accent>skills</Accent>.
                     </Title>
                     <Subtitle>
-                        I focus on effective and clear communication when
-                        collaborating with my peers, utilising my best knowledge
-                        of numbers, data, and people. I also adopt modern
-                        Software Engineering processes while working on products
-                        and personal projects.
+                        <p>
+                            I currently lead a brilliant and highly motivated
+                            team of data engineers to make insights accessible
+                            across the company. I focus a lot on making
+                            efficient and scalable systems and solutions by
+                            using and collecting the right data.
+                        </p>
+                        <p>
+                            Being in a small and fast growing startup I get to
+                            do many things like product management. I currently
+                            manage the ideation and operations for the three
+                            main products in the company.
+                        </p>
+                        <p>
+                            I focus on effective and clear communication when
+                            collaborating with my peers, utilising my best
+                            knowledge of numbers, data, and people. I also adopt
+                            modern Software Engineering processes while working
+                            on products and personal projects.
+                        </p>
                     </Subtitle>
                     <div className={gridStyle}>
                         <Skill
