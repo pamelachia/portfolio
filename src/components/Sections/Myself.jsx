@@ -129,8 +129,8 @@ class Myself extends Component {
                             the world.
                             <br />
                             Currently, I am looking for opportunities
-                            surrounding <Accent>data and product</Accent> in
-                            Singapore.
+                            surrounding <Accent>data</Accent> and{" "}
+                            <Accent>product</Accent> in Singapore.
                             {/* Currently, I am working as the{" "}
                             <Accent>Data Engineering Lead</Accent> at Vase.ai. */}
                         </Subtitle>
