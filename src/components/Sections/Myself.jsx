@@ -128,8 +128,11 @@ class Myself extends Component {
                             I love solving crazy-hard problems that will change
                             the world.
                             <br />
-                            Currently, I am working as the{" "}
-                            <Accent>Data Engineering Lead</Accent> at Vase.ai.
+                            Currently, I am looking for opportunities
+                            surrounding <Accent>data and product</Accent> in
+                            Singapore.
+                            {/* Currently, I am working as the{" "}
+                            <Accent>Data Engineering Lead</Accent> at Vase.ai. */}
                         </Subtitle>
                         <div className={cvStyle}>
                             <Link
