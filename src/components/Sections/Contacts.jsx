@@ -103,13 +103,9 @@ class Contacts extends Component {
                                     UK number: +{69 - 25} ({5 - 5}){" "}
                                     {3189 + 4293} {1283 - 405} {2349 - 1930}
                                 </li>
-                                <li>
-                                    Malaysian number: +{102 - 42} ({8 - 8}){" "}
-                                    {49 - 33} {403 - 201} {2837 - 1311}
-                                </li>
                             </ul>
                             <p>
-                                If you really must hear my voice, these numbers
+                                If you really must hear my voice, this numbers
                                 will lead you to my mobile.
                             </p>
                         </Contact>
