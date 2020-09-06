@@ -97,7 +97,7 @@ class Contacts extends Component {
                                 within a day.
                             </p>
                         </Contact>
-                        <Contact title="By Phone">
+                        {/* <Contact title="By Phone">
                             <ul>
                                 <li>
                                     UK number: +{69 - 25} ({5 - 5}){" "}
@@ -108,7 +108,7 @@ class Contacts extends Component {
                                 If you really must hear my voice, this numbers
                                 will lead you to my mobile.
                             </p>
-                        </Contact>
+                        </Contact> */}
                     </div>
                 </Appear>
             </div>
