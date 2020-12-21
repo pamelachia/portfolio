@@ -152,10 +152,10 @@ class Skills extends Component {
                             collecting the right data.
                         </p>
                         <p>
-                            Being in a small and fast growing startup I get to
-                            do many things like product management. I currently
-                            manage the ideation and operations for the three
-                            main products in the company.
+                            Being in a small and fast growing startup I got to
+                            do many things like product management. I managed
+                            the ideation and operations for the three main
+                            products in the company.
                         </p>
                         <p>
                             I focus on effective and clear communication when
