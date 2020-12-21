@@ -145,11 +145,11 @@ class Skills extends Component {
                     </Title>
                     <Subtitle>
                         <p>
-                            I currently lead a brilliant and highly motivated
-                            team of data engineers to make insights accessible
-                            across the company. I focus a lot on making
-                            efficient and scalable systems and solutions by
-                            using and collecting the right data.
+                            I have led a brilliant and highly motivated team of
+                            data engineers to make insights accessible across
+                            the company. I focus a lot on making efficient and
+                            scalable systems and solutions by using and
+                            collecting the right data.
                         </p>
                         <p>
                             Being in a small and fast growing startup I get to
