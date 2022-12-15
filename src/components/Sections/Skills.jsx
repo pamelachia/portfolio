@@ -9,7 +9,7 @@ import { colors, mq } from "../../styles";
 import MathsImg from "../../img/maths.png";
 import GameTheoryImg from "../../img/gametheory.png";
 import PythonImg from "../../img/python.png";
-import JavaScriptImg from "../../img/javascript.png";
+// import JavaScriptImg from "../../img/javascript.png";
 
 const Skill = ({ title, imgSrc, mobileOrder, displayDetail, children }) => {
     const style = css`
@@ -31,7 +31,7 @@ const Skill = ({ title, imgSrc, mobileOrder, displayDetail, children }) => {
         display: flex;
         margin-bottom: 25px;
 
-        ${mobileOrder < 3 ? "flex-direction: row-reverse" : ""};
+        // ${mobileOrder < 3 ? "flex-direction: row-reverse" : ""};
         ${mq.small(css`
             flex-direction: row;
         `)};
@@ -145,35 +145,78 @@ class Skills extends Component {
                     </Title>
                     <Subtitle>
                         <p>
-                            I have led a brilliant and highly motivated team of
-                            data engineers to make insights accessible across
-                            the company. I focus a lot on making efficient and
-                            scalable systems and solutions by using and
-                            collecting the right data.
+                            I have taken on many roles in teams (founder,
+                            engineering lead, data scientist, analyst, product
+                            manager) and focus a lot on making efficient and
+                            scalable solutions by using and collecting the right
+                            data.
                         </p>
                         <p>
-                            Being in a small and fast growing startup I got to
-                            do many things like product management. I managed
-                            the ideation and operations for the three main
-                            products in the company.
-                        </p>
-                        <p>
-                            I focus on effective and clear communication when
-                            collaborating with my peers, utilising my best
-                            knowledge of numbers, data, and people. I also adopt
-                            modern Software Engineering processes while working
-                            on products and personal projects.
+                            I build dashboards and applications, design
+                            algorithms and scale databases, as well as explore
+                            new architecture and utilise various cloud
+                            platforms. I have domain expertise in game theory
+                            algorithms. Below is a quick list of my core skills
+                            and experience.
                         </p>
                     </Subtitle>
                     <div className={gridStyle}>
                         <Skill
-                            imgSrc={PythonImg}
-                            title="Python development"
+                            imgSrc={GameTheoryImg}
+                            title="Data"
                             mobileOrder={1}
                             displayDetail={this.state.learnMore}
                         >
                             <ul>
                                 <li>
+                                    Analytics: Mixpanel, Amplitude, Google
+                                    Analytics, Google Data Studio, AWS
+                                    Quicksight, Google Sheets, Jupyter
+                                    Notebooks, Seaborn, Grafana.
+                                </li>
+                                <li>
+                                    ML/AI: Dynamic pricing algorithm, population
+                                    sampling model, order queueing model for
+                                    action prioritisation.
+                                </li>
+                                <li>
+                                    Engineering and Databases: Python, AWS
+                                    Lambda, AWS Glue, Segment, SQL, MongoDB,
+                                    Redis, Serverless, Google Dataflow.
+                                </li>
+                                {/* <li>
+                                    Created game theory models to study real
+                                    economies for two of my dissertations in
+                                    university.
+                                </li>
+                                <li>
+                                    Capable of applying game theoretic knowledge
+                                    and concepts to solve real-world business
+                                    problems.
+                                </li>
+                                <li>
+                                    Completed several advanced game theory,
+                                    mathematical economics, and microeconomics
+                                    modules in university that focused on
+                                    practical applications of game theory
+                                    models.
+                                </li> */}
+                            </ul>
+                        </Skill>
+                        <Skill
+                            imgSrc={PythonImg}
+                            title="Engineering"
+                            mobileOrder={2}
+                            displayDetail={this.state.learnMore}
+                        >
+                            <ul>
+                                <li>Python</li>
+                                <li>JavaScript and TypeScript (fullstack)</li>
+                                <li>
+                                    Testing and Cloud Platforms: Jest, Cypress,
+                                    Circle CI, AWS, GCP.
+                                </li>
+                                {/* <li>
                                     Delivering solutions making data stored in
                                     SQL and NoSQL databases accessible, allowing
                                     for re-design of data structures, production
@@ -188,38 +231,37 @@ class Skills extends Component {
                                     and Matplotlib, for actionable insights,
                                     allowing smoother decision making and better
                                     explanations to audiences.
-                                </li>
+                                </li> */}
                             </ul>
                         </Skill>
                         <Skill
                             imgSrc={MathsImg}
-                            title="Mathematics and Statistics"
+                            title="Game Theory, Mathematics and Statistics"
                             mobileOrder={3}
                             displayDetail={this.state.learnMore}
                         >
                             <ul>
                                 <li>
-                                    Quickly develop rigorous proofs for simpler
+                                    Develop rigorous proofs for simpler
                                     solutions. This is so that simpler solutions
                                     are implemented with confidence and product
                                     improvements can be faster deployed.
                                 </li>
                                 <li>
-                                    Create mathematically complete algorithms
-                                    for more optimal performance for projects
-                                    and products.
+                                    Design and build mathematically complete
+                                    algorithms
                                 </li>
                                 <li>
-                                    Consistently test statistical assumptions
-                                    when using models based on economometrics
-                                    and machine learning.
+                                    Test statistical assumptions when using
+                                    models based on economometrics and machine
+                                    learning.
                                 </li>
                             </ul>
                         </Skill>
-                        <Skill
+                        {/* <Skill
                             imgSrc={JavaScriptImg}
                             title="JavaScript development"
-                            mobileOrder={2}
+                            mobileOrder={4}
                             displayDetail={this.state.learnMore}
                         >
                             <ul>
@@ -244,30 +286,24 @@ class Skills extends Component {
                                     Platform (GCP).
                                 </li>
                             </ul>
-                        </Skill>
+                        </Skill> */}
                         <Skill
-                            imgSrc={GameTheoryImg}
-                            title="Game Theory (economics)"
+                            title="Others"
                             mobileOrder={4}
                             displayDetail={this.state.learnMore}
                         >
                             <ul>
                                 <li>
-                                    Created game theory models to study real
-                                    economies for two of my dissertations in
-                                    university.
+                                    Leading a function: led teams in data,
+                                    product, and also a company as CTO.
                                 </li>
                                 <li>
-                                    Capable of applying game theoretic knowledge
-                                    and concepts to solve real-world business
-                                    problems.
+                                    Product management: developed products,
+                                    features and managed sprints
                                 </li>
                                 <li>
-                                    Completed several advanced game theory,
-                                    mathematical economics, and microeconomics
-                                    modules in university that focused on
-                                    practical applications of game theory
-                                    models.
+                                    Product design: Built Figma prototypes and
+                                    base UIs
                                 </li>
                             </ul>
                         </Skill>

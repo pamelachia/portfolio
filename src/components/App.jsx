@@ -41,14 +41,6 @@ class App extends Component {
                         <Myself onScollTo={this.handleScrollTo} />
                     </Section>
                     <Section
-                        name="mission"
-                        scrolledTo={this.state.scrolledTo}
-                        backgroundColor={colors.deepDark}
-                        fillWindowHeight={true}
-                    >
-                        <Mission />
-                    </Section>
-                    <Section
                         name="skills"
                         scrolledTo={this.state.scrolledTo}
                         backgroundColor={colors.deepDark}
@@ -61,6 +53,14 @@ class App extends Component {
                         backgroundColor={colors.deepDark}
                     >
                         <Projects />
+                    </Section>
+                    <Section
+                        name="mission"
+                        scrolledTo={this.state.scrolledTo}
+                        backgroundColor={colors.deepDark}
+                        fillWindowHeight={true}
+                    >
+                        <Mission />
                     </Section>
                     <Section
                         name="contacts"

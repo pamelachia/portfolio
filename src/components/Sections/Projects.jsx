@@ -134,8 +134,7 @@ class Projects extends Component {
             <div className={style}>
                 <Appear>
                     <Title>
-                        My <Accent>projects</Accent> and public{" "}
-                        <Accent>talks</Accent>.
+                        My <Accent>projects</Accent> (last updated 2018)
                     </Title>
                     <div className={gridStyle}>
                         <Project

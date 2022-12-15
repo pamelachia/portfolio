@@ -118,21 +118,17 @@ class Myself extends Component {
             <div className={wrapperStyle}>
                 <div className={style}>
                     <div className={textStyle}>
-                        <Title>
-                            I am <Accent>Pamela</Accent>.
-                        </Title>
+                        <Title>Pam is an ex-founder and data engineer.</Title>
                         <div className={mobileAvatarStyles}>
                             <Avatar isMobile={true} />
                         </div>
                         <Subtitle>
-                            I love solving crazy-hard problems that will change
-                            the world.
+                            I have worked across data, product and engineering
+                            in startups and have a deep proficiency in game
+                            theory modelling (math and statistics).
                             <br />
                             Currently, I am looking for opportunities
-                            surrounding <Accent>data</Accent> and{" "}
-                            <Accent>product</Accent> in Singapore.
-                            {/* Currently, I am working as the{" "}
-                            <Accent>Data Engineering Lead</Accent> at Vase.ai. */}
+                            surrounding <Accent>data</Accent> in Singapore.
                         </Subtitle>
                         <div className={cvStyle}>
                             <Link
@@ -142,10 +138,10 @@ class Myself extends Component {
                             >
                                 Let me know
                             </Link>{" "}
-                            if you want me to send over my CV/resume.
+                            if you'd like to take a look at my CV/resume.
                         </div>
                     </div>
-                    <Avatar isMobile={false} />
+                    {/* <Avatar isMobile={false} /> */}
                 </div>
                 <ScrollerAnimated />
             </div>

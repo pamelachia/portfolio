@@ -185,11 +185,6 @@ class Header extends Component {
                         </Button>
                     </li>
                     <li className={liStyle}>
-                        <Button onClick={this.handleOnScrollTo("mission")}>
-                            Mission
-                        </Button>
-                    </li>
-                    <li className={liStyle}>
                         <Button onClick={this.handleOnScrollTo("skills")}>
                             Skills
                         </Button>
@@ -200,10 +195,15 @@ class Header extends Component {
                         </Button>
                     </li>
                     <li className={liStyle}>
+                        <Button onClick={this.handleOnScrollTo("mission")}>
+                            More of me
+                        </Button>
+                    </li>
+                    {/* <li className={liStyle}>
                         <Button onClick={this.handleOnScrollTo("contacts")}>
                             Contact
                         </Button>
-                    </li>
+                    </li> */}
                     <li className={cx(liStyle, edgeLiStyle)}>
                         <a
                             href="https://goodreads.com/pamelachia"
