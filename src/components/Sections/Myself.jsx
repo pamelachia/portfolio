@@ -124,8 +124,8 @@ class Myself extends Component {
                         </div>
                         <Subtitle>
                             I have worked across data, product and engineering
-                            in startups and have a deep proficiency in game
-                            theory modelling (math and statistics).
+                            in startups and have a deep proficiency in data
+                            collection and optimisation/algorithmic modelling.
                             <br />
                             Currently, I am looking for opportunities
                             surrounding <Accent>data</Accent> in Singapore.

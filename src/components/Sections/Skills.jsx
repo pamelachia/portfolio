@@ -155,9 +155,9 @@ class Skills extends Component {
                             I build dashboards and applications, design
                             algorithms and scale databases, as well as explore
                             new architecture and utilise various cloud
-                            platforms. I have domain expertise in game theory
-                            algorithms. Below is a quick list of my core skills
-                            and experience.
+                            platforms. I have domain expertise in game theory.
+                            Below is a quick list of my core skills and
+                            experience.
                         </p>
                     </Subtitle>
                     <div className={gridStyle}>
@@ -176,8 +176,8 @@ class Skills extends Component {
                                 </li>
                                 <li>
                                     ML/AI: Dynamic pricing algorithm, population
-                                    sampling model, order queueing model for
-                                    action prioritisation.
+                                    sampling model, recommendation systems for
+                                    queue prioritisation.
                                 </li>
                                 <li>
                                     Engineering and Databases: Python, AWS

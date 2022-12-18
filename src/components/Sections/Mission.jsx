@@ -26,32 +26,72 @@ class Mission extends Component {
                 <div className={style}>
                     <Subtitle>
                         <p>
-                            I am <Accent>REALLY</Accent> passionate about
-                            problem-solving. I am comfortable with ambiguity and
-                            problems of varying complexity. The notion of
-                            generating best possible solutions by working
-                            together with a team of dedicated, creative and
-                            capable individuals excites me.
-                        </p>
-                        <p>
-                            I especially enjoy products and solutions that will
-                            generate value and enable people to live to their
-                            fullest. I want to do my part to make the world a
-                            better place.
-                        </p>
-                        <p>
-                            My way of approaching this is by cultivating a
-                            strong and unique interdisciplinary approach. I’m
-                            interested in the intersection of information,
-                            mathematics, psychology, economics, and businesses
-                            that transform lives.
-                        </p>
-                        <p>
-                            I am currently building my knowledge and experience
-                            across data science, software engineering, and
-                            growth hacking.
+                            I am obsessed about <Accent>excellence</Accent>.
+                            Focusing on two core methods to achieve that:
                         </p>
                     </Subtitle>
+                    <p>
+                        <ol>
+                            <li>
+                                <Accent>
+                                    Quantified self and personal growth hacking.
+                                </Accent>
+                                <ul>
+                                    <li>
+                                        Yearly SMART-esque goals that I split
+                                        into quarterly key results and weekly
+                                        actions.
+                                    </li>
+                                    <li>
+                                        Analyse to improve the amount and
+                                        quality of productive time I have
+                                        weekly, monthly, quarterly, and yearly.
+                                    </li>
+                                    <li>
+                                        Collecting and reviewing my own sleeping
+                                        and fitness data, food and liquid
+                                        intake, HR and regular body checkups,
+                                        social events etc.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <Accent>
+                                    Splitting my learning process into
+                                    consumption, absorption, and application.
+                                    Then maximising them separately by
+                                    increasing speed and frequency.
+                                </Accent>
+                                <ul>
+                                    <li>
+                                        Consumption: To increase the funnel of
+                                        knowledge and retain them, I collect
+                                        daily key learnings, logical jumps and
+                                        fun thought processes, and summaries and
+                                        explanations of content I
+                                        read/listen/watch.
+                                    </li>
+                                    <li>
+                                        Absorption: To retain my learnings, I
+                                        summarise the new learnings end of every
+                                        month, review the monthly learnings end
+                                        of every year, and revisit yearly
+                                        summarised learnings end of every year.
+                                    </li>
+                                    <li>
+                                        Application: Relying on only our brain
+                                        is inefficient and dumb. I have an
+                                        external digital database of content I
+                                        consumed to function as a ‘second
+                                        brain’. This is used to recall things
+                                        I've learned so I can focus more on
+                                        applying what I learn and not just
+                                        memorising them.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
                 </div>
             </Appear>
         );
