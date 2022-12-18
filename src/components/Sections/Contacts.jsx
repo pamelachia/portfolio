@@ -81,7 +81,7 @@ class Contacts extends Component {
                     </Title>
                     <Subtitle>
                         If you believe that we will both benefit from a chat,
-                        let's <Accent>talk</Accent>.
+                        let's talk.
                     </Subtitle>
                     <div className={gridStyle}>
                         <Contact title="By Email">
