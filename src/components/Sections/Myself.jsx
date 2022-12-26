@@ -12,6 +12,7 @@ import AvatarImg from "../../img/PamelaChia.jpg";
 const AVATAR_SIZE = 190;
 const MOBILE_AVATAR_SIZE = 130;
 
+// eslint-disable-next-line
 const Avatar = ({ isMobile }) => {
     const style = css`
         background-image: url("${AvatarImg}");
@@ -105,9 +106,9 @@ class Myself extends Component {
             `)};
         `;
 
-        const mobileAvatarStyles = css`
-            text-align: center;
-        `;
+        // const mobileAvatarStyles = css`
+        //     text-align: center;
+        // `;
 
         const cvStyle = css`
             margin-top: 55px;
