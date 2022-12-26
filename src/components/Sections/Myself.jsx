@@ -119,9 +119,9 @@ class Myself extends Component {
                 <div className={style}>
                     <div className={textStyle}>
                         <Title>Pam is an ex-founder and data engineer.</Title>
-                        <div className={mobileAvatarStyles}>
+                        {/* <div className={mobileAvatarStyles}>
                             <Avatar isMobile={true} />
-                        </div>
+                        </div> */}
                         <Subtitle>
                             I have worked across data, product and engineering
                             in startups and have a deep proficiency in data
