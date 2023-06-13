@@ -4,7 +4,6 @@ import { css, keyframes } from "emotion";
 import Title from "../Cards/Title";
 import Subtitle from "../Cards/Subtitle";
 import { colors, fontFamilies, mq } from "../../styles";
-import Accent from "../Cards/Accent";
 import Link from "../Cards/Link";
 import ScrollerAnimated from "../ScrollerAnimated";
 import AvatarImg from "../../img/PamelaChia.jpg";
@@ -127,9 +126,6 @@ class Myself extends Component {
                             I have worked across data, product and engineering
                             in startups and have a deep proficiency in data
                             collection and optimisation/algorithmic modelling.
-                            <br />
-                            Currently, I am looking for opportunities
-                            surrounding <Accent>data</Accent> in Singapore.
                         </Subtitle>
                         <div className={cvStyle}>
                             <Link
