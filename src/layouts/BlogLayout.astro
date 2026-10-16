@@ -1,0 +1,65 @@
+---
+interface Props {
+  canonicalUrl: string
+  description: string
+  title: string
+}
+
+const { canonicalUrl, description, title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#1c1a19" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div id="top">
+      <a class="skip-link" href="#content">Skip to content</a>
+      <header>
+        <a class="wordmark" href="/" aria-label="Pamela Chia, home">PC</a>
+        <nav aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+      </header>
+      <main id="content" tabindex="-1">
+        <slot />
+      </main>
+      <footer>
+        <span>© {new Date().getFullYear()} Pamela Chia</span>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style>
+  :global(*) { box-sizing: border-box; }
+  :global(html) { background: #1c1a19; scroll-behavior: smooth; }
+  :global(body) { margin: 0; color: #f3efe7; background: #1c1a19; font-family: Georgia, 'Times New Roman', serif; font-size: 18px; line-height: 1.6; }
+  :global(a) { color: inherit; text-decoration-color: #55c1f7; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  :global(a:hover) { color: #55c1f7; }
+  :global(a:focus-visible) { outline: 2px solid #55c1f7; outline-offset: 5px; }
+  .skip-link { position: fixed; z-index: 2; top: 1rem; left: 1rem; padding: .5rem .75rem; color: #1c1a19; background: #f3efe7; transform: translateY(-180%); }
+  .skip-link:focus { transform: translateY(0); }
+  header, footer { display: flex; width: min(100% - 3rem, 70rem); align-items: baseline; justify-content: space-between; margin: 0 auto; font-family: Arial, sans-serif; font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; }
+  header { padding: 1.5rem 0; border-bottom: 1px solid #5d5751; }
+  .wordmark { color: #55c1f7; font-size: 1rem; font-weight: 700; letter-spacing: -.03em; text-decoration: none; }
+  nav { display: flex; gap: 1.35rem; }
+  nav a { text-decoration: none; }
+  footer { padding: 1.5rem 0 2.5rem; border-top: 1px solid #5d5751; color: #c5beb5; }
+  @media (max-width: 700px) { header, footer { width: min(100% - 2rem, 70rem); } }
+  @media (max-width: 430px) { footer { align-items: flex-start; flex-direction: column; gap: .6rem; } }
+  @media (prefers-reduced-motion: reduce) { :global(html) { scroll-behavior: auto; } }
+</style>
