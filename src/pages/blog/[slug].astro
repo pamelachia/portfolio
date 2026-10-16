@@ -1,0 +1,56 @@
+---
+import { getCollection, render } from 'astro:content'
+import BlogLayout from '../../layouts/BlogLayout.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+}
+
+const { post } = Astro.props
+const { Content } = await render(post)
+const canonicalUrl = `https://pamelachia.com/blog/${post.id}/`
+---
+
+<BlogLayout
+  title={`${post.data.title} | Pamela Chia`}
+  description={post.data.description}
+  canonicalUrl={canonicalUrl}
+>
+  <article class="post">
+    <header>
+      <a class="back-link" href="/blog/">← Blog</a>
+      <p class="eyebrow"><time datetime={post.data.date}>{post.data.date}</time></p>
+      <h1>{post.data.title}</h1>
+      <p class="description">{post.data.description}</p>
+    </header>
+    <div class="prose"><Content /></div>
+  </article>
+</BlogLayout>
+
+<style>
+  .post { width: min(100% - 3rem, 44rem); margin: 0 auto; padding: 7rem 0 8rem; }
+  .back-link { display: inline-block; margin-bottom: 5rem; font-family: Arial, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .eyebrow { margin: 0 0 1.25rem; color: #55c1f7; font-family: Arial, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  h1 { margin: 0; font-size: clamp(3rem, 7vw, 6rem); font-weight: 400; letter-spacing: -.065em; line-height: .9; }
+  .description { margin: 2rem 0 0; color: #c5beb5; font-size: clamp(1.25rem, 2.4vw, 1.7rem); line-height: 1.3; }
+  .prose { margin-top: 5rem; }
+  .prose :global(h2), .prose :global(h3), .prose :global(h4) { margin: 3rem 0 1rem; font-weight: 400; letter-spacing: -.03em; line-height: 1.1; }
+  .prose :global(h2) { font-size: 2rem; }
+  .prose :global(h3) { font-size: 1.5rem; }
+  .prose :global(p), .prose :global(ul), .prose :global(ol), .prose :global(blockquote), .prose :global(pre), .prose :global(table) { margin: 0 0 1.5rem; }
+  .prose :global(ul), .prose :global(ol) { padding-left: 1.4rem; }
+  .prose :global(li + li) { margin-top: .4rem; }
+  .prose :global(img) { display: block; max-width: 100%; height: auto; margin: 2rem 0; }
+  .prose :global(pre) { overflow-x: auto; padding: 1.25rem; border: 1px solid #5d5751; color: #ddd7cf; background: #151414; font-size: .88rem; }
+  .prose :global(code) { font-family: 'SFMono-Regular', Consolas, monospace; font-size: .9em; }
+  .prose :global(:not(pre) > code) { padding: .1em .3em; background: #2a2826; }
+  .prose :global(blockquote) { margin-left: 0; padding-left: 1.25rem; border-left: 2px solid #55c1f7; color: #c5beb5; }
+  .prose :global(table) { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+  .prose :global(th), .prose :global(td) { padding: .6rem .8rem; border: 1px solid #5d5751; text-align: left; }
+  @media (max-width: 700px) { .post { width: min(100% - 2rem, 44rem); padding: 5rem 0; } .back-link { margin-bottom: 3.5rem; } .prose { margin-top: 3.5rem; } }
+</style>
