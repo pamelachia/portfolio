@@ -1,0 +1,245 @@
+---
+const pageTitle = 'Pamela Chia | Founder and engineer'
+const pageDescription =
+  'Pamela Chia is a founder and engineer leading Growth Engineering at Supabase.'
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Pamela Chia',
+  url: 'https://pamelachia.com',
+  email: 'pamelachiamayyee@gmail.com',
+  jobTitle: 'Growth Engineering Lead',
+  worksFor: { '@type': 'Organization', name: 'Supabase' },
+  sameAs: [
+    'https://github.com/pamelachia',
+    'https://www.linkedin.com/in/pamela-chia/',
+  ],
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={pageDescription} />
+    <meta name="theme-color" content="#1c1a19" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <title>{pageTitle}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(person)}></script>
+  </head>
+  <body>
+    <div id="top">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <main id="content" tabindex="-1">
+      <section class="intro section" aria-labelledby="page-title">
+        <div class="masthead">
+          <a class="wordmark" href="/" aria-label="Pamela Chia, home">PC</a>
+          <nav aria-label="Primary navigation">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="intro-copy">
+          <p class="eyebrow">Founder and engineer</p>
+          <h1 id="page-title">Pamela Chia</h1>
+          <p class="lede">
+            I lead Growth Engineering at Supabase, working across product, data,
+            and experiences for AI agents.
+          </p>
+          <p class="intro-detail">
+            I am interested in the choices that turn an idea into something people
+            can use, and the systems that keep it working.
+          </p>
+        </div>
+        <div class="intro-footer">
+          <span>Based in Singapore</span>
+          <a href="#work">Selected work <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="section work" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Selected work</p>
+          <h2 id="work-title">Making complex systems useful</h2>
+        </div>
+
+        <article class="work-item">
+          <div class="work-number" aria-hidden="true">01</div>
+          <div class="work-content">
+            <h3>Developer tools that work well with agents</h3>
+            <p>
+              I shipped structured CLI output for coding agents and public discovery
+              interfaces that connect documentation, API descriptions, and MCP
+              endpoints. The work spans what agents find, the formats they consume,
+              and the contracts that keep those interfaces consistent.
+            </p>
+            <p class="evidence-label">Public proof</p>
+            <ul class="proof-links" aria-label="Public proof for developer tools">
+              <li><a href="https://github.com/supabase/cli/pull/5532">Structured CLI output <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://github.com/supabase/supabase/pull/49768">Agent discovery catalog <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://github.com/supabase/supabase/pull/50180">API and MCP discovery <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-number" aria-hidden="true">02</div>
+          <div class="work-content">
+            <h3>Useful boundaries for agent workflows</h3>
+            <p>
+              I build agent-assisted engineering workflows with explicit verification
+              and decision boundaries. That includes evaluating policy-following
+              responses and preparing alert diagnosis while leaving production
+              remediation to a person.
+            </p>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-number" aria-hidden="true">03</div>
+          <div class="work-content">
+            <h3>Product decisions grounded in evidence</h3>
+            <p>
+              I work across frontend, backend, and analytics to make product journeys
+              measurable. This includes instrumenting creation flows, preserving the
+              context needed to diagnose failures, and checking whether a pattern is
+              supported by the underlying measurement.
+            </p>
+            <p class="evidence-label">Public proof</p>
+            <ul class="proof-links" aria-label="Public proof for product measurement">
+              <li><a href="https://github.com/supabase/supabase/pull/47386">Creation-funnel instrumentation <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Background</p>
+          <h2 id="about-title">A founder before this chapter</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              Before Supabase, I co-founded SISU Wellness and served as its CTO. I
+              also spent time at Entrepreneur First and grew through roles at Vase,
+              where I moved from analyst to engineer to lead.
+            </p>
+            <p>
+              I studied economics before software. That path still shapes how I work:
+              I care about incentives, useful feedback loops, and the gap between a
+              good-looking theory and a system that holds up in practice.
+            </p>
+          </div>
+          <div class="personal-note">
+            <p class="eyebrow">Outside work</p>
+            <p>
+              I read widely, keep a quantified-self practice, and build knowledge
+              systems that last longer than the project that prompted them.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Contact</p>
+          <h2 id="contact-title">Get in touch</h2>
+        </div>
+        <div class="contact-content">
+          <p>I am always glad to meet people thinking seriously about what to build next.</p>
+          <div class="contact-links">
+            <a class="primary-link" href="mailto:pamelachiamayyee@gmail.com">pamelachiamayyee@gmail.com <span aria-hidden="true">↗</span></a>
+            <a href="https://cv.pamelachia.com/">CV <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/pamelachia">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/pamela-chia/">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>© {new Date().getFullYear()} Pamela Chia</span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
+    </div>
+  </body>
+</html>
+
+<style>
+  :global(*) { box-sizing: border-box; }
+  :global(html) { background: #1c1a19; scroll-behavior: smooth; }
+  :global(body) { margin: 0; color: #f3efe7; background: #1c1a19; font-family: Georgia, 'Times New Roman', serif; font-size: 18px; line-height: 1.55; }
+  :global(a) { color: inherit; text-decoration-color: #ba7e58; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  :global(a:hover) { color: #e8a37a; }
+  :global(a:focus-visible) { outline: 2px solid #e8a37a; outline-offset: 5px; }
+  .skip-link { position: fixed; z-index: 2; top: 1rem; left: 1rem; padding: .5rem .75rem; color: #1c1a19; background: #f3efe7; transform: translateY(-180%); }
+  .skip-link:focus { transform: translateY(0); }
+  .section { width: min(100% - 3rem, 76rem); margin: 0 auto; padding: 8rem 0; border-top: 1px solid #5d5751; }
+  .intro { display: flex; min-height: 100svh; flex-direction: column; justify-content: space-between; padding-top: 1.5rem; border-top: 0; }
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; font-family: Arial, sans-serif; font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; }
+  .wordmark { color: #e8a37a; font-size: 1rem; font-weight: 700; letter-spacing: -.03em; text-decoration: none; }
+  nav { display: flex; gap: 1.35rem; }
+  nav a { text-decoration: none; }
+  .intro-copy { max-width: 60rem; padding: 6rem 0; }
+  .eyebrow { margin: 0 0 1.25rem; color: #e8a37a; font-family: Arial, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  h1, h2, h3, p { margin-top: 0; }
+  h1 { max-width: 12ch; margin-bottom: .3rem; font-size: clamp(4rem, 12vw, 10rem); font-weight: 400; letter-spacing: -.07em; line-height: .85; }
+  .lede { max-width: 31ch; margin: 3rem 0 1.25rem; font-size: clamp(1.5rem, 3vw, 2.45rem); line-height: 1.2; }
+  .intro-detail { max-width: 39rem; margin-bottom: 0; color: #c5beb5; }
+  .intro-footer { display: flex; justify-content: space-between; color: #c5beb5; font-family: Arial, sans-serif; font-size: .76rem; letter-spacing: .04em; }
+  .intro-footer a { color: #f3efe7; }
+  .section-heading { display: grid; grid-template-columns: 1fr 3fr; gap: 2rem; margin-bottom: 5rem; }
+  .section-heading .eyebrow { margin: .5rem 0 0; }
+  h2 { max-width: 11ch; margin-bottom: 0; font-size: clamp(2.6rem, 6vw, 5.2rem); font-weight: 400; letter-spacing: -.055em; line-height: .96; }
+  .work { padding-bottom: 3rem; }
+  .work-item { display: grid; grid-template-columns: 1fr 3fr; gap: 2rem; padding: 3.5rem 0; border-top: 1px solid #5d5751; }
+  .work-number { color: #c5beb5; font-family: Arial, sans-serif; font-size: .76rem; letter-spacing: .08em; }
+  .work-content { max-width: 43rem; }
+  h3 { margin-bottom: 1.25rem; font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.08; }
+  .work-content p { margin-bottom: 1.4rem; color: #ddd7cf; }
+  .evidence-label { margin-top: 2.5rem; margin-bottom: .7rem !important; color: #e8a37a !important; font-family: Arial, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .proof-links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin: 0; padding: 0; font-family: Arial, sans-serif; font-size: .88rem; list-style: none; }
+  .proof-links a { color: #f3efe7; }
+  .about-grid { display: grid; grid-template-columns: 3fr 1fr; gap: 5rem; }
+  .about-copy { max-width: 42rem; font-size: clamp(1.35rem, 2.5vw, 2.05rem); line-height: 1.25; }
+  .about-copy p + p { margin-top: 2.5rem; }
+  .personal-note { align-self: end; padding: 1.5rem 0; border-top: 1px solid #5d5751; color: #c5beb5; }
+  .personal-note .eyebrow { margin-bottom: .75rem; }
+  .personal-note p:last-child { margin-bottom: 0; }
+  .contact-content { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
+  .contact-content > p { max-width: 23rem; margin: 0; color: #c5beb5; }
+  .contact-links { display: flex; align-items: flex-start; flex-direction: column; gap: .8rem; font-size: clamp(1.35rem, 2.5vw, 2.05rem); }
+  .contact-links a { text-decoration-thickness: 1px; }
+  .contact-links .primary-link { color: #e8a37a; }
+  footer { display: flex; width: min(100% - 3rem, 76rem); justify-content: space-between; margin: 0 auto; padding: 1.5rem 0 2.5rem; border-top: 1px solid #5d5751; color: #c5beb5; font-family: Arial, sans-serif; font-size: .72rem; letter-spacing: .04em; }
+  @media (max-width: 700px) {
+    :global(body) { font-size: 17px; }
+    .section { width: min(100% - 2rem, 76rem); padding: 5rem 0; }
+    .intro { min-height: 44rem; padding-top: 1.25rem; }
+    .intro-copy { padding: 5rem 0; }
+    .section-heading, .work-item, .about-grid, .contact-content { grid-template-columns: 1fr; gap: 1.25rem; }
+    .section-heading { margin-bottom: 3.5rem; }
+    .work-item { gap: .8rem; padding: 2.8rem 0; }
+    .work-number { color: #e8a37a; }
+    .about-grid { gap: 3rem; }
+    .about-copy { font-size: 1.45rem; }
+    .contact-content { gap: 3rem; }
+    footer { width: min(100% - 2rem, 76rem); }
+  }
+  @media (max-width: 430px) {
+    nav { gap: .9rem; }
+    .intro-footer { align-items: flex-start; flex-direction: column; gap: .5rem; }
+    h1 { font-size: clamp(3.5rem, 18vw, 5.3rem); }
+    .lede { margin-top: 2.5rem; }
+    footer { align-items: flex-start; flex-direction: column; gap: .6rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { :global(html) { scroll-behavior: auto; } }
+</style>

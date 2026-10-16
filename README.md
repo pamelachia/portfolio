@@ -1,13 +1,23 @@
-# Portfolio
+# Pamela Chia
 
-## Run
+Personal profile site for [pamelachia.com](https://pamelachia.com).
 
-- npm start
+## Requirements
 
-## Build
+Node.js 22.22 or later and npm 9.6.5 or later.
 
-- npm build
+## Development
 
-## Rebuild icons
+```sh
+npm ci
+npm run dev
+```
 
-- npm run icons
+## Verification and production build
+
+```sh
+npm run check
+npm run build
+```
+
+The static site is written to `dist/`. Vercel serves that directory using the build configuration in `vercel.json`.
