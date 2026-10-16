@@ -213,8 +213,8 @@ class Projects extends Component {
                         <Project
                             title="this.portfolio()"
                             imgSrc={BlogImg}
-                            type="gitlab"
-                            typePayload="https://gitlab.com/pamelachia/portfolio"
+                            type="github"
+                            typePayload="https://github.com/pamelachia/portfolio"
                         >
                             <p>
                                 Made using ReactJS, CSS-in-JS, CSS Keyframe
