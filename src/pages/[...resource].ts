@@ -48,7 +48,7 @@ export const getStaticPaths = (async () => {
       if (typeof post.body !== 'string') throw new Error(`Missing Markdown body: ${post.id}`)
       return {
         path: `blog/${post.id}/index.md`,
-        body: `# ${post.data.title}\n\n${post.data.description}\n\nPublished: ${post.data.date}\n\nSource: ${absolute(`blog/${post.id}/`)}\n\n${post.body}`,
+        body: `# ${post.data.title}\n\n${post.data.description}\n\nPublished: ${post.data.date}\n\nSource: ${absolute(`blog/${post.id}/`)}\n\n${post.body}\n`,
         type: 'text/markdown',
       }
     }),
