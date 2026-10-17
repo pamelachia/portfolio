@@ -104,10 +104,11 @@ const structuredData = {
           <div class="about-copy">
             <p>{profile.about.founder}</p>
             <p>
-              {profile.about.educationIntro} My dissertation,
-              <em>{profile.about.dissertation.title}</em>, {profile.about.dissertation.description}
-              My undergraduate research, <em>{profile.about.undergraduateResearch.title}</em>,
-              {profile.about.undergraduateResearch.description}
+              {`${profile.about.educationIntro} My dissertation, `}
+              <em>{profile.about.dissertation.title}</em>
+              {`, ${profile.about.dissertation.description} My undergraduate research, `}
+              <em>{profile.about.undergraduateResearch.title}</em>
+              {`, ${profile.about.undergraduateResearch.description}`}
             </p>
           </div>
           <div class="personal-note">
