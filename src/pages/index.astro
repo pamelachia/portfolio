@@ -63,7 +63,7 @@ const person = {
         </div>
         <div class="intro-footer">
           <span>Based in Singapore</span>
-          <a href="#work">Selected work <span aria-hidden="true">↓</span></a>
+          <a href="#work">Selected work</a>
         </div>
       </section>
 
@@ -86,8 +86,8 @@ const person = {
             </p>
             <p class="evidence-label">Public proof</p>
             <ul class="proof-links" aria-label="Public proof for cross-team growth systems">
-              <li><a href="https://github.com/supabase/supabase/pull/15231">Dashboard telemetry API <span aria-hidden="true">↗</span></a></li>
-              <li><a href="https://github.com/supabase/supabase/pull/18307">Self-service compliance <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://github.com/supabase/supabase/pull/15231">Dashboard telemetry API</a></li>
+              <li><a href="https://github.com/supabase/supabase/pull/18307">Self-service compliance</a></li>
             </ul>
           </div>
         </article>
@@ -108,9 +108,9 @@ const person = {
             </p>
             <p class="evidence-label">Public proof</p>
             <ul class="proof-links" aria-label="Public proof for AI agent work">
-              <li><a href="https://github.com/supabase/cli/pull/5532">Structured CLI output <span aria-hidden="true">↗</span></a></li>
-              <li><a href="https://github.com/supabase/supabase/pull/49768">Agent discovery catalog <span aria-hidden="true">↗</span></a></li>
-              <li><a href="https://github.com/supabase/supabase/pull/50180">API and MCP discovery <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://github.com/supabase/cli/pull/5532">Structured CLI output</a></li>
+              <li><a href="https://github.com/supabase/supabase/pull/49768">Agent discovery catalog</a></li>
+              <li><a href="https://github.com/supabase/supabase/pull/50180">API and MCP discovery</a></li>
             </ul>
           </div>
         </article>
@@ -168,17 +168,17 @@ const person = {
         <div class="contact-content">
           <p>I am always glad to meet people thinking seriously about what to build next.</p>
           <div class="contact-links">
-            <a class="primary-link" href="mailto:pamelachiamayyee@gmail.com">pamelachiamayyee@gmail.com <span aria-hidden="true">↗</span></a>
-            <a href="https://cv.pamelachia.com/">CV <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/pamelachia">GitHub <span aria-hidden="true">↗</span></a>
-            <a href="https://www.linkedin.com/in/pamela-chia/">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="primary-link" href="mailto:pamelachiamayyee@gmail.com">Email</a>
+            <a href="https://cv.pamelachia.com/">CV</a>
+            <a href="https://github.com/pamelachia">GitHub</a>
+            <a href="https://www.linkedin.com/in/pamela-chia/">LinkedIn</a>
           </div>
         </div>
       </section>
     </main>
     <footer>
       <span>© {new Date().getFullYear()} Pamela Chia</span>
-      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      <a href="#top">Back to top</a>
     </footer>
     </div>
   </body>
@@ -240,9 +240,12 @@ const person = {
     .section-heading { margin-bottom: 3.5rem; }
     .work-item { gap: .8rem; padding: 2.8rem 0; }
     .work-number { color: #55c1f7; }
+    .proof-links { align-items: flex-start; flex-direction: column; gap: .25rem; }
+    .proof-links a, .contact-links a { display: block; min-height: 2.75rem; padding: .5rem 0; }
     .about-grid { gap: 3rem; }
     .about-copy { font-size: 1.45rem; }
     .contact-content { gap: 3rem; }
+    .contact-links { gap: .25rem; }
     footer { width: min(100% - 2rem, 76rem); }
   }
   @media (max-width: 430px) {
