@@ -1,20 +1,18 @@
 ---
-const pageTitle = 'Pamela Chia | Founder and engineer'
-const pageDescription =
-  'Pamela Chia is a founder and engineer working in growth engineering at Supabase.'
+import profile from '../data/profile.json'
+
+const pageTitle = `${profile.name} | ${profile.label}`
+const pageDescription = profile.description
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 const person = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Pamela Chia',
-  url: 'https://pamelachia.com',
-  email: 'pamelachiamayyee@gmail.com',
-  jobTitle: 'Growth Engineer',
-  worksFor: { '@type': 'Organization', name: 'Supabase' },
-  sameAs: [
-    'https://github.com/pamelachia',
-    'https://www.linkedin.com/in/pamela-chia/',
-  ],
+  name: profile.name,
+  url: profile.url,
+  email: profile.contacts[0].url.replace(/^mailto:/, ''),
+  jobTitle: profile.jobTitle,
+  worksFor: { '@type': 'Organization', name: profile.employer },
+  sameAs: profile.contacts.filter(({ label }) => ['GitHub', 'LinkedIn'].includes(label)).map(({ url }) => url),
 }
 ---
 
@@ -49,20 +47,13 @@ const person = {
           </nav>
         </div>
         <div class="intro-copy">
-          <p class="eyebrow">Founder and engineer</p>
-          <h1 id="page-title">Pamela Chia</h1>
-          <p class="lede">
-            I do growth engineering at Supabase, working across product, data,
-            and experiences for AI agents.
-          </p>
-          <p class="intro-detail">
-            My foundation is in behavioural game theory, econometrics, and full-stack
-            data systems. I am interested in the choices that turn an idea into
-            something people can use, and the systems that keep it working.
-          </p>
+          <p class="eyebrow">{profile.label}</p>
+          <h1 id="page-title">{profile.name}</h1>
+          <p class="lede">{profile.intro}</p>
+          <p class="intro-detail">{profile.foundation}</p>
         </div>
         <div class="intro-footer">
-          <span>Based in Singapore</span>
+          <span>Based in {profile.location}</span>
           <a href="#work">Selected work</a>
         </div>
       </section>
@@ -70,92 +61,46 @@ const person = {
       <section class="section work" id="work" aria-labelledby="work-title">
         <div class="section-heading">
           <p class="eyebrow">01 / Selected work</p>
-          <h2 id="work-title">Making complex systems useful</h2>
+          <h2 id="work-title">{profile.workHeading}</h2>
         </div>
 
-        <article class="work-item">
-          <div class="work-number" aria-hidden="true">01</div>
-          <div class="work-content">
-            <h3>Full-stack growth systems across teams</h3>
-            <p>
-              I joined Supabase in 2023 and built across frontend, backend, data, and
-              infrastructure. My work included event APIs and product analytics,
-              lifecycle email and resource-usage notifications, consent management,
-              and self-service compliance experiences, working with engineering,
-              Legal, and customer-facing teams.
-            </p>
-            <p class="evidence-label">Public proof</p>
-            <ul class="proof-links" aria-label="Public proof for cross-team growth systems">
-              <li><a href="https://github.com/supabase/supabase/pull/15231">Dashboard telemetry API</a></li>
-              <li><a href="https://github.com/supabase/supabase/pull/18307">Self-service compliance</a></li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="work-item">
-          <div class="work-number" aria-hidden="true">02</div>
-          <div class="work-content">
-            <h3>Extending growth to AI agents</h3>
-            <p>
-              More recently, I extended that work to agents: structured CLI output,
-              discovery interfaces connecting documentation, APIs, and MCP endpoints,
-              and measurement of how agents find and use the product.
-            </p>
-            <p>
-              I also build agent-assisted engineering workflows, with response
-              evaluation, explicit verification, and human decisions for production
-              remediation.
-            </p>
-            <p class="evidence-label">Public proof</p>
-            <ul class="proof-links" aria-label="Public proof for AI agent work">
-              <li><a href="https://github.com/supabase/cli/pull/5532">Structured CLI output</a></li>
-              <li><a href="https://github.com/supabase/supabase/pull/49768">Agent discovery catalog</a></li>
-              <li><a href="https://github.com/supabase/supabase/pull/50180">API and MCP discovery</a></li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="work-item">
-          <div class="work-number" aria-hidden="true">03</div>
-          <div class="work-content">
-            <h3>Algorithms and mathematical modelling</h3>
-            <p>
-              At Vase, I built a balanced population sampling algorithm and worked on
-              data pipelines, architecture, and internal products, progressing from
-              analyst to engineer to lead. My economics research studied organisational
-              incentives and technology adoption through behavioural game theory and
-              agent-based modelling.
-            </p>
-          </div>
-        </article>
+        {profile.work.map((work, index) => (
+          <article class="work-item">
+            <div class="work-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
+            <div class="work-content">
+              <h3>{work.title}</h3>
+              {work.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              {work.links.length > 0 && (
+                <>
+                  <p class="evidence-label">Public proof</p>
+                  <ul class="proof-links" aria-label={`Public proof for ${work.title}`}>
+                    {work.links.map(({ label, url }) => <li><a href={url}>{label}</a></li>)}
+                  </ul>
+                </>
+              )}
+            </div>
+          </article>
+        ))}
       </section>
 
       <section class="section about" id="about" aria-labelledby="about-title">
         <div class="section-heading">
           <p class="eyebrow">02 / Background</p>
-          <h2 id="about-title">Founder and engineer</h2>
+          <h2 id="about-title">{profile.about.heading}</h2>
         </div>
         <div class="about-grid">
           <div class="about-copy">
+            <p>{profile.about.founder}</p>
             <p>
-              Before Supabase, I co-founded SISU Wellness and served as its CTO.
-              I led product and engineering from concept through launch.
-            </p>
-            <p>
-              I studied economics at Warwick, graduating with an MSc with Distinction.
-              My dissertation, <em>More than Money: Motivated Agents, Organisation
-              Goals, and Organisational Structure</em>, explored behavioural game
-              theory. My undergraduate research, <em>The Way We Learn: A Game of
-              Technology Adoption for Self-Tuning Agents</em>, used game theory and
-              agent-based modelling.
+              {profile.about.educationIntro} My dissertation,
+              <em>{profile.about.dissertation.title}</em>, {profile.about.dissertation.description}
+              My undergraduate research, <em>{profile.about.undergraduateResearch.title}</em>,
+              {profile.about.undergraduateResearch.description}
             </p>
           </div>
           <div class="personal-note">
             <p class="eyebrow">Outside work</p>
-            <p>
-              I read widely, track personal experiments, and keep a second brain
-              to connect ideas across books, projects, and everyday life.
-            </p>
+            <p>{profile.about.outsideWork}</p>
           </div>
         </div>
       </section>
@@ -166,18 +111,17 @@ const person = {
           <h2 id="contact-title">Get in touch</h2>
         </div>
         <div class="contact-content">
-          <p>I am always glad to meet people thinking seriously about what to build next.</p>
+          <p>{profile.contactIntro}</p>
           <div class="contact-links">
-            <a class="primary-link" href="mailto:pamelachiamayyee@gmail.com">Email</a>
-            <a href="https://cv.pamelachia.com/">CV</a>
-            <a href="https://github.com/pamelachia">GitHub</a>
-            <a href="https://www.linkedin.com/in/pamela-chia/">LinkedIn</a>
+            {profile.contacts.map(({ label, url }) => (
+              <a class:list={{ 'primary-link': label === 'Email' }} href={url}>{label}</a>
+            ))}
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <span>© {new Date().getFullYear()} Pamela Chia</span>
+      <span>© {new Date().getFullYear()} {profile.name}</span>
       <a href="#top">Back to top</a>
     </footer>
     </div>
