@@ -10,14 +10,19 @@
   "scripts": {
     "dev": "astro dev",
     "check": "astro check",
+    "test": "node --experimental-strip-types --test middleware.test.ts",
     "build": "astro build",
     "preview": "astro preview"
   },
   "dependencies": {
+    "@vercel/functions": "3.10.1",
     "astro": "7.4.0",
+    "negotiator": "1.1.0",
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.10"
+    "@astrojs/check": "0.9.10",
+    "@types/negotiator": "0.6.5",
+    "@types/node": "22.20.5"
   }
 }

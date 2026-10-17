@@ -48,4 +48,8 @@ Edit the homepage copy and contact links in `src/data/profile.json`. The HTML, M
 
 The homepage is available at `/index.md`, the writing index at `/blog/index.md`, and each post at `/blog/<slug>/index.md`. Post Markdown preserves the authored body and its relative-link base, adding the title, description, date and canonical source URL. Blog posts automatically appear in `/llms.txt` and `/sitemap.xml`.
 
+On the hosted site, the ordinary homepage and blog URLs also return Markdown when the request's `Accept` header prefers `text/markdown`. Routing middleware selects the existing static export using standard quality values, specificity and client ordering. Requests with no preference or only wildcards receive HTML. Both formats include `Vary: Accept`; explicit Markdown URLs remain available regardless of negotiation. Negotiated directory URLs redirect to their trailing-slash form so relative article links keep the same base.
+
+This routing runs on the hosting platform. Astro's local development and preview servers serve HTML at the ordinary URLs; use the explicit Markdown URLs locally.
+
 The contact section copies a short public introduction and links locally to the clipboard. `/contact.txt` provides the same text without JavaScript. Read Markdown links also work without JavaScript; copy controls offer selectable text when clipboard access is unavailable.
