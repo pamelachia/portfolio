@@ -1,0 +1,81 @@
+---
+interface Props {
+  href: string
+  label: string
+  linkLabel?: string
+  text?: string
+}
+
+const { href, label, linkLabel = 'Read Markdown', text = '' } = Astro.props
+---
+
+<div class="copy-control" data-copy-source={href}>
+  <div class="copy-actions">
+    <button type="button" hidden>{label}</button>
+    <a href={href}>{linkLabel}</a>
+  </div>
+  <p class="copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  <details hidden>
+    <summary>Copy manually</summary>
+    <textarea aria-label={`${label} text`} readonly rows="8">{text}</textarea>
+  </details>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-copy-source]').forEach((control) => {
+    const button = control.querySelector('button')!
+    const status = control.querySelector('[role="status"]')!
+    const fallback = control.querySelector('details')!
+    const textarea = control.querySelector('textarea')!
+    let prepared = textarea.value
+
+    button.addEventListener('click', async () => {
+      button.disabled = true
+      status.textContent = ''
+      try {
+        if (!prepared) {
+          try {
+            const response = await fetch(control.dataset.copySource!, { signal: AbortSignal.timeout(10000) })
+            if (!response.ok || !/^text\/(markdown|plain)(;|$)/i.test(response.headers.get('Content-Type') || '')) {
+              throw new Error('Text unavailable')
+            }
+            prepared = await response.text()
+          } catch {
+            status.textContent = 'Unable to load the text. Try the link above.'
+            return
+          }
+        }
+        try {
+          await navigator.clipboard.writeText(prepared)
+          status.textContent = 'Copied.'
+        } catch {
+          textarea.value = prepared
+          fallback.hidden = false
+          fallback.open = true
+          textarea.focus()
+          textarea.select()
+          status.textContent = 'Select the text below and copy it manually.'
+        }
+      } finally {
+        button.disabled = false
+      }
+    })
+    button.hidden = false
+  })
+</script>
+
+<style>
+  .copy-control { max-width: 100%; color: #c5beb5; font-family: Arial, sans-serif; font-size: .8rem; line-height: 1.5; }
+  .copy-actions { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; align-items: center; }
+  .copy-actions a, button { display: inline-flex; align-items: center; min-height: 44px; }
+  button { padding: 0; border: 0; border-radius: 0; color: #f3efe7; background: none; font: inherit; text-decoration: underline; text-decoration-color: #55c1f7; text-underline-offset: 4px; cursor: pointer; }
+  button:hover { color: #55c1f7; }
+  button:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 2px solid #55c1f7; outline-offset: 5px; }
+  button:disabled { opacity: .6; cursor: wait; }
+  .copy-status { margin: .25rem 0; }
+  .copy-status:empty { display: none; }
+  details { margin-top: .75rem; }
+  summary { cursor: pointer; }
+  textarea { display: block; width: 100%; min-height: 12rem; margin-top: .75rem; padding: .75rem; border: 1px solid #5d5751; color: #f3efe7; background: #1c1a19; font: .85rem/1.5 monospace; resize: vertical; }
+  .copy-control [hidden] { display: none; }
+</style>

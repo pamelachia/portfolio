@@ -41,3 +41,11 @@ Every Markdown file in `src/content/blog/` publishes when its branch merges. Kee
 Published filenames are URLs. Keep a filename unchanged after publishing unless you also add a redirect.
 
 For images, place public files in `public/`, use descriptive alt text, and resize or compress them before publishing. Prefer WebP and aim for files below 300 KB. The blog constrains image display width but does not optimize images automatically.
+
+## Markdown and discovery
+
+Edit the homepage copy and contact links in `src/data/profile.json`. The HTML, Markdown and contact summary share that source.
+
+The homepage is available at `/index.md`, the writing index at `/blog/index.md`, and each post at `/blog/<slug>/index.md`. Post Markdown preserves the authored body and its relative-link base, adding the title, description, date and canonical source URL. Blog posts automatically appear in `/llms.txt` and `/sitemap.xml`.
+
+The contact section copies a short public introduction and links locally to the clipboard. `/contact.txt` provides the same text without JavaScript. Read Markdown links also work without JavaScript; copy controls offer selectable text when clipboard access is unavailable.

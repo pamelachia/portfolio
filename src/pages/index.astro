@@ -1,5 +1,7 @@
 ---
 import profile from '../data/profile.json'
+import CopyText from '../components/CopyText.astro'
+import { contactText, profileMarkdown } from '../lib/profile'
 
 const pageTitle = `${profile.name} | ${profile.label}`
 const pageDescription = profile.description
@@ -7,12 +9,21 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 const person = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': `${profile.url}#person`,
   name: profile.name,
   url: profile.url,
-  email: profile.contacts[0].url.replace(/^mailto:/, ''),
+  email: profile.contacts.find(({ url }) => url.startsWith('mailto:'))!.url.replace(/^mailto:/, ''),
   jobTitle: profile.jobTitle,
   worksFor: { '@type': 'Organization', name: profile.employer },
   sameAs: profile.contacts.filter(({ label }) => ['GitHub', 'LinkedIn'].includes(label)).map(({ url }) => url),
+}
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  url: profile.url,
+  name: pageTitle,
+  description: pageDescription,
+  mainEntity: person,
 }
 ---
 
@@ -24,13 +35,14 @@ const person = {
     <meta name="description" content={pageDescription} />
     <meta name="theme-color" content="#1c1a19" />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="text/markdown" href={new URL('index.md', Astro.site)} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta name="twitter:card" content="summary" />
     <title>{pageTitle}</title>
-    <script type="application/ld+json" set:html={JSON.stringify(person)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')}></script>
   </head>
   <body>
     <div id="top">
@@ -116,10 +128,14 @@ const person = {
             {profile.contacts.map(({ label, url }) => (
               <a class:list={{ 'primary-link': label === 'Email' }} href={url}>{label}</a>
             ))}
+            <CopyText href="/contact.txt" label="Copy details for AI" linkLabel="View details" text={contactText()} />
           </div>
         </div>
       </section>
     </main>
+    <div class="reading-tools">
+      <CopyText href="/index.md" label="Copy Markdown" text={profileMarkdown()} />
+    </div>
     <footer>
       <span>© {new Date().getFullYear()} {profile.name}</span>
       <a href="#top">Back to top</a>
@@ -174,6 +190,7 @@ const person = {
   .contact-links { display: flex; align-items: flex-start; flex-direction: column; gap: .8rem; font-size: clamp(1.35rem, 2.5vw, 2.05rem); }
   .contact-links a { text-decoration-thickness: 1px; }
   .contact-links .primary-link { color: #55c1f7; }
+  .reading-tools { width: min(100% - 3rem, 76rem); margin: 0 auto; padding-bottom: 1.5rem; }
   footer { display: flex; width: min(100% - 3rem, 76rem); justify-content: space-between; margin: 0 auto; padding: 1.5rem 0 2.5rem; border-top: 1px solid #5d5751; color: #c5beb5; font-family: Arial, sans-serif; font-size: .72rem; letter-spacing: .04em; }
   @media (max-width: 700px) {
     :global(body) { font-size: 17px; }
@@ -190,6 +207,7 @@ const person = {
     .about-copy { font-size: 1.45rem; }
     .contact-content { gap: 3rem; }
     .contact-links { gap: .25rem; }
+    .reading-tools { width: min(100% - 2rem, 76rem); }
     footer { width: min(100% - 2rem, 76rem); }
   }
   @media (max-width: 430px) {

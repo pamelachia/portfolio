@@ -1,11 +1,25 @@
 ---
+import CopyText from '../components/CopyText.astro'
+import profile from '../data/profile.json'
+
 interface Props {
   canonicalUrl: string
   description: string
   title: string
+  article?: { title: string; date: string }
 }
 
-const { canonicalUrl, description, title } = Astro.props
+const { canonicalUrl, description, title, article } = Astro.props
+const markdownUrl = new URL('index.md', canonicalUrl)
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': article ? 'BlogPosting' : 'Blog',
+  name: title,
+  url: canonicalUrl,
+  description,
+  author: { '@type': 'Person', '@id': `${profile.url}#person`, name: profile.name, url: profile.url },
+  ...(article ? { headline: article.title, datePublished: article.date, mainEntityOfPage: canonicalUrl } : {}),
+}
 ---
 
 <!doctype html>
@@ -16,12 +30,15 @@ const { canonicalUrl, description, title } = Astro.props
     <meta name="description" content={description} />
     <meta name="theme-color" content="#1c1a19" />
     <link rel="canonical" href={canonicalUrl} />
-    <meta property="og:type" content="website" />
+    <link rel="alternate" type="text/markdown" href={markdownUrl} />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    {article && <meta property="article:published_time" content={article.date} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta name="twitter:card" content="summary" />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')}></script>
   </head>
   <body>
     <div id="top">
@@ -36,6 +53,9 @@ const { canonicalUrl, description, title } = Astro.props
       <main id="content" tabindex="-1">
         <slot />
       </main>
+      <div class="reading-tools">
+        <CopyText href={markdownUrl.pathname} label="Copy Markdown" />
+      </div>
       <footer>
         <span>© {new Date().getFullYear()} Pamela Chia</span>
         <a href="#top">Back to top</a>
@@ -58,8 +78,9 @@ const { canonicalUrl, description, title } = Astro.props
   .wordmark { color: #55c1f7; font-size: 1rem; font-weight: 700; letter-spacing: -.03em; text-decoration: none; }
   nav { display: flex; gap: 1.35rem; }
   nav a { text-decoration: none; }
+  .reading-tools { width: min(100% - 3rem, 70rem); margin: 0 auto; padding-bottom: 1.5rem; }
   footer { padding: 1.5rem 0 2.5rem; border-top: 1px solid #5d5751; color: #c5beb5; }
-  @media (max-width: 700px) { header, footer { width: min(100% - 2rem, 70rem); } }
+  @media (max-width: 700px) { header, footer, .reading-tools { width: min(100% - 2rem, 70rem); } }
   @media (max-width: 430px) { footer { align-items: flex-start; flex-direction: column; gap: .6rem; } }
   @media (prefers-reduced-motion: reduce) { :global(html) { scroll-behavior: auto; } }
 </style>
