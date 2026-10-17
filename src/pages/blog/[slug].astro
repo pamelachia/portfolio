@@ -20,6 +20,7 @@ const canonicalUrl = `https://pamelachia.com/blog/${post.id}/`
   title={`${post.data.title} | Pamela Chia`}
   description={post.data.description}
   canonicalUrl={canonicalUrl}
+  article={{ title: post.data.title, date: post.data.date }}
 >
   <article class="post">
     <header>

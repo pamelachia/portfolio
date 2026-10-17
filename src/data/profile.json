@@ -1,0 +1,91 @@
+{
+  "name": "Pamela Chia",
+  "label": "Founder and engineer",
+  "jobTitle": "Growth Engineer",
+  "employer": "Supabase",
+  "url": "https://pamelachia.com/",
+  "description": "Pamela Chia is a founder and engineer working in growth engineering at Supabase.",
+  "intro": "I do growth engineering at Supabase, working across product, data, and experiences for AI agents.",
+  "foundation": "My foundation is in behavioural game theory, econometrics, and full-stack data systems. I am interested in the choices that turn an idea into something people can use, and the systems that keep it working.",
+  "location": "Singapore",
+  "workHeading": "Making complex systems useful",
+  "work": [
+    {
+      "title": "Full-stack growth systems across teams",
+      "paragraphs": [
+        "I joined Supabase in 2023 and built across frontend, backend, data, and infrastructure. My work included event APIs and product analytics, lifecycle email and resource-usage notifications, consent management, and self-service compliance experiences, working with engineering, Legal, and customer-facing teams."
+      ],
+      "links": [
+        {
+          "label": "Dashboard telemetry API",
+          "url": "https://github.com/supabase/supabase/pull/15231"
+        },
+        {
+          "label": "Self-service compliance",
+          "url": "https://github.com/supabase/supabase/pull/18307"
+        }
+      ]
+    },
+    {
+      "title": "Extending growth to AI agents",
+      "paragraphs": [
+        "More recently, I extended that work to agents: structured CLI output, discovery interfaces connecting documentation, APIs, and MCP endpoints, and measurement of how agents find and use the product.",
+        "I also build agent-assisted engineering workflows, with response evaluation, explicit verification, and human decisions for production remediation."
+      ],
+      "links": [
+        {
+          "label": "Structured CLI output",
+          "url": "https://github.com/supabase/cli/pull/5532"
+        },
+        {
+          "label": "Agent discovery catalog",
+          "url": "https://github.com/supabase/supabase/pull/49768"
+        },
+        {
+          "label": "API and MCP discovery",
+          "url": "https://github.com/supabase/supabase/pull/50180"
+        }
+      ]
+    },
+    {
+      "title": "Algorithms and mathematical modelling",
+      "paragraphs": [
+        "At Vase, I built a balanced population sampling algorithm and worked on data pipelines, architecture, and internal products, progressing from analyst to engineer to lead. My economics research studied organisational incentives and technology adoption through behavioural game theory and agent-based modelling."
+      ],
+      "links": []
+    }
+  ],
+  "about": {
+    "heading": "Founder and engineer",
+    "founder": "Before Supabase, I co-founded SISU Wellness and served as its CTO. I led product and engineering from concept through launch.",
+    "educationIntro": "I studied economics at Warwick, graduating with an MSc with Distinction.",
+    "dissertation": {
+      "title": "More than Money: Motivated Agents, Organisation Goals, and Organisational Structure",
+      "description": "explored behavioural game theory."
+    },
+    "undergraduateResearch": {
+      "title": "The Way We Learn: A Game of Technology Adoption for Self-Tuning Agents",
+      "description": "used game theory and agent-based modelling."
+    },
+    "outsideWork": "I read widely, track personal experiments, and keep a second brain to connect ideas across books, projects, and everyday life."
+  },
+  "contactIntro": "I am always glad to meet people thinking seriously about what to build next.",
+  "contacts": [
+    {
+      "label": "Email",
+      "url": "mailto:pamelachiamayyee@gmail.com"
+    },
+    {
+      "label": "CV",
+      "url": "https://cv.pamelachia.com/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/pamelachia"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/pamela-chia/"
+    }
+  ]
+}
