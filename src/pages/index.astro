@@ -129,13 +129,16 @@ const structuredData = {
             {profile.contacts.map(({ label, url }) => (
               <a class:list={{ 'primary-link': label === 'Email' }} href={url}>{label}</a>
             ))}
-            <CopyText href="/contact.txt" label="Copy details for AI" linkLabel="View details" text={contactText()} />
           </div>
         </div>
       </section>
     </main>
     <div class="reading-tools">
-      <CopyText href="/index.md" label="Copy Markdown" text={profileMarkdown()} />
+      <p class="eyebrow ai-label">For AI tools</p>
+      <div class="ai-actions">
+        <CopyText href="/contact.txt" label="Copy contact card" linkLabel="View text" text={contactText()} />
+        <CopyText href="/index.md" label="Copy page as Markdown" linkLabel="View Markdown" text={profileMarkdown()} />
+      </div>
     </div>
     <footer>
       <span>© {new Date().getFullYear()} {profile.name}</span>
@@ -192,6 +195,8 @@ const structuredData = {
   .contact-links a { text-decoration-thickness: 1px; }
   .contact-links .primary-link { color: #55c1f7; }
   .reading-tools { width: min(100% - 3rem, 76rem); margin: 0 auto; padding-bottom: 1.5rem; }
+  .ai-label { margin-bottom: .9rem; }
+  .ai-actions { display: flex; flex-direction: column; gap: .75rem; }
   footer { display: flex; width: min(100% - 3rem, 76rem); justify-content: space-between; margin: 0 auto; padding: 1.5rem 0 2.5rem; border-top: 1px solid #5d5751; color: #c5beb5; font-family: Arial, sans-serif; font-size: .72rem; letter-spacing: .04em; }
   @media (max-width: 700px) {
     :global(body) { font-size: 17px; }

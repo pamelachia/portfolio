@@ -11,10 +11,13 @@ const { href, label, linkLabel = 'Read Markdown', text = '' } = Astro.props
 
 <div class="copy-control" data-copy-source={href}>
   <div class="copy-actions">
-    <button type="button" hidden>{label}</button>
+    <button type="button" hidden>
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+      {label}
+    </button>
     <a href={href}>{linkLabel}</a>
+    <p class="copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
   </div>
-  <p class="copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
   <details hidden>
     <summary>Copy manually</summary>
     <textarea aria-label={`${label} text`} readonly rows="8">{text}</textarea>
@@ -68,11 +71,12 @@ const { href, label, linkLabel = 'Read Markdown', text = '' } = Astro.props
   .copy-control { max-width: 100%; color: #c5beb5; font-family: Arial, sans-serif; font-size: .8rem; line-height: 1.5; }
   .copy-actions { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; align-items: center; }
   .copy-actions a, button { display: inline-flex; align-items: center; min-height: 44px; }
-  button { padding: 0; border: 0; border-radius: 0; color: #f3efe7; background: none; font: inherit; text-decoration: underline; text-decoration-color: #55c1f7; text-underline-offset: 4px; cursor: pointer; }
-  button:hover { color: #55c1f7; }
+  button { gap: .45em; padding: .4rem .85rem; border: 0; border-radius: 999px; color: #f3efe7; background: rgba(243, 239, 231, .08); font: inherit; cursor: pointer; }
+  button svg { width: 1em; height: 1em; flex: none; }
+  button:hover { color: #55c1f7; background: rgba(85, 193, 247, .15); }
   button:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 2px solid #55c1f7; outline-offset: 5px; }
   button:disabled { opacity: .6; cursor: wait; }
-  .copy-status { margin: .25rem 0; }
+  .copy-status { margin: 0; }
   .copy-status:empty { display: none; }
   details { margin-top: .75rem; }
   summary { cursor: pointer; }
