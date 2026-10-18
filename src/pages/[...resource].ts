@@ -11,7 +11,7 @@ export const getStaticPaths = (async () => {
   const blogIndex = [
     '# Blog',
     `Source: ${absolute('blog/')}`,
-    `Writing by ${profile.name}.`,
+    profile.blogIntro,
     posts.length === 0 ? 'Writing will appear here.' : posts.map((post) => [
       `## ${post.data.title}`,
       `Published: ${post.data.date}`,

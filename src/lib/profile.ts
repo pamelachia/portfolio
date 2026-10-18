@@ -22,6 +22,7 @@ export function profileMarkdown() {
     profile.foundation,
     `Based in ${profile.location}.`,
     `## Selected work: ${profile.workHeading}`,
+    profile.workIntro,
     ...profile.work.flatMap((work) => [
       `### ${work.title}`,
       ...work.paragraphs,
@@ -30,6 +31,7 @@ export function profileMarkdown() {
     `## Background: ${about.heading}`,
     about.founder,
     `${about.educationIntro} My dissertation, *${about.dissertation.title}*, ${about.dissertation.description} My undergraduate research, *${about.undergraduateResearch.title}*, ${about.undergraduateResearch.description}`,
+    about.people,
     '### Outside work',
     about.outsideWork,
     '## Get in touch',
