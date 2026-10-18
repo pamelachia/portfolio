@@ -73,7 +73,10 @@ const structuredData = {
       <section class="section work" id="work" aria-labelledby="work-title">
         <div class="section-heading">
           <p class="eyebrow">01 / Selected work</p>
-          <h2 id="work-title">{profile.workHeading}</h2>
+          <div>
+            <h2 id="work-title">{profile.workHeading}</h2>
+            {profile.workIntro && <p class="work-intro">{profile.workIntro}</p>}
+          </div>
         </div>
 
         {profile.work.map((work, index) => (
@@ -110,6 +113,7 @@ const structuredData = {
               <em>{profile.about.undergraduateResearch.title}</em>
               {`, ${profile.about.undergraduateResearch.description}`}
             </p>
+            <p>{profile.about.people}</p>
           </div>
           <div class="personal-note">
             <p class="eyebrow">Outside work</p>
@@ -174,6 +178,7 @@ const structuredData = {
   .section-heading { display: grid; grid-template-columns: 1fr 3fr; gap: 2rem; margin-bottom: 5rem; }
   .section-heading .eyebrow { margin: .5rem 0 0; }
   h2 { max-width: 11ch; margin-bottom: 0; font-size: clamp(2.6rem, 6vw, 5.2rem); font-weight: 400; letter-spacing: -.055em; line-height: .96; }
+  .work-intro { max-width: 42rem; margin: 2rem 0 0; font-size: clamp(1.35rem, 2.5vw, 2.05rem); line-height: 1.25; }
   .work { padding-bottom: 3rem; }
   .work-item { display: grid; grid-template-columns: 1fr 3fr; gap: 2rem; padding: 3.5rem 0; border-top: 1px solid #5d5751; }
   .work-number { color: #c5beb5; font-family: Arial, sans-serif; font-size: .76rem; letter-spacing: .08em; }

@@ -6,9 +6,10 @@
   "url": "https://pamelachia.com/",
   "description": "Pamela Chia is a founder and engineer working in growth engineering at Supabase.",
   "intro": "I do growth engineering at Supabase, working across product, data, and experiences for AI agents.",
-  "foundation": "My foundation is in behavioural game theory, econometrics, and full-stack data systems. I am interested in the choices that turn an idea into something people can use, and the systems that keep it working.",
+  "foundation": "My foundation is in behavioural game theory, econometrics, and full-stack data systems. I think about the design of the slope: the choices that turn an idea into something people can use, and the systems that keep it working. A little bit of slope makes up for a lot of Y intercept.",
   "location": "Singapore",
   "workHeading": "Making complex systems useful",
+  "workIntro": "The job is keeping the large goal in view while translating local actions into global results.",
   "work": [
     {
       "title": "Full-stack growth systems across teams",
@@ -56,7 +57,7 @@
     }
   ],
   "about": {
-    "heading": "Founder and engineer",
+    "heading": "How I got here",
     "founder": "Before Supabase, I co-founded SISU Wellness and served as its CTO. I led product and engineering from concept through launch.",
     "educationIntro": "I studied economics at Warwick, graduating with an MSc with Distinction.",
     "dissertation": {
@@ -67,9 +68,11 @@
       "title": "The Way We Learn: A Game of Technology Adoption for Self-Tuning Agents",
       "description": "used game theory and agent-based modelling."
     },
-    "outsideWork": "I read widely, track personal experiments, and keep a second brain to connect ideas across books, projects, and everyday life."
+    "people": "The fun is working with good people on important problems, the kind I respect and suspect are better than me.",
+    "outsideWork": "Recursive self-improvement on an individual level is my whole thing. I read widely, keep a second brain to connect ideas across books, projects, and everyday life, and work to increase the pace of my personal experimentation."
   },
-  "contactIntro": "I am always glad to meet people thinking seriously about what to build next.",
+  "contactIntro": "Everyone carries a map of reality that feels obvious to them and invisible to everyone else. Conversation is how we compare maps. I am always glad to meet people thinking seriously about what to build next.",
+  "blogIntro": "Writing gives poor thinking nowhere to hide. It is a long, complex search query that finds fascinating people and routes interesting stuff to me.",
   "contacts": [
     {
       "label": "Email",
