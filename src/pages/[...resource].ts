@@ -20,17 +20,25 @@ export const getStaticPaths = (async () => {
       `[Read Markdown](${absolute(`blog/${post.id}/index.md`)})`,
     ].join('\n\n')).join('\n\n'),
   ].join('\n\n') + '\n'
+  const cvUrl = profile.contacts.find(({ label }) => label === 'CV')!.url
+  const endpointLinks = [
+    `- [Homepage](${profile.url}): Background, selected work and contact links.`,
+    `- [Homepage Markdown](${absolute('index.md')}): Machine-readable profile.`,
+    `- [Contact card](${absolute('contact.txt')}): Public introduction, email and profile links.`,
+    `- [CV](${cvUrl}): Current curriculum vitae.`,
+    `- [Blog](${absolute('blog/')}): Published writing.`,
+    `- [Blog Markdown](${absolute('blog/index.md')}): Machine-readable writing index.`,
+    ...posts.map((post) => `- [${post.data.title}](${absolute(`blog/${post.id}/index.md`)}): ${post.data.description}`),
+  ]
+  const proofLinks = profile.work.flatMap(({ links }) => links).map(({ label, url }) => `- [${label}](${url})`)
   const llms = [
     `# ${profile.name}`,
-    `> ${profile.description}`,
-    '## Profile',
-    `- [Profile](${absolute('index.md')}): Background, selected work and contact links.`,
-    `- [CV](${profile.contacts.find(({ label }) => label === 'CV')!.url}): Current curriculum vitae.`,
-    '## Writing',
-    `- [Blog](${absolute('blog/index.md')}): Published writing.`,
-    ...posts.map((post) => `- [${post.data.title}](${absolute(`blog/${post.id}/index.md`)}): ${post.data.description}`),
-    '## Contact',
-    `- [Contact details](${absolute('contact.txt')}): Public introduction, email and profile links.`,
+    `> Founder and ${profile.jobTitle} at ${profile.employer}, working across product, data, and experiences for AI agents. Based in ${profile.location}.`,
+    `${profile.about.founder} ${profile.about.educationIntro}`,
+    '## Pages & Machine-Readable Endpoints',
+    endpointLinks.join('\n'),
+    '## Selected Work (Public Proof)',
+    proofLinks.join('\n'),
   ].join('\n\n') + '\n'
   const urls = [profile.url, absolute('blog/'), ...posts.map((post) => absolute(`blog/${post.id}/`))]
   const escapeXml = (text: string) => text.replace(/[<>&"']/g, (char) => ({

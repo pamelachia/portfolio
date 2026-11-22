@@ -1,6 +1,7 @@
 ---
 import CopyText from '../components/CopyText.astro'
 import profile from '../data/profile.json'
+import { jsonLdScript, personJsonLd } from '../lib/structured-data'
 
 interface Props {
   canonicalUrl: string
@@ -11,6 +12,7 @@ interface Props {
 
 const { canonicalUrl, description, title, article } = Astro.props
 const markdownUrl = new URL('index.md', canonicalUrl)
+const person = personJsonLd()
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': article ? 'BlogPosting' : 'Blog',
@@ -38,7 +40,8 @@ const structuredData = {
     <meta property="og:url" content={canonicalUrl} />
     <meta name="twitter:card" content="summary" />
     <title>{title}</title>
-    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')}></script>
+    <script type="application/ld+json" set:html={jsonLdScript(person)}></script>
+    <script type="application/ld+json" set:html={jsonLdScript(structuredData)}></script>
   </head>
   <body>
     <div id="top">
