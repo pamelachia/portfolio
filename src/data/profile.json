@@ -1,13 +1,23 @@
 {
   "name": "Pamela Chia",
   "label": "Founder and engineer",
-  "jobTitle": "Growth Engineer",
+  "jobTitle": "Growth Engineering Lead",
   "employer": "Supabase",
+  "employerUrl": "https://supabase.com",
   "url": "https://pamelachia.com/",
   "description": "Pamela Chia is a founder and engineer working in growth engineering at Supabase.",
   "intro": "I do growth engineering at Supabase, working across product, data, and experiences for AI agents.",
   "foundation": "My foundation is in behavioural game theory, econometrics, and full-stack data systems. I think about the design of the slope: the choices that turn an idea into something people can use, and the systems that keep it working. A little bit of slope makes up for a lot of Y intercept.",
   "location": "Singapore",
+  "alumniOf": "University of Warwick",
+  "knowsAbout": [
+    "Growth Engineering",
+    "AI Agents",
+    "Model Context Protocol (MCP)",
+    "Behavioural Game Theory",
+    "Econometrics",
+    "Full-Stack Data Systems"
+  ],
   "workHeading": "Making complex systems useful",
   "workIntro": "The job is keeping the large goal in view while translating local actions into global results.",
   "work": [
